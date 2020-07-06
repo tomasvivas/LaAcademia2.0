@@ -15,12 +15,15 @@ namespace Data.Database
             /* paso 11 del TP2LAB05 
              11.En el método OpenConnection guardaremos el valor del connectionstring
              en una variable invocando a
-             ConfigurationManager.ConnectionStrings[consKeyDefaultCnnString].ConnectionString */
+             ConfigurationManager.ConnectionStrings[consKeyDefaultCnnString].ConnectionString */ 
+           
         }
 
         protected void CloseConnection()
         {
             throw new Exception("Metodo no implementado");
+            sqlConn.Close(); 
+            sqlConn=null;
         }
 
         protected SqlDataReader ExecuteReader(String commandText)
