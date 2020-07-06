@@ -11,6 +11,6 @@ namespace UI.Consola
         static void Main(string[] args)
         {
             new Usuarios(new Business.Logic.UsuarioLogic()).Menu(); 
-        }
+        }    
     }
 }

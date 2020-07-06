@@ -12,6 +12,10 @@ namespace Data.Database
         protected void OpenConnection()
         {
             throw new Exception("Metodo no implementado");
+            /* paso 11 del TP2LAB05 
+             11.En el método OpenConnection guardaremos el valor del connectionstring
+             en una variable invocando a
+             ConfigurationManager.ConnectionStrings[consKeyDefaultCnnString].ConnectionString */
         }
 
         protected void CloseConnection()
