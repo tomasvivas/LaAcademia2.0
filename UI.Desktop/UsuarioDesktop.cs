@@ -87,9 +87,9 @@ namespace UI.Desktop
             }
             if (this.Modo == ModoForm.Alta || this.Modo == ModoForm.Modificacion)
             {
-                this.txtID.Text = this.UsuarioActual.ID.ToString();
-                this.chkHabilitado.Checked = this.UsuarioActual.Habilitado;
-                this.txtNombre.Text = this.UsuarioActual.Nombre;
+                this.UsuarioActual.ID =  this.txtID.Text; 
+                this.UsuarioActual.Habilitado = this.chkHabilitado.Checked;
+                this.UsuarioActual.Nombre = this.txtNombre.Text ;
                 this.txtApellido.Text = this.UsuarioActual.Apellido;
                 this.txtEmail.Text = this.UsuarioActual.Email;
                 this.txtUsuario.Text = this.UsuarioActual.NombreUsuario;

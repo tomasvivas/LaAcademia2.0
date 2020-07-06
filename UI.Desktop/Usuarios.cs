@@ -45,7 +45,6 @@ namespace UI.Desktop
             UsuarioDesktop ud = new UsuarioDesktop(ApplicationForm.ModoForm.Alta);
             ud.ShowDialog();
             this.Listar();
-            ud.GuardarCambios();
         }
 
         private void tbsEditar_Click(object sender, EventArgs e)

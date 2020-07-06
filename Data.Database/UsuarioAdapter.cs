@@ -65,7 +65,7 @@ namespace Data.Database
         {
            List<Usuario> usuarios = new List<Usuario> () ;
             this.OpenConnection();
-            SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios", SqlConn);
+            SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios", sqlConn);
             SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
             while (drUsuarios.Read())
             { 
@@ -80,9 +80,10 @@ namespace Data.Database
                 usuarios.Add(usr);
                 drUsuarios.Close();
                 this.CloseConnection();
-                return usuarios;
+                
 
             }
+            return usuarios;
         }
 
         public Business.Entities.Usuario GetOne(int ID)
@@ -91,7 +92,7 @@ namespace Data.Database
             try 
                 { 
                     this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand ("select * from usuarios where id_usuario=@id", SqlConn);
+                SqlCommand cmdUsuarios = new SqlCommand ("select * from usuarios where id_usuario=@id", sqlConn);
                 cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 if (drUsuarios.Read())
