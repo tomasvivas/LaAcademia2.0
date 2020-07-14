@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business.Logic;
 using Business.Entities;
-using Business.Logic; 
+using System.Security.Cryptography.X509Certificates;
+
 
 namespace UI.Desktop
 {
@@ -17,6 +19,7 @@ namespace UI.Desktop
         public Usuarios()
         {
             InitializeComponent();
+            this.dgvUsuarios.AutoGenerateColumns = false;
         }
 
         private void Usuarios_Load(object sender, EventArgs e)
@@ -28,7 +31,7 @@ namespace UI.Desktop
         {
             UsuarioLogic ul = new UsuarioLogic();
             this.dgvUsuarios.DataSource = ul.GetAll(); 
-            }
+        }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -53,8 +56,8 @@ namespace UI.Desktop
             {
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Modificacion);
-                ud.MapearADatos();
-                ud.ShowDialog(); 
+                ud.ShowDialog();
+                this.Listar();
             }
         }
 
@@ -65,7 +68,7 @@ namespace UI.Desktop
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Baja);
                 ud.ShowDialog();
-                
+                this.Listar();              
             }
         }
     }
