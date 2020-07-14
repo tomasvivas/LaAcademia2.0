@@ -115,6 +115,7 @@
             this.txtClave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtClave.Location = new System.Drawing.Point(73, 105);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(158, 20);
             this.txtClave.TabIndex = 3;
             // 
@@ -139,6 +140,7 @@
             this.txtConfirmarClave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtConfirmarClave.Location = new System.Drawing.Point(349, 105);
             this.txtConfirmarClave.Name = "txtConfirmarClave";
+            this.txtConfirmarClave.PasswordChar = '*';
             this.txtConfirmarClave.Size = new System.Drawing.Size(159, 20);
             this.txtConfirmarClave.TabIndex = 6;
             // 

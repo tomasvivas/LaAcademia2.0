@@ -24,7 +24,7 @@ namespace UI.Desktop
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            Listar(); 
+            this.Listar(); 
         }
 
         public void Listar()
@@ -35,12 +35,17 @@ namespace UI.Desktop
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Listar(); 
+            this.Listar(); 
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tcUsuarios_RightToolStripPanel_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void tbsNuevo_Click(object sender, EventArgs e)
