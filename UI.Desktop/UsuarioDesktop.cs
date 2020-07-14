@@ -92,9 +92,6 @@ namespace UI.Desktop
                 UsuarioActual = UsuarioNuevo;
                 UsuarioLogic nuevousuario = new UsuarioLogic();
                 nuevousuario.Save(UsuarioActual);
-
-
-
             }
 
             else if (Modo == ModoForm.Modificacion)
@@ -134,7 +131,7 @@ namespace UI.Desktop
         public override bool Validar(string apellido, string nombre, string email, string usuario, string clave, string conf)
         {
             if (apellido.Length != 0 & nombre.Length != 0 & email.Length != 0 & usuario.Length != 0 & clave.Length != 0 & clave == conf
-                & clave.Length <= 8)
+                & clave.Length >= 8)
             {
                 return true;
             }
