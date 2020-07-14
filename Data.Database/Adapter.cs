@@ -30,7 +30,6 @@ namespace Data.Database
 
         protected void CloseConnection()
         {
-            throw new Exception("Metodo no implementado");
             sqlConn.Close(); 
             sqlConn=null;
         }
