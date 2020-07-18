@@ -32,7 +32,7 @@ namespace UI.Consola
             while (confir == 'S')
             {
                 Console.Clear();
-                Console.WriteLine("MENU DE USUARIOS")
+                Console.WriteLine("MENU DE USUARIOS");
                 Console.WriteLine("1– Listado General \n2– Consulta \n3– Agregar \n4- Modificar \n5- Eliminar \n6- Salir");
                 ConsoleKeyInfo opc = Console.ReadKey();
                 switch (opc.Key)

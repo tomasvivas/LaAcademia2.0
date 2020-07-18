@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{384617F1-861E-4591-B0D8-BC12A9C158E3}</ProjectGuid>
+    <ProjectGuid>{2C5D49C4-9D8A-4919-A12C-AC7AA18EE580}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>UI.Consola</RootNamespace>
-    <AssemblyName>UI.Consola</AssemblyName>
+    <RootNamespace>Esp.Consola</RootNamespace>
+    <AssemblyName>Esp.Consola</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,8 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Especialidades.cs" />
-    <Compile Include="Planes.cs" />
-    <Compile Include="Usuarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,10 +58,6 @@
     <ProjectReference Include="..\Business.Logic\Business.Logic.csproj">
       <Project>{ff268ef6-098c-491f-9adc-403ba5fc8d9a}</Project>
       <Name>Business.Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Data.Database\Data.Database.csproj">
-      <Project>{18d1c50f-58e0-4d94-b05b-4a95a146e6bb}</Project>
-      <Name>Data.Database</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

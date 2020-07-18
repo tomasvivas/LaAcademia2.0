@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Business.Logic;
 using Business.Entities;
 
-namespace UI.Consola 
+namespace Esp.Consola
 {
     public class Especialidades
 
