@@ -25,6 +25,7 @@ namespace UI.Consola
             EspecialidadNegocio = especialidad;
 
         }
+        #region MENU
         public void Menu()
         {
             char confir = 'S';
@@ -91,7 +92,7 @@ namespace UI.Consola
 
         public void MostrarDatos(Especialidad esp)
         {
-            Console.WriteLine("Especialidad: {0}", esp.ID);
+            
             Console.WriteLine("\t\tDescripcion: {0}", esp.Descripcion);
             Console.WriteLine();
 
@@ -191,6 +192,7 @@ namespace UI.Consola
                 Console.ReadKey();
             }
         }
-
+        #endregion
     }
+
 }
