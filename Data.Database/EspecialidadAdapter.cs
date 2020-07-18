@@ -8,26 +8,7 @@ namespace Data.Database
 {
     public class EspecialidadAdapter : Adapter
     {
-        private static List<Especialidad> _Especialidad;
 
-        private static List<Especialidad> Especialidades
-        {
-            get
-            {
-                if (_Especialidad == null)
-                {
-                    _Especialidad = new List<Business.Entities.Especialidad>();
-                    Business.Entities.Especialidad esp;
-                    esp = new Business.Entities.Especialidad();
-                    esp.State = Business.Entities.BusinessEntity.States.Unmodified;
-                    esp.Descripcion = "Ing. Quimica";
-                    _Especialidad.Add(esp);
-
-                }
-                return _Especialidad;
-            }
-
-        }
 
         public List<Especialidad> GetAll()
         {
@@ -119,21 +100,66 @@ namespace Data.Database
             }
         }
 
-        public void Save(Especialidad especialidad)
+        protected void Update(Especialidad esp)
         {
-            if (especialidad.State == BusinessEntity.States.New)
+            try
             {
-                this.Insert(especialidad);
+                this.OpenConnection();
+                SqlCommand cmdSave = new SqlCommand("UPDATE especialidades SET desc_especialidad = @descripcion, " +
+                    "WHERE id_especialidad = @id", sqlConn);
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = esp.ID;
+                cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = esp.Descripcion;
+                cmdSave.ExecuteNonQuery();
             }
-            else if (especialidad.State == BusinessEntity.States.Deleted)
+            catch (Exception Ex)
             {
-                this.Delete(especialidad.Descripcion);
+                Exception ExcepcionManejada = new Exception("Error al modificar datos de la especialidad", Ex);
+                throw ExcepcionManejada;
             }
-            else if (especialidad.State == BusinessEntity.States.Modified)
+            finally
             {
-                this.Update(especialidad);
+                this.CloseConnection();
             }
-            especialidad.State = BusinessEntity.States.Unmodified;
+        }
+
+        protected void Insert(Especialidad esp)
+        {
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdSave = new SqlCommand("insert into especialiades(desc_especialidad) " +
+                    "values (@descripcion) " +
+                    "select @@identity", sqlConn);
+                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = esp.Descripcion;
+                esp.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
+                cmdSave.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al crear especialidad", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
+        public void Save(Especialidad esp)
+        {
+            if (esp.State == BusinessEntity.States.New)
+            {
+                this.Insert(esp);
+            }
+            else if (esp.State == BusinessEntity.States.Deleted)
+            {
+                this.Delete(esp.Descripcion);
+            }
+            else if (esp.State == BusinessEntity.States.Modified)
+            {
+                this.Update(esp);
+            }
+            esp.State = BusinessEntity.States.Unmodified;
         }
     }
 }

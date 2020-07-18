@@ -26,13 +26,6 @@
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
-    <NestedTypes>
-      <Enum Name="Business.Entities.BusinessEntity.States" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>BusinessEntity.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABCAEAAA=</HashCode>
       <FileName>BusinessEntity.cs</FileName>
