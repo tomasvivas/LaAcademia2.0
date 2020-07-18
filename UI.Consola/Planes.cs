@@ -6,33 +6,33 @@ using System.Threading.Tasks;
 using Business.Logic;
 using Business.Entities;
 
-
 namespace UI.Consola
 {
-    public class Usuarios
+    class Planes
     {
-        private Business.Logic.UsuarioLogic _UsuarioNegocio;
+        private Business.Logic.PlanLogic _PlanNegocio;
 
-        public Business.Logic.UsuarioLogic UsuarioNegocio
+        public Business.Logic.PlanLogic PlanNegocio
         {
-            get { return _UsuarioNegocio; }
-            set { _UsuarioNegocio = value; }
-        }
-        
-
-        public Usuarios(Business.Logic.UsuarioLogic user)
-        {
-            UsuarioNegocio = user;  
+            get { return _PlanNegocio; }
+            set { _PlanNegocio = value; }
         }
 
-        #region METODOS 
+
+        public Planes(Business.Logic.PlanLogic plan)
+        {
+            PlanNegocio = plan;
+        }
+
+        #region MENU
+
         public void Menu()
         {
             char confir = 'S';
             while (confir == 'S')
             {
                 Console.Clear();
-                Console.WriteLine("MENU DE USUARIOS")
+                Console.WriteLine("MENU DE PLANES");
                 Console.WriteLine("1– Listado General \n2– Consulta \n3– Agregar \n4- Modificar \n5- Eliminar \n6- Salir");
                 ConsoleKeyInfo opc = Console.ReadKey();
                 switch (opc.Key)
@@ -71,47 +71,36 @@ namespace UI.Consola
                 confir = char.Parse(Console.ReadLine());
                 confir = Char.ToUpper(confir);
             }
-
-
-
         }
 
         public void ListadoGeneral()
         {
-            
+
             Console.Clear();
-            foreach (Usuario usr in UsuarioNegocio.GetAll())
+            foreach (Plan plan in PlanNegocio.GetAll())
             {
-                MostrarDatos(usr);
+                MostrarDatos(plan);
 
             }
-            
 
         }
 
-
-        public void MostrarDatos(Usuario usr)
+        public void MostrarDatos(Plan plan)
         {
-            Console.WriteLine("Usuario: {0}", usr.ID);
-            Console.WriteLine("\t\tNombre: {0}", usr.Nombre);
-            Console.WriteLine("\t\tApellido: {0}", usr.Apellido);
-            Console.WriteLine("\t\tNombre de Usuario: {0} ", usr.NombreUsuario);
-            Console.WriteLine("\t\tClave: {0}", usr.Clave);
-            Console.WriteLine("\t\tEmail: {0}", usr.Email);
-            Console.WriteLine("\t\tHabilitado: {0}", usr.Habilitado);
-
+            Console.WriteLine("Plan: {0}", plan.ID);
+            Console.WriteLine("\t\tDescripcion: {0}", plan.Descripcion);
+            Console.WriteLine("\t\tEspecilidad: {0}", plan.IDEspecialidad);
             Console.WriteLine();
         }
-
 
         public void Consulta()
         {
             Console.Clear();
             try
             {
-                Console.Write("Ingrese el ID del usuario a consultar: ");
+                Console.Write("Ingrese el ID del plan a consultar: ");
                 int ID = int.Parse(Console.ReadLine());
-                this.MostrarDatos(UsuarioNegocio.GetOne(ID));
+                this.MostrarDatos(PlanNegocio.GetOne(ID));
             }
             catch (FormatException)
             {
@@ -122,7 +111,7 @@ namespace UI.Consola
             {
                 Console.WriteLine(e.Message);
                 Console.ReadLine();
-               
+
             }
             finally
             {
@@ -136,23 +125,15 @@ namespace UI.Consola
             try
             {
                 Console.Clear();
-                Console.Write("Ingrese el ID del usuario a modificar: ");
+                Console.Write("Ingrese el ID del plan a modificar: ");
                 int ID = int.Parse(Console.ReadLine());
-                Usuario usuario = UsuarioNegocio.GetOne(ID);
-                Console.Write("Ingrese nombre: ");
-                usuario.Nombre = Console.ReadLine();
-                Console.Write("Ingrese apellido: ");
-                usuario.Apellido = Console.ReadLine();
-                Console.Write("Ingrese nombre de usuario: ");
-                usuario.NombreUsuario = Console.ReadLine();
-                Console.Write("Ingrese clave: ");
-                usuario.Clave = Console.ReadLine();
-                Console.Write("Ingrese email: ");
-                usuario.Email = Console.ReadLine();
-                Console.Write("Ingrese habilitacion de usuario (1-Si/otro-No): ");
-                usuario.Habilitado = (Console.ReadLine() == "1");
-                usuario.State = BusinessEntity.States.Modified;
-                UsuarioNegocio.Save(usuario);
+                Plan plan = PlanNegocio.GetOne(ID);
+                Console.Write("Ingrese descripcion: ");
+                plan.Descripcion = Console.ReadLine();
+                Console.Write("Ingrese especialidad: ");
+                plan.IDEspecialidad = int.Parse(Console.ReadLine());
+                plan.State = BusinessEntity.States.Modified;
+                PlanNegocio.Save(plan);
             }
             catch (FormatException fe)
             {
@@ -174,23 +155,15 @@ namespace UI.Consola
 
         public void Agregar()
         {
-            Usuario usuario = new Usuario();
-            Console.Write("Ingrese nombre: ");
-            usuario.Nombre = Console.ReadLine();
-            Console.Write("Ingrese apellido: ");
-            usuario.Apellido = Console.ReadLine();
-            Console.Write("Ingrese nombre de usuario: ");
-            usuario.NombreUsuario = Console.ReadLine();
-            Console.Write("Ingrese clave: ");
-            usuario.Clave = Console.ReadLine();
-            Console.Write("Ingrese email: ");
-            usuario.Email = Console.ReadLine();
-            Console.Write("Ingrese habilitacion de usuario (1-Si/otro-No): ");
-            usuario.Habilitado = (Console.ReadLine() == "1");
-            usuario.State = BusinessEntity.States.New;
-            UsuarioNegocio.Save(usuario);
+            Plan plan = new Plan();
+            Console.Write("Ingrese descripcion: ");
+            plan.Descripcion = Console.ReadLine();
+            Console.Write("Ingrese especialidad: ");
+            plan.IDEspecialidad = int.Parse(Console.ReadLine());
+            plan.State = BusinessEntity.States.New;
+            PlanNegocio.Save(plan);
             Console.WriteLine();
-            Console.WriteLine("ID: {0}", usuario.ID); 
+            Console.WriteLine("ID: {0}", plan.ID);
         }
 
         public void Eliminar()
@@ -198,9 +171,9 @@ namespace UI.Consola
             try
             {
                 Console.Clear();
-                Console.WriteLine("Ingrese el ID del usuario a eliminar: ");
+                Console.WriteLine("Ingrese el ID del plan a eliminar: ");
                 int ID = int.Parse(Console.ReadLine());
-                UsuarioNegocio.Delete(ID); 
+                PlanNegocio.Delete(ID);
             }
             catch (FormatException fe)
             {
@@ -219,6 +192,7 @@ namespace UI.Consola
                 Console.ReadKey();
             }
         }
+
         #endregion
     }
 }
