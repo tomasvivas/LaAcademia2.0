@@ -54,10 +54,12 @@ namespace UI.Desktop
 
         }
 
-        public virtual bool Validar(string apellido, string nombre, string email, string usuario, string clave, string conf)
+        public virtual bool Validar()
         {
             return false;
         }
+
+        
 
         public void Notificar(string titulo, string mensaje, MessageBoxButtons botones, MessageBoxIcon icono)
         {

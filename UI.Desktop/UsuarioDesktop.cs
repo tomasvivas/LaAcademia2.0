@@ -40,7 +40,7 @@ namespace UI.Desktop
             UsuarioActual = usuario.GetOne(ID);
             this.MapearDeDatos();
             
-         }
+        }
 
     
 
@@ -128,13 +128,13 @@ namespace UI.Desktop
         {
             this.MapearADatos();
         }
-        public override bool Validar(string apellido, string nombre, string email, string usuario, string clave, string conf)
+        public bool Validar(string apellido, string nombre, string email, string usuario, string clave, string conf)
         {
             if (apellido.Length != 0 & nombre.Length != 0 & email.Length != 0 & usuario.Length != 0 & clave.Length != 0 & clave == conf
                 & clave.Length >= 8)
             {
                 return true;
-            }
+            } 
             else
             {
                 this.Notificar("Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

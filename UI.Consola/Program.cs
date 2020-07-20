@@ -32,7 +32,7 @@ namespace UI.Consola
                             }
                         case 3:
                             {
-                               // new Especialidades(new Business.Logic.EspecialidadLogic()).Menu();
+                                new Especialidades(new Business.Logic.EspecialidadLogic()).Menu();
                                 break;
                             }
                         case 4:
