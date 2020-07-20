@@ -102,6 +102,7 @@
             this.dgvPlanes.AllowUserToDeleteRows = false;
             this.dgvPlanes.AllowUserToResizeColumns = false;
             this.dgvPlanes.AllowUserToResizeRows = false;
+            this.dgvPlanes.AutoGenerateColumns = false; 
             this.dgvPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,

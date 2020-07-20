@@ -94,6 +94,7 @@
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AllowUserToResizeColumns = false;
             this.dgvUsuarios.AllowUserToResizeRows = false;
+            this.dgvUsuarios.AutoGenerateColumns = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -186,7 +187,7 @@
             this.tbsEliminar});
             this.usUsuarios.Location = new System.Drawing.Point(9, 0);
             this.usUsuarios.Name = "usUsuarios";
-            this.usUsuarios.Size = new System.Drawing.Size(112, 25);
+            this.usUsuarios.Size = new System.Drawing.Size(81, 25);
             this.usUsuarios.TabIndex = 0;
             // 
             // tbsNuevo
