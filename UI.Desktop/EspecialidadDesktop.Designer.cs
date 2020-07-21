@@ -43,7 +43,7 @@
             this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.57303F));
             this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.42697F));
             this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 528F));
+            this.tlpEspecialidadDesktop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 529F));
             this.tlpEspecialidadDesktop.Controls.Add(this.btnCancelar, 3, 2);
             this.tlpEspecialidadDesktop.Controls.Add(this.btnAceptar, 2, 2);
             this.tlpEspecialidadDesktop.Controls.Add(this.txtDescripcion, 1, 1);
@@ -59,7 +59,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(263, 27);
+            this.btnCancelar.Location = new System.Drawing.Point(262, 27);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(178, 27);
+            this.btnAceptar.Location = new System.Drawing.Point(177, 27);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 3;
@@ -80,7 +80,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
-            this.txtDescripcion.Location = new System.Drawing.Point(76, 3);
+            this.txtDescripcion.Location = new System.Drawing.Point(75, 3);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(96, 20);
@@ -92,7 +92,7 @@
             this.lDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lDescripcion.Location = new System.Drawing.Point(3, 0);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(67, 24);
+            this.lDescripcion.Size = new System.Drawing.Size(66, 24);
             this.lDescripcion.TabIndex = 1;
             this.lDescripcion.Text = "Descripción";
             this.lDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

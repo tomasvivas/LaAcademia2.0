@@ -12,7 +12,7 @@ using Business.Entities;
 
 namespace UI.Desktop
 {
-    public partial class PlanDesktop : ApplicationForm
+    public partial class PlanDesktop : Form
     {
         private Plan _PlanAct;
         public Plan PlanActual
