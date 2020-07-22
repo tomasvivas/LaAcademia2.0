@@ -61,13 +61,13 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(237, 132);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(238, 140);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtID
             // 
-            this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtID.Location = new System.Drawing.Point(98, 3);
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.Location = new System.Drawing.Point(99, 7);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(136, 20);
@@ -75,54 +75,54 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDescripcion.Location = new System.Drawing.Point(98, 36);
+            this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDescripcion.Location = new System.Drawing.Point(99, 42);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(136, 20);
             this.txtDescripcion.TabIndex = 1;
             // 
             // txtIdEspecialidad
             // 
-            this.txtIdEspecialidad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtIdEspecialidad.Location = new System.Drawing.Point(98, 69);
+            this.txtIdEspecialidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIdEspecialidad.Location = new System.Drawing.Point(99, 77);
             this.txtIdEspecialidad.Name = "txtIdEspecialidad";
             this.txtIdEspecialidad.Size = new System.Drawing.Size(136, 20);
             this.txtIdEspecialidad.TabIndex = 2;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Location = new System.Drawing.Point(39, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 33);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "ID";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 33);
+            this.label2.Location = new System.Drawing.Point(16, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 33);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Descripcion";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(3, 66);
+            this.label3.Location = new System.Drawing.Point(7, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 33);
+            this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "ID Especialidad";
             // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(17, 102);
+            this.btnAceptar.Location = new System.Drawing.Point(18, 108);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 6;
@@ -133,11 +133,11 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(159, 102);
+            this.btnCancelar.Location = new System.Drawing.Point(160, 108);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "btnCancelar";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(237, 132);
+            this.ClientSize = new System.Drawing.Size(238, 140);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "PlanDesktop";
             this.Text = "Plan";

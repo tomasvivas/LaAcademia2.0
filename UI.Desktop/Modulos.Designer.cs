@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modulos));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.tsModulos = new System.Windows.Forms.ToolStrip();
             this.tlModulos = new System.Windows.Forms.TableLayoutPanel();
             this.dgvModulos = new System.Windows.Forms.DataGridView();
+            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsModulos = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            this.tsModulos.SuspendLayout();
             this.tlModulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
+            this.tsModulos.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -62,21 +62,9 @@
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
-            // toolStripContainer1.TcModulos
+            // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.tsModulos);
-            // 
-            // tsModulos
-            // 
-            this.tsModulos.Dock = System.Windows.Forms.DockStyle.None;
-            this.tsModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbEditar,
-            this.tsbEliminar});
-            this.tsModulos.Location = new System.Drawing.Point(3, 0);
-            this.tsModulos.Name = "tsModulos";
-            this.tsModulos.Size = new System.Drawing.Size(112, 25);
-            this.tsModulos.TabIndex = 0;
             // 
             // tlModulos
             // 
@@ -112,6 +100,13 @@
             this.dgvModulos.Size = new System.Drawing.Size(735, 174);
             this.dgvModulos.TabIndex = 0;
             // 
+            // ColDescripcion
+            // 
+            this.ColDescripcion.Frozen = true;
+            this.ColDescripcion.HeaderText = "Descripcion";
+            this.ColDescripcion.Name = "ColDescripcion";
+            this.ColDescripcion.ReadOnly = true;
+            // 
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -133,12 +128,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // ColDescripcion
+            // tsModulos
             // 
-            this.ColDescripcion.Frozen = true;
-            this.ColDescripcion.HeaderText = "Descripcion";
-            this.ColDescripcion.Name = "ColDescripcion";
-            this.ColDescripcion.ReadOnly = true;
+            this.tsModulos.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
+            this.tsModulos.Location = new System.Drawing.Point(3, 0);
+            this.tsModulos.Name = "tsModulos";
+            this.tsModulos.Size = new System.Drawing.Size(81, 25);
+            this.tsModulos.TabIndex = 0;
             // 
             // tsbNuevo
             // 
@@ -184,10 +184,10 @@
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.tsModulos.ResumeLayout(false);
-            this.tsModulos.PerformLayout();
             this.tlModulos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).EndInit();
+            this.tsModulos.ResumeLayout(false);
+            this.tsModulos.PerformLayout();
             this.ResumeLayout(false);
 
         }
