@@ -72,7 +72,7 @@ namespace UI.Desktop
             if (this.dgvEspecialidades.SelectedRows != null)
             {
                 string descripcion = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).Descripcion;
-                EsepcialidadDesktop ed = new EspecialidadDesktop(descripcion, ApplicationForm.ModoForm.Baja);
+                EspecialidadDesktop ed = new EspecialidadDesktop(descripcion, ApplicationForm.ModoForm.Baja);
                 ed.ShowDialog();
                 this.Listar();
             }
