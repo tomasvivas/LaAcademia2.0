@@ -30,21 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Modulos));
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.tsModulos = new System.Windows.Forms.ToolStrip();
             this.tlModulos = new System.Windows.Forms.TableLayoutPanel();
             this.dgvModulos = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsModulos = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.ColID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            this.tsModulos.SuspendLayout();
             this.tlModulos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).BeginInit();
+            this.tsModulos.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -62,21 +63,9 @@
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
-            // toolStripContainer1.TcModulos
+            // toolStripContainer1.TopToolStripPanel
             // 
             this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.tsModulos);
-            // 
-            // tsModulos
-            // 
-            this.tsModulos.Dock = System.Windows.Forms.DockStyle.None;
-            this.tsModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbEditar,
-            this.tsbEliminar});
-            this.tsModulos.Location = new System.Drawing.Point(3, 0);
-            this.tsModulos.Name = "tsModulos";
-            this.tsModulos.Size = new System.Drawing.Size(112, 25);
-            this.tsModulos.TabIndex = 0;
             // 
             // tlModulos
             // 
@@ -103,6 +92,7 @@
             this.dgvModulos.AllowUserToResizeRows = false;
             this.dgvModulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvModulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColID,
             this.ColDescripcion});
             this.tlModulos.SetColumnSpan(this.dgvModulos, 2);
             this.dgvModulos.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -133,12 +123,17 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // ColDescripcion
+            // tsModulos
             // 
-            this.ColDescripcion.Frozen = true;
-            this.ColDescripcion.HeaderText = "Descripcion";
-            this.ColDescripcion.Name = "ColDescripcion";
-            this.ColDescripcion.ReadOnly = true;
+            this.tsModulos.Dock = System.Windows.Forms.DockStyle.None;
+            this.tsModulos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
+            this.tsModulos.Location = new System.Drawing.Point(3, 0);
+            this.tsModulos.Name = "tsModulos";
+            this.tsModulos.Size = new System.Drawing.Size(81, 25);
+            this.tsModulos.TabIndex = 0;
             // 
             // tsbNuevo
             // 
@@ -170,6 +165,20 @@
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
+            // ColID
+            // 
+            this.ColID.Frozen = true;
+            this.ColID.HeaderText = "ID";
+            this.ColID.Name = "ColID";
+            this.ColID.ReadOnly = true;
+            // 
+            // ColDescripcion
+            // 
+            this.ColDescripcion.Frozen = true;
+            this.ColDescripcion.HeaderText = "Descripcion";
+            this.ColDescripcion.Name = "ColDescripcion";
+            this.ColDescripcion.ReadOnly = true;
+            // 
             // Modulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,10 +193,10 @@
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.tsModulos.ResumeLayout(false);
-            this.tsModulos.PerformLayout();
             this.tlModulos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvModulos)).EndInit();
+            this.tsModulos.ResumeLayout(false);
+            this.tsModulos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -200,9 +209,10 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsModulos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
     }
 }

@@ -84,6 +84,7 @@ namespace UI.Desktop
             {
 
                 ModuloActual.Descripcion = this.txtDescripcion.Text;
+                ModuloActual.ID = int.Parse(this.txtID.Text);
                 ModuloLogic nuevomodulo = new ModuloLogic();
                 nuevomodulo.Save(ModuloActual);
 
