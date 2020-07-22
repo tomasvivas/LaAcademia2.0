@@ -32,6 +32,7 @@
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.tlModulos = new System.Windows.Forms.TableLayoutPanel();
             this.dgvModulos = new System.Windows.Forms.DataGridView();
+            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsModulos = new System.Windows.Forms.ToolStrip();
@@ -101,6 +102,13 @@
             this.dgvModulos.ReadOnly = true;
             this.dgvModulos.Size = new System.Drawing.Size(735, 174);
             this.dgvModulos.TabIndex = 0;
+            // 
+            // ColDescripcion
+            // 
+            this.ColDescripcion.Frozen = true;
+            this.ColDescripcion.HeaderText = "Descripcion";
+            this.ColDescripcion.Name = "ColDescripcion";
+            this.ColDescripcion.ReadOnly = true;
             // 
             // btnActualizar
             // 
