@@ -94,7 +94,6 @@
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.AllowUserToResizeColumns = false;
             this.dgvUsuarios.AllowUserToResizeRows = false;
-            this.dgvUsuarios.AutoGenerateColumns = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -197,7 +196,8 @@
             this.tbsNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tbsNuevo.Name = "tbsNuevo";
             this.tbsNuevo.Size = new System.Drawing.Size(23, 22);
-            this.tbsNuevo.Text = "toolStripButton1";
+            this.tbsNuevo.Text = "ToolStripButton1";
+            this.tbsNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tbsNuevo.ToolTipText = "Nuevo";
             this.tbsNuevo.Click += new System.EventHandler(this.tbsNuevo_Click);
             // 
@@ -228,6 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tcUsuarios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);

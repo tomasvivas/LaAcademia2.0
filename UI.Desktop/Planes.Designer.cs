@@ -147,10 +147,6 @@
             // tsPlanes
             // 
             this.tsPlanes.Dock = System.Windows.Forms.DockStyle.None;
-            this.tsPlanes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbModificar,
-            this.tsbEliminar});
             this.tsPlanes.Location = new System.Drawing.Point(3, 0);
             this.tsPlanes.Name = "tsPlanes";
             this.tsPlanes.Size = new System.Drawing.Size(81, 25);
@@ -195,6 +191,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 246);
             this.Controls.Add(this.tcPlanes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Planes";
             this.Text = "Planes";
             this.Load += new System.EventHandler(this.Planes_Load);

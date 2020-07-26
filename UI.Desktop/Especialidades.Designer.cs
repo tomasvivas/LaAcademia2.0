@@ -96,13 +96,9 @@
             // tsEspecialidades
             // 
             this.tsEspecialidades.Dock = System.Windows.Forms.DockStyle.None;
-            this.tsEspecialidades.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNuevo,
-            this.tsbEditar,
-            this.tsbEliminar});
             this.tsEspecialidades.Location = new System.Drawing.Point(5, 0);
             this.tsEspecialidades.Name = "tsEspecialidades";
-            this.tsEspecialidades.Size = new System.Drawing.Size(112, 25);
+            this.tsEspecialidades.Size = new System.Drawing.Size(81, 25);
             this.tsEspecialidades.TabIndex = 0;
             // 
             // tsbNuevo
@@ -162,6 +158,7 @@
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.toolStripContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Especialidades";
             this.Text = "Especialidades";
             this.Load += new System.EventHandler(this.Especialidades_Load);
