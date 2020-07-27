@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UI.Consola
 {
-    class Modulos
+    public class Modulos
     {
         private Business.Logic.ModuloLogic _ModuloNegocio;
 

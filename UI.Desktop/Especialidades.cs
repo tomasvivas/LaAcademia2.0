@@ -13,7 +13,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace UI.Desktop
 {
-    public partial class Especialidades : ApplicationForm
+    public partial class Especialidades : Form
     {
         public Especialidades()
         {
