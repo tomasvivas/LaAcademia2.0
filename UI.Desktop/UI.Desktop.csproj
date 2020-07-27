@@ -175,8 +175,15 @@
       <Name>Util</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\delete_delete_exit_1577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_modify_icon-icons.com_49882.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_plus_1588.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

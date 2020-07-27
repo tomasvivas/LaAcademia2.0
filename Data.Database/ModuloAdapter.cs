@@ -21,9 +21,9 @@ namespace Data.Database
                 SqlDataReader drModulo = cmdModulo.ExecuteReader();
                 while (drModulo.Read())
                 {
-                    Modulo esp = new Modulo();
-                    esp.Descripcion = (string)drModulo["descripcion"];
-                    modulo.Add(esp);
+                    Modulo mod = new Modulo();
+                    mod.Descripcion = (string)drModulo["descripcion"];
+                    modulo.Add(mod);
 
 
 
@@ -109,7 +109,7 @@ namespace Data.Database
                 SqlCommand cmdSave = new SqlCommand("UPDATE modulos SET desc_modulo = @descripcion, " +
                     "WHERE id_modulo = @id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = mod.ID;
-                cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = mod.Descripcion;
+                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = mod.Descripcion;
                 cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)

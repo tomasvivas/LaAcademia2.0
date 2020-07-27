@@ -63,6 +63,16 @@ namespace UI.Desktop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_insert_plus_1588 {
+            get {
+                object obj = ResourceManager.GetObject("add_insert_plus_1588", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap admin_person_user_man_2839 {
             get {
                 object obj = ResourceManager.GetObject("admin_person_user_man_2839", resourceCulture);
@@ -96,6 +106,26 @@ namespace UI.Desktop.Properties {
         internal static System.Drawing.Bitmap delete_delete_deleteusers_delete_male_user_maleclient_2348 {
             get {
                 object obj = ResourceManager.GetObject("delete_delete_deleteusers_delete_male_user_maleclient_2348", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_delete_exit_1577 {
+            get {
+                object obj = ResourceManager.GetObject("delete_delete_exit_1577", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_modify_icon_icons_com_49882 {
+            get {
+                object obj = ResourceManager.GetObject("edit_modify_icon-icons.com_49882", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
