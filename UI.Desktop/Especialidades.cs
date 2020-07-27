@@ -13,7 +13,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace UI.Desktop
 {
-    public partial class Especialidades : Form
+    public partial class Especialidades : ApplicationForm
     {
         public Especialidades()
         {
@@ -76,6 +76,11 @@ namespace UI.Desktop
                 ed.ShowDialog();
                 this.Listar();
             }
+        }
+
+        private void tlEspecialidades_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
