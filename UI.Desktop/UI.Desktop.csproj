@@ -119,9 +119,6 @@
     <EmbeddedResource Include="ModuloDesktop.resx">
       <DependentUpon>ModuloDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos.resx">
-      <DependentUpon>Modulos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PlanDesktop.resx">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
     </EmbeddedResource>

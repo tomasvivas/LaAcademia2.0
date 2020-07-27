@@ -1,36 +1,39 @@
-﻿using Business.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Business.Logic;
+using Business.Entities;
+
 
 namespace UI.Consola
 {
-    class Modulos
+    public class Materias
     {
-        private Business.Logic.ModuloLogic _ModuloNegocio;
+        private Business.Logic.MateriaLogic _MateriaNegocio;
 
-        public Business.Logic.ModuloLogic ModuloNegocio
+        public Business.Logic.MateriaLogic MateriaNegocio
         {
-            get { return _ModuloNegocio; }
-            set { _ModuloNegocio = value; }
+            get { return _MateriaNegocio; }
+            set { _MateriaNegocio = value; }
         }
 
-        public Modulos(Business.Logic.ModuloLogic modulo)
-        {
-            ModuloNegocio = modulo;
 
+        public Materias(Business.Logic.MateriaLogic mat)
+        {
+            MateriaNegocio = mat;
         }
 
         #region MENU
+
         public void Menu()
         {
             char confir = 'S';
             while (confir == 'S')
             {
                 Console.Clear();
-                Console.WriteLine("MENU DE MODULOS");
+                Console.WriteLine("MENU DE MATERIAS");
                 Console.WriteLine("1– Listado General \n2– Consulta \n3– Agregar \n4- Modificar \n5- Eliminar \n6- Salir");
                 ConsoleKeyInfo opc = Console.ReadKey();
                 switch (opc.Key)
@@ -69,29 +72,27 @@ namespace UI.Consola
                 confir = char.Parse(Console.ReadLine());
                 confir = Char.ToUpper(confir);
             }
-
-
         }
 
         public void ListadoGeneral()
         {
 
             Console.Clear();
-            foreach (Modulo mod in ModuloNegocio.GetAll())
+            foreach (Materia mat in MateriaNegocio.GetAll())
             {
-                MostrarDatos(mod);
+                MostrarDatos(mat);
 
             }
 
-
         }
 
-        public void MostrarDatos(Modulo mod)
+        public void MostrarDatos(Materia mat)
         {
-
-            Console.WriteLine("\t\tDescripcion: {0}", mod.Descripcion);
+            Console.WriteLine("Materia: {0}", mat.ID);
+            Console.WriteLine("\t\tHoras semanales: {0}", mat.HSSemanales);
+            Console.WriteLine("\t\tHoras totales: {0}", mat.HSTotales);
+            Console.WriteLine("\t\tPlan al que pertenece:{0}", mat.IDPlan);
             Console.WriteLine();
-
         }
 
         public void Consulta()
@@ -99,14 +100,14 @@ namespace UI.Consola
             Console.Clear();
             try
             {
-                Console.Write("Ingrese la descripcion del modulo a consultar: ");
-                string descripcion = Console.ReadLine();
-                this.MostrarDatos(ModuloNegocio.GetOne(descripcion));
+                Console.Write("Ingrese el ID de la materia a consultar: ");
+                int ID = int.Parse(Console.ReadLine());
+                this.MostrarDatos(MateriaNegocio.GetOne(ID));
             }
             catch (FormatException)
             {
                 Console.WriteLine();
-                Console.WriteLine("La descripción ingresada no es válida");
+                Console.WriteLine("La ID ingresada debe ser un número entero");
             }
             catch (Exception e)
             {
@@ -126,16 +127,24 @@ namespace UI.Consola
             try
             {
                 Console.Clear();
-                Console.Write("Ingrese la descripción del modulo a modificar: ");
-                string descripcion = Console.ReadLine();
-                Modulo modulo = ModuloNegocio.GetOne(descripcion);
-                modulo.State = BusinessEntity.States.Modified;
-                ModuloNegocio.Save(modulo);
+                Console.Write("Ingrese el ID de la materia a modificar: ");
+                int ID = int.Parse(Console.ReadLine());
+                Materia mat = MateriaNegocio.GetOne(ID);
+                Console.Write("Ingrese descripcion: ");
+                mat.Descripcion = Console.ReadLine();
+                Console.Write("Ingrese horas semanales: ");
+                mat.HSSemanales = int.Parse(Console.ReadLine());
+                Console.Write("Ingrese horas totales: ");
+                mat.HSTotales = int.Parse(Console.ReadLine());
+                Console.Write("Ingrese ID del plan al que pertenece: ");
+                mat.IDPlan = int.Parse(Console.ReadLine());
+                mat.State = BusinessEntity.States.Modified;
+                MateriaNegocio.Save(mat);
             }
             catch (FormatException fe)
             {
                 Console.WriteLine();
-                Console.WriteLine("La descripción ingresada no es válida ");
+                Console.WriteLine("La ID ingresa debe ser un numero entero: ");
             }
             catch (Exception e)
             {
@@ -152,13 +161,19 @@ namespace UI.Consola
 
         public void Agregar()
         {
-            Modulo modulo = new Modulo();
-            Console.Write("Ingrese descripción: ");
-            modulo.Descripcion = Console.ReadLine();
-            modulo.State = BusinessEntity.States.New;
-            ModuloNegocio.Save(modulo);
+            Materia mat = new Materia();
+            Console.Write("Ingrese descripcion: ");
+            mat.Descripcion = Console.ReadLine();
+            Console.Write("Ingrese horas semanales: ");
+            mat.HSSemanales = int.Parse(Console.ReadLine());
+            Console.Write("Ingrese horas totales: ");
+            mat.HSTotales = int.Parse(Console.ReadLine());
+            Console.Write("Ingrese ID del plan al que pertence: ");
+            mat.IDPlan = int.Parse(Console.ReadLine());
+            mat.State = BusinessEntity.States.New;
+            MateriaNegocio.Save(mat);
             Console.WriteLine();
-            Console.WriteLine("DESCRIPCIÓN: {0}", modulo.Descripcion);
+            Console.WriteLine("ID: {0}", mat.ID);
         }
 
         public void Eliminar()
@@ -166,14 +181,14 @@ namespace UI.Consola
             try
             {
                 Console.Clear();
-                Console.WriteLine("Ingrese la descripción del modulo a eliminar: ");
-                string descripcion = Console.ReadLine();
-                ModuloNegocio.Delete(descripcion);
+                Console.WriteLine("Ingrese el ID de la materia a eliminar: ");
+                int ID = int.Parse(Console.ReadLine());
+                MateriaNegocio.Delete(ID);
             }
             catch (FormatException fe)
             {
                 Console.WriteLine();
-                Console.WriteLine("La descripción ingresada no es válida ");
+                Console.WriteLine("La ID ingresa debe ser un numero entero: ");
             }
             catch (Exception e)
             {
@@ -187,6 +202,7 @@ namespace UI.Consola
                 Console.ReadKey();
             }
         }
+
         #endregion
     }
 }

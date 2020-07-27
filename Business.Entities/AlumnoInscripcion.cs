@@ -14,34 +14,26 @@ namespace Business.Entities
 
         public int Condicion
         {
-            get => default;
-            set
-            {
-            }
+            get { return _Condicion; }
+            set { _Condicion = value; }
         }
 
         public int IDAlumno
         {
-            get => default;
-            set
-            {
-            }
+            get { return _IDAlumno; }
+            set { _IDAlumno = value; }
         }
 
         public int IDCurso
         {
-            get => default;
-            set
-            {
-            }
+            get { return _IDCurso; }
+            set { _IDCurso = value; }
         }
 
         public int Nota
         {
-            get => default;
-            set
-            {
-            }
+            get { return _Nota; }
+            set { _Nota = value;  }
         }
     }
 }

@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic.cs" />
-    <Compile Include="ComisionLogic.cs" />
     <Compile Include="ModuloLogic.cs" />
     <Compile Include="PlanLogic.cs" />
     <Compile Include="EspecialidadLogic.cs" />
