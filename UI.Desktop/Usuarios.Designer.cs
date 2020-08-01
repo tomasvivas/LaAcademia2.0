@@ -41,9 +41,9 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.usUsuarios = new System.Windows.Forms.ToolStrip();
-            this.tbsNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tbsEditar = new System.Windows.Forms.ToolStripButton();
-            this.tbsEliminar = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tcUsuarios.ContentPanel.SuspendLayout();
             this.tcUsuarios.TopToolStripPanel.SuspendLayout();
             this.tcUsuarios.SuspendLayout();
@@ -181,46 +181,43 @@
             // 
             this.usUsuarios.Dock = System.Windows.Forms.DockStyle.None;
             this.usUsuarios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tbsNuevo,
-            this.tbsEditar,
-            this.tbsEliminar});
-            this.usUsuarios.Location = new System.Drawing.Point(9, 0);
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
+            this.usUsuarios.Location = new System.Drawing.Point(3, 0);
             this.usUsuarios.Name = "usUsuarios";
-            this.usUsuarios.Size = new System.Drawing.Size(81, 25);
+            this.usUsuarios.Size = new System.Drawing.Size(232, 25);
             this.usUsuarios.TabIndex = 0;
             // 
-            // tbsNuevo
+            // tsbNuevo
             // 
-            this.tbsNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbsNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tbsNuevo.Image")));
-            this.tbsNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbsNuevo.Name = "tbsNuevo";
-            this.tbsNuevo.Size = new System.Drawing.Size(23, 22);
-            this.tbsNuevo.Text = "ToolStripButton1";
-            this.tbsNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.tbsNuevo.ToolTipText = "Nuevo";
-            this.tbsNuevo.Click += new System.EventHandler(this.tbsNuevo_Click);
+            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tsbNuevo.ToolTipText = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tbsNuevo_Click);
             // 
-            // tbsEditar
+            // tsbEditar
             // 
-            this.tbsEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbsEditar.Image = ((System.Drawing.Image)(resources.GetObject("tbsEditar.Image")));
-            this.tbsEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbsEditar.Name = "tbsEditar";
-            this.tbsEditar.Size = new System.Drawing.Size(23, 22);
-            this.tbsEditar.Text = "Editar";
-            this.tbsEditar.Click += new System.EventHandler(this.tbsEditar_Click);
+            this.tsbEditar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEditar.Image")));
+            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditar.Name = "tsbEditar";
+            this.tsbEditar.Size = new System.Drawing.Size(57, 22);
+            this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tbsEditar_Click);
             // 
-            // tbsEliminar
+            // tsbEliminar
             // 
-            this.tbsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tbsEliminar.Image")));
-            this.tbsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbsEliminar.Name = "tbsEliminar";
-            this.tbsEliminar.Size = new System.Drawing.Size(23, 22);
-            this.tbsEliminar.Text = "toolStripButton1";
-            this.tbsEliminar.ToolTipText = "Eliminar";
-            this.tbsEliminar.Click += new System.EventHandler(this.tbsEliminar_Click);
+            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
+            this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.ToolTipText = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tbsEliminar_Click);
             // 
             // Usuarios
             // 
@@ -259,8 +256,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewCheckBoxColumn habilitado;
-        private System.Windows.Forms.ToolStripButton tbsNuevo;
-        private System.Windows.Forms.ToolStripButton tbsEditar;
-        private System.Windows.Forms.ToolStripButton tbsEliminar;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
+        private System.Windows.Forms.ToolStripButton tsbEliminar;
     }
 }

@@ -21,9 +21,9 @@ namespace Business.Logic
             EspecialidadData = new EspecialidadAdapter();
         }
 
-        public Business.Entities.Especialidad GetOne(string descripcion)
+        public Business.Entities.Especialidad GetOne(int id)
         {
-            return EspecialidadData.GetOne(descripcion);
+            return EspecialidadData.GetOne(id);
         }
 
         public List<Especialidad> GetAll()
@@ -37,9 +37,9 @@ namespace Business.Logic
             EspecialidadData.Save(especialidad);
         }
 
-        public void Delete(string descripcion)
+        public void Delete(int id)
         {
-            EspecialidadData.Delete(descripcion);
+            EspecialidadData.Delete(id);
         }
     }
 }

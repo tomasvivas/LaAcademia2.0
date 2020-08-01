@@ -38,9 +38,9 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsPlanes = new System.Windows.Forms.ToolStrip();
-            this.tbsNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tbsEditar = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditar = new System.Windows.Forms.ToolStripButton();
+            this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tcPlanes.ContentPanel.SuspendLayout();
             this.tcPlanes.TopToolStripPanel.SuspendLayout();
             this.tcPlanes.SuspendLayout();
@@ -55,11 +55,11 @@
             // tcPlanes.ContentPanel
             // 
             this.tcPlanes.ContentPanel.Controls.Add(this.tlPlanes);
-            this.tcPlanes.ContentPanel.Size = new System.Drawing.Size(671, 221);
+            this.tcPlanes.ContentPanel.Size = new System.Drawing.Size(573, 151);
             this.tcPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcPlanes.Location = new System.Drawing.Point(0, 0);
             this.tcPlanes.Name = "tcPlanes";
-            this.tcPlanes.Size = new System.Drawing.Size(671, 246);
+            this.tcPlanes.Size = new System.Drawing.Size(573, 176);
             this.tcPlanes.TabIndex = 0;
             this.tcPlanes.Text = "toolStripContainer1";
             // 
@@ -81,7 +81,7 @@
             this.tlPlanes.RowCount = 2;
             this.tlPlanes.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlPlanes.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlPlanes.Size = new System.Drawing.Size(671, 221);
+            this.tlPlanes.Size = new System.Drawing.Size(573, 151);
             this.tlPlanes.TabIndex = 0;
             // 
             // dgvPlanes
@@ -102,7 +102,7 @@
             this.dgvPlanes.Name = "dgvPlanes";
             this.dgvPlanes.ReadOnly = true;
             this.dgvPlanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlanes.Size = new System.Drawing.Size(665, 186);
+            this.dgvPlanes.Size = new System.Drawing.Size(567, 116);
             this.dgvPlanes.TabIndex = 0;
             // 
             // id
@@ -126,7 +126,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(512, 195);
+            this.btnActualizar.Location = new System.Drawing.Point(414, 125);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
@@ -136,7 +136,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(593, 195);
+            this.btnSalir.Location = new System.Drawing.Point(495, 125);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -148,49 +148,46 @@
             // 
             this.tsPlanes.Dock = System.Windows.Forms.DockStyle.None;
             this.tsPlanes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tbsNuevo,
-            this.tbsEditar,
-            this.toolStripButton3});
+            this.tsbNuevo,
+            this.tsbEditar,
+            this.tsbEliminar});
             this.tsPlanes.Location = new System.Drawing.Point(3, 0);
             this.tsPlanes.Name = "tsPlanes";
-            this.tsPlanes.Size = new System.Drawing.Size(112, 25);
+            this.tsPlanes.Size = new System.Drawing.Size(232, 25);
             this.tsPlanes.TabIndex = 0;
             // 
-            // tbsNuevo
+            // tsbNuevo
             // 
-            this.tbsNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbsNuevo.Image = global::UI.Desktop.Properties.Resources.add_insert_plus_1588;
-            this.tbsNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbsNuevo.Name = "tbsNuevo";
-            this.tbsNuevo.Size = new System.Drawing.Size(23, 22);
-            this.tbsNuevo.Text = "toolStripButton1";
-            this.tbsNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
+            this.tsbNuevo.Image = global::UI.Desktop.Properties.Resources.add_insert_plus_1588;
+            this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNuevo.Name = "tsbNuevo";
+            this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
+            this.tsbNuevo.Text = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
-            // tbsEditar
+            // tsbEditar
             // 
-            this.tbsEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tbsEditar.Image = global::UI.Desktop.Properties.Resources.edit_modify_icon_icons_com_49882;
-            this.tbsEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbsEditar.Name = "tbsEditar";
-            this.tbsEditar.Size = new System.Drawing.Size(23, 22);
-            this.tbsEditar.Text = "toolStripButton2";
-            this.tbsEditar.Click += new System.EventHandler(this.tsbModificar_Click);
+            this.tsbEditar.Image = global::UI.Desktop.Properties.Resources.edit_modify_icon_icons_com_49882;
+            this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditar.Name = "tsbEditar";
+            this.tsbEditar.Size = new System.Drawing.Size(57, 22);
+            this.tsbEditar.Text = "Editar";
+            this.tsbEditar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
-            // toolStripButton3
+            // tsbEliminar
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::UI.Desktop.Properties.Resources.delete_delete_exit_1577;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.Click += new System.EventHandler(this.tsbEliminar_Click);
+            this.tsbEliminar.Image = global::UI.Desktop.Properties.Resources.delete_delete_exit_1577;
+            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
+            this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // Planes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 246);
+            this.ClientSize = new System.Drawing.Size(573, 176);
             this.Controls.Add(this.tcPlanes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Planes";
@@ -221,8 +218,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_especialidad;
 
-        private System.Windows.Forms.ToolStripButton tbsNuevo;
-        private System.Windows.Forms.ToolStripButton tbsEditar;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsbNuevo;
+        private System.Windows.Forms.ToolStripButton tsbEditar;
+        private System.Windows.Forms.ToolStripButton tsbEliminar;
     }
 }

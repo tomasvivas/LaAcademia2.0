@@ -21,10 +21,9 @@ namespace Data.Database
                 while (drEspecialidad.Read())
                 {
                     Especialidad esp = new Especialidad();
-                    esp.Descripcion = (string)drEspecialidad["descripcion"];
+                    esp.ID = (int)drEspecialidad["id_especialidad"];
+                    esp.Descripcion = (string)drEspecialidad["desc_especialidad"];
                     especialidad.Add(esp);
-
-
 
 
                 }
@@ -48,18 +47,19 @@ namespace Data.Database
             return especialidad;
         }
 
-        public Business.Entities.Especialidad GetOne(string Descripcion)
+        public Business.Entities.Especialidad GetOne(int ID)
         {
             Especialidad esp = new Especialidad();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdEspecialidad = new SqlCommand("select * from especialidades where descripcion=@descripcion", sqlConn);
-                cmdEspecialidad.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = Descripcion;
+                SqlCommand cmdEspecialidad = new SqlCommand("select * from especialidades where id_especialidad=@id", sqlConn);
+                cmdEspecialidad.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drEspecialidad = cmdEspecialidad.ExecuteReader();
                 if (drEspecialidad.Read())
                 {
-                    esp.Descripcion = (string)drEspecialidad["descripcion"];
+                    esp.ID = (int)drEspecialidad["id_especialidad"];
+                    esp.Descripcion = (string)drEspecialidad["desc_especialidad"];
                 }
 
                 drEspecialidad.Close();
@@ -85,8 +85,8 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdDelete = new SqlCommand("delete especialidades where descripcion=@descripcion", sqlConn);
-                cmdDelete.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = descripcion;
+                SqlCommand cmdDelete = new SqlCommand("delete especialidades where id_especialidad=@id", sqlConn);
+                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = descripcion;
                 cmdDelete.ExecuteNonQuery();
             }
             catch (Exception Ex)

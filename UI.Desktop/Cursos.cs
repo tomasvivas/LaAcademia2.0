@@ -16,5 +16,10 @@ namespace UI.Desktop
         {
             InitializeComponent();
         }
+
+        private void Cursos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

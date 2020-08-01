@@ -60,8 +60,8 @@ namespace UI.Desktop
         {
             if (this.dgvEspecialidades.SelectedRows != null)
             {
-                string descripcion = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).Descripcion;
-                EspecialidadDesktop ed = new EspecialidadDesktop(descripcion, ApplicationForm.ModoForm.Modificacion);
+                int id = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                EspecialidadDesktop ed = new EspecialidadDesktop(id, ApplicationForm.ModoForm.Modificacion);
                 ed.ShowDialog();
                 this.Listar();
             }
@@ -71,8 +71,8 @@ namespace UI.Desktop
         {
             if (this.dgvEspecialidades.SelectedRows != null)
             {
-                string descripcion = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).Descripcion;
-                EspecialidadDesktop ed = new EspecialidadDesktop(descripcion, ApplicationForm.ModoForm.Baja);
+                int id = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                EspecialidadDesktop ed = new EspecialidadDesktop(id, ApplicationForm.ModoForm.Baja);
                 ed.ShowDialog();
                 this.Listar();
             }

@@ -31,16 +31,17 @@ namespace UI.Desktop
         {
             Modo = modo;
         }
-        public EspecialidadDesktop(string descripcion, ModoForm modo) : this()
+        public EspecialidadDesktop(int id, ModoForm modo) : this()
         {
             Modo = modo;
             EspecialidadLogic especialidad = new EspecialidadLogic();
-            EspecialidadActual = especialidad.GetOne(descripcion);
+            EspecialidadActual = especialidad.GetOne(id);
             this.MapearDeDatos();
 
         }
         public override void MapearDeDatos()
         {
+            this.txtId.Text = this.EspecialidadActual.ID.ToString();
             this.txtDescripcion.Text = this.EspecialidadActual.Descripcion;
 
             if (Modo == ModoForm.Alta)
@@ -74,7 +75,6 @@ namespace UI.Desktop
 
             else if (Modo == ModoForm.Modificacion)
             {
-
                 EspecialidadActual.Descripcion = this.txtDescripcion.Text;
                 EspecialidadLogic nuevaespecialidad = new EspecialidadLogic();
                 nuevaespecialidad.Save(EspecialidadActual);
@@ -83,7 +83,8 @@ namespace UI.Desktop
             }
             else if (Modo == ModoForm.Baja)
             {
-               EspecialidadActual.Descripcion = "";
+               EspecialidadActual.ID = int.Parse("");
+                EspecialidadActual.Descripcion = "";
                EspecialidadLogic nuevaespecialidad = new EspecialidadLogic();
                 nuevaespecialidad.Save(EspecialidadActual);
             }
@@ -125,6 +126,8 @@ namespace UI.Desktop
         {
             this.Close();
         }
+
+       
     }
 
 }
