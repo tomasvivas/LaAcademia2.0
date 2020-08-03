@@ -14,6 +14,13 @@ namespace UI.Desktop
 {
     public partial class Login : ApplicationForm
     {
+        private Usuario _UsAct;
+        public Usuario UsuarioActual
+        {
+            get { return _UsAct; }
+            set { _UsAct = value; }
+        }
+
         public Login()
         {
             InitializeComponent();
@@ -29,10 +36,17 @@ namespace UI.Desktop
             int id = int.Parse(this.txtId.Text);
             string clave = this.txtClave.Text;
             UsuarioLogic usr = new UsuarioLogic();
-            usr.GetOne(id); 
-            if (usr != null)
+            UsuarioActual = usr.GetOne(id);
+            if (UsuarioActual != null)
             {
-                //abrir menu
+                if (UsuarioActual.Clave == clave)
+                {
+                    //abrir menu
+                }
+                else
+                {
+                    this.Notificar("La clave no coincide", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
