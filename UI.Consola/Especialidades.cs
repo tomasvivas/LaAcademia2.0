@@ -10,7 +10,7 @@ namespace UI.Consola
 {
     public class Especialidades
 
-    {
+    {/*
         private Business.Logic.EspecialidadLogic _EspecialidadNegocio;
 
         public Business.Logic.EspecialidadLogic EspecialidadNegocio
@@ -192,7 +192,7 @@ namespace UI.Consola
                 Console.ReadKey();
             }
         }
-        #endregion
+        #endregion */
     }
 
 }

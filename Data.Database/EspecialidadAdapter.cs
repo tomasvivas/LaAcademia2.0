@@ -80,13 +80,13 @@ namespace Data.Database
 
         }
 
-        public void Delete(string descripcion)
+        public void Delete(int id)
         {
             try
             {
                 this.OpenConnection();
                 SqlCommand cmdDelete = new SqlCommand("delete especialidades where id_especialidad=@id", sqlConn);
-                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = descripcion;
+                cmdDelete.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 cmdDelete.ExecuteNonQuery();
             }
             catch (Exception Ex)
@@ -153,7 +153,7 @@ namespace Data.Database
             }
             else if (esp.State == BusinessEntity.States.Deleted)
             {
-                this.Delete(esp.Descripcion);
+                this.Delete(esp.ID);
             }
             else if (esp.State == BusinessEntity.States.Modified)
             {
