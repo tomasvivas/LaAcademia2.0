@@ -60,14 +60,14 @@
             this.tlLogin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.tlLogin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tlLogin.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlLogin.Size = new System.Drawing.Size(288, 175);
+            this.tlLogin.Size = new System.Drawing.Size(431, 231);
             this.tlLogin.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 84);
+            this.label1.Location = new System.Drawing.Point(75, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -77,7 +77,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 116);
+            this.label2.Location = new System.Drawing.Point(53, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
@@ -88,16 +88,16 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(120, 8);
+            this.label3.Location = new System.Drawing.Point(198, 34);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 56);
+            this.label3.Size = new System.Drawing.Size(202, 42);
             this.label3.TabIndex = 2;
             this.label3.Text = "Bienvenido/a a la Academia\r\n\r\nPor favor ingrese su ID y contraseña";
             // 
             // txtId
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtId.Location = new System.Drawing.Point(150, 81);
+            this.txtId.Location = new System.Drawing.Point(249, 127);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(100, 20);
             this.txtId.TabIndex = 3;
@@ -105,7 +105,7 @@
             // txtClave
             // 
             this.txtClave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtClave.Location = new System.Drawing.Point(150, 113);
+            this.txtClave.Location = new System.Drawing.Point(249, 169);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(100, 20);
             this.txtClave.TabIndex = 4;
@@ -113,7 +113,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngresar.Location = new System.Drawing.Point(34, 140);
+            this.btnIngresar.Location = new System.Drawing.Point(90, 196);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 5;
@@ -124,7 +124,7 @@
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSalir.Location = new System.Drawing.Point(210, 140);
+            this.btnSalir.Location = new System.Drawing.Point(353, 196);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 6;
@@ -136,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(288, 175);
+            this.ClientSize = new System.Drawing.Size(431, 231);
             this.Controls.Add(this.tlLogin);
             this.Name = "Login";
             this.Text = "Ingresar";

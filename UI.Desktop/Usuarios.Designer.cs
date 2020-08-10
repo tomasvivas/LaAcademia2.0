@@ -188,6 +188,7 @@
             this.usUsuarios.Name = "usUsuarios";
             this.usUsuarios.Size = new System.Drawing.Size(232, 25);
             this.usUsuarios.TabIndex = 0;
+            this.usUsuarios.Click += new System.EventHandler(this.tbsNuevo_Click);
             // 
             // tsbNuevo
             // 
