@@ -31,9 +31,9 @@ namespace UI.Consola
                                 break;
                             }
                         case 3:
-                            {
-                                new Especialidades(new Business.Logic.EspecialidadLogic()).Menu();
-                                break;
+                        {
+                            /* new Especialidades(new Business.Logic.EspecialidadLogic()).Menu(); */
+                            break; 
                             }
                         case 4:
                             {

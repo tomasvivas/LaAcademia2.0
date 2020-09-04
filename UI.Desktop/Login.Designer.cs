@@ -87,12 +87,13 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(198, 34);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(210, 35);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 42);
+            this.label3.Size = new System.Drawing.Size(179, 39);
             this.label3.TabIndex = 2;
             this.label3.Text = "Bienvenido/a a la Academia\r\n\r\nPor favor ingrese su ID y contraseña";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtId
             // 
