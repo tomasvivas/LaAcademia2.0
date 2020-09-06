@@ -170,6 +170,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Menu";
             this.Text = "Menú";
+            this.Load += new System.EventHandler(this.Inicio_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

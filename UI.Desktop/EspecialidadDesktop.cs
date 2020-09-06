@@ -98,7 +98,7 @@ namespace UI.Desktop
         }
         public bool Validar(string descripcion)
         {
-            if (descripcion.Length != 0)
+            if (descripcion.Length > 0 && descripcion.Length < 50)
             {
                 return true;
             }
@@ -127,7 +127,10 @@ namespace UI.Desktop
             this.Close();
         }
 
-       
+        private void EspecialidadDesktop_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

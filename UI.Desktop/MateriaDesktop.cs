@@ -28,6 +28,7 @@ namespace UI.Desktop
         public MateriaDesktop(ModoForm modo) : this()
         {
             Modo = modo;
+            this.MapearPlanes();
         }
         public MateriaDesktop(int ID, ModoForm modo) : this()
         {
@@ -35,6 +36,7 @@ namespace UI.Desktop
             MateriaLogic materia = new MateriaLogic();
             MateriaActual = materia.GetOne(ID);
             this.MapearDeDatos();
+            this.MapearPlanes();
 
         }
 
@@ -51,7 +53,7 @@ namespace UI.Desktop
             this.txtDescripcion.Text = this.MateriaActual.Descripcion;
             this.txtHSSemanales.Text = this.MateriaActual.HSSemanales.ToString();
             this.txtHSTotales.Text = this.MateriaActual.HSTotales.ToString();
-            this.txtIDPlan.Text = this.MateriaActual.IDPlan.ToString();
+          
 
             if (Modo == ModoForm.Alta)
             {
@@ -64,6 +66,11 @@ namespace UI.Desktop
             else if (Modo == ModoForm.Baja)
             {
                 btnAceptar.Text = "Eliminar";
+                txtID.Enabled = false;
+                txtDescripcion.Enabled = false;
+                txtHSSemanales.Enabled = false;
+                txtHSTotales.Enabled = false;
+                txtIDPlan.Enabled = false;
             }
             else
             {
@@ -79,7 +86,7 @@ namespace UI.Desktop
                 MateriaNueva.Descripcion = this.txtDescripcion.Text;
                 MateriaNueva.HSSemanales = int.Parse(this.txtHSSemanales.Text);
                 MateriaNueva.HSTotales = int.Parse(this.txtHSTotales.Text);
-                MateriaNueva.IDPlan = int.Parse(this.txtIDPlan.Text);
+                MateriaNueva.IDPlan = Convert.ToInt32(txtIDPlan.SelectedValue.ToString());
                 MateriaActual = MateriaNueva;
                 MateriaLogic nuevamateria = new MateriaLogic();
                 nuevamateria.Save(MateriaActual);
@@ -91,7 +98,7 @@ namespace UI.Desktop
                 MateriaActual.Descripcion = this.txtDescripcion.Text;
                 MateriaActual.HSSemanales = int.Parse(this.txtHSSemanales.Text);
                 MateriaActual.HSTotales = int.Parse(this.txtHSTotales.Text);
-                MateriaActual.IDPlan = int.Parse(this.txtIDPlan.Text);
+                MateriaActual.IDPlan = Convert.ToInt32(txtIDPlan.SelectedValue.ToString());
 
                 MateriaLogic nuevamateria = new MateriaLogic();
                 nuevamateria.Save(MateriaActual);
@@ -111,13 +118,26 @@ namespace UI.Desktop
                 btnAceptar.Text = "Aceptar";
         }
 
+        public void MapearPlanes()
+        {
+            MateriaLogic ml = new MateriaLogic();
+            txtIDPlan.DataSource = ml.GetPlanes();
+            txtIDPlan.ValueMember = "ID";
+            txtIDPlan.DisplayMember = "Descripcion";
+            if (Modo != ModoForm.Alta)
+            {
+                txtIDPlan.SelectedValue = MateriaActual.IDPlan;
+
+            };
+        }
+
         public override void GuardarCambios()
         {
             this.MapearADatos();
         }
-        public bool Validar(string desc, int hssem, int hstot, int idplan)
+        public bool Validar(string desc, int hssem, int hstot)
         {
-            if (desc.Length != 0 & hssem >= 0 & hstot >= 0 & idplan != 0)
+            if (desc.Length != 0 & hssem >= 0 & hstot >= 0)
             {
                 return true;
             }
@@ -136,10 +156,10 @@ namespace UI.Desktop
             string desc = this.txtDescripcion.Text;
             int hssemanales = int.Parse(this.txtHSSemanales.Text);
             int hstotales = int.Parse(this.txtHSTotales.Text);
-            int idplan = int.Parse(this.txtIDPlan.Text);
+            
 
 
-            if (Validar(desc, hssemanales, hstotales, idplan) == true)
+            if (Validar(desc, hssemanales, hstotales) == true)
             {
                 this.GuardarCambios();
             }

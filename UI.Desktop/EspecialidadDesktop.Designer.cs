@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EspecialidadDesktop));
             this.tlpEspecialidadDesktop = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.tlpEspecialidadDesktop.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,16 @@
             this.tlpEspecialidadDesktop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpEspecialidadDesktop.Size = new System.Drawing.Size(305, 113);
             this.tlpEspecialidadDesktop.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(54, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "ID";
             // 
             // btnAceptar
             // 
@@ -107,16 +117,6 @@
             this.txtDescripcion.Size = new System.Drawing.Size(147, 20);
             this.txtDescripcion.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID";
-            // 
             // txtId
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -135,6 +135,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EspecialidadDesktop";
             this.Text = "Especialidades";
+            this.Load += new System.EventHandler(this.EspecialidadDesktop_Load);
             this.tlpEspecialidadDesktop.ResumeLayout(false);
             this.tlpEspecialidadDesktop.PerformLayout();
             this.ResumeLayout(false);

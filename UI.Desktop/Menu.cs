@@ -17,6 +17,20 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
+        private void Inicio_Shown(object sender, EventArgs e)
+        {
+            Login ingreso = new Login();
+            ingreso.ShowDialog();
+            if (ingreso.DialogResult != DialogResult.OK)
+            {
+                this.Dispose();
+            }
+            else
+            {
+                this.Opacity = 100;
+            }
+        }
+
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             Usuarios usr = new Usuarios();

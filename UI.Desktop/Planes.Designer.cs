@@ -32,15 +32,16 @@
             this.tcPlanes = new System.Windows.Forms.ToolStripContainer();
             this.tlPlanes = new System.Windows.Forms.TableLayoutPanel();
             this.dgvPlanes = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsPlanes = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descEspecialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcPlanes.ContentPanel.SuspendLayout();
             this.tcPlanes.TopToolStripPanel.SuspendLayout();
             this.tcPlanes.SuspendLayout();
@@ -94,7 +95,8 @@
             this.dgvPlanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.descripcion,
-            this.id_especialidad});
+            this.id_especialidad,
+            this.descEspecialidad});
             this.tlPlanes.SetColumnSpan(this.dgvPlanes, 2);
             this.dgvPlanes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPlanes.Location = new System.Drawing.Point(3, 3);
@@ -104,24 +106,6 @@
             this.dgvPlanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPlanes.Size = new System.Drawing.Size(567, 116);
             this.dgvPlanes.TabIndex = 0;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "Descripcion";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // id_especialidad
-            // 
-            this.id_especialidad.HeaderText = "Especialidad";
-            this.id_especialidad.Name = "id_especialidad";
-            this.id_especialidad.ReadOnly = true;
             // 
             // btnActualizar
             // 
@@ -153,7 +137,7 @@
             this.tsbEliminar});
             this.tsPlanes.Location = new System.Drawing.Point(3, 0);
             this.tsPlanes.Name = "tsPlanes";
-            this.tsPlanes.Size = new System.Drawing.Size(232, 25);
+            this.tsPlanes.Size = new System.Drawing.Size(201, 25);
             this.tsPlanes.TabIndex = 0;
             // 
             // tsbNuevo
@@ -182,6 +166,34 @@
             this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "ID";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // descripcion
+            // 
+            this.descripcion.DataPropertyName = "descPlan";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // id_especialidad
+            // 
+            this.id_especialidad.DataPropertyName = "IDEspecialidad";
+            this.id_especialidad.HeaderText = "ID Especialidad";
+            this.id_especialidad.Name = "id_especialidad";
+            this.id_especialidad.ReadOnly = true;
+            // 
+            // descEspecialidad
+            // 
+            this.descEspecialidad.DataPropertyName = "descEspecialidad";
+            this.descEspecialidad.HeaderText = "Especialidad";
+            this.descEspecialidad.Name = "descEspecialidad";
+            this.descEspecialidad.ReadOnly = true;
             // 
             // Planes
             // 
@@ -214,12 +226,13 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolStrip tsPlanes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_especialidad;
 
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_especialidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descEspecialidad;
     }
 }

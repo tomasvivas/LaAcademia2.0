@@ -20,59 +20,66 @@ namespace Data.Database
 
         public List<Materia> GetAll()
         {
-            List<Materia> mats = new List<Materia>();
+            List<Materia> materias = new List<Materia>();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdMaterias = new SqlCommand("select * from materias", sqlConn);
+                SqlCommand cmdMaterias = new SqlCommand("SELECT materias.id_materia, materias.desc_materia, materias.hs_semanales, " +
+                    "materias.hs_totales, materias.id_plan, planes.desc_plan FROM materias " +
+                    "INNER JOIN planes ON planes.id_plan = materias.id_plan ", sqlConn);
                 SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
+
                 while (drMaterias.Read())
                 {
-                    Materia mat = new Materia();
-                    mat.ID = (int)drMaterias["id_materia"];
-                    mat.HSSemanales = (int)drMaterias["hs_semanales"];
-                    mat.HSTotales = (int)drMaterias["hs_totales"];
-                    mat.IDPlan = (int)drMaterias["id_plan"];
-                    mat.Descripcion = (string)drMaterias["desc_materia"];
-                    mats.Add(mat);
+                    Materia mate = new Materia();
+                    mate.ID = (int)drMaterias["id_materia"];
+                    mate.Descripcion = (string)drMaterias["desc_materia"];
+                    mate.HSSemanales = (int)drMaterias["hs_semanales"];
+                    mate.HSTotales = (int)drMaterias["hs_totales"];
+                    mate.IDPlan = (int)drMaterias["id_plan"];
+                    mate.descPlan = (string)drMaterias["desc_plan"];
+
+                    materias.Add(mate);
                 }
                 drMaterias.Close();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de materias", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de materias", ex);
                 throw ExcepcionManejada;
-
             }
             finally
             {
                 this.CloseConnection();
             }
-            return mats;
+            return materias;
         }
 
-        public Business.Entities.Materia GetOne(int ID)
+        public Materia GetOne(int ID)
         {
             Materia mat = new Materia();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdMaterias = new SqlCommand("select * from materias where id_materia=@id", sqlConn);
+                SqlCommand cmdMaterias = new SqlCommand("SELECT materias.id_materia, materias.desc_materia, materias.hs_semanales, " +
+                    "materias.hs_totales, materias.id_plan, planes.desc_plan FROM materias " +
+                    "INNER JOIN planes ON planes.id_plan = materias.id_plan where materias.id_materia = @id; ", sqlConn);
                 cmdMaterias.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
                 if (drMaterias.Read())
                 {
                     mat.ID = (int)drMaterias["id_materia"];
+                    mat.Descripcion = (string)drMaterias["desc_materia"];
                     mat.HSSemanales = (int)drMaterias["hs_semanales"];
                     mat.HSTotales = (int)drMaterias["hs_totales"];
                     mat.IDPlan = (int)drMaterias["id_plan"];
-                    mat.Descripcion = (string)drMaterias["desc_materia"];
+
                 }
                 drMaterias.Close();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar datos de materias", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar la materia", ex);
                 throw ExcepcionManejada;
             }
             finally
@@ -80,7 +87,24 @@ namespace Data.Database
                 this.CloseConnection();
             }
             return mat;
+        }
 
+        public List<Plan> GetPlanes()
+        {
+            List<Plan> planes = new List<Plan>();
+            this.OpenConnection();
+            SqlCommand cmdPlanes = new SqlCommand("SELECT id_plan, desc_plan FROM planes", sqlConn);
+            SqlDataReader drPlanes = cmdPlanes.ExecuteReader();
+
+            while (drPlanes.Read())
+            {
+                Plan pl = new Plan();
+                pl.ID = (int)drPlanes["id_plan"];
+                pl.Descripcion = (string)drPlanes["desc_plan"];
+                planes.Add(pl);
+            }
+
+            return planes;
         }
 
         public void Delete(int ID)

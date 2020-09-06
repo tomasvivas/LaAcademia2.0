@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlanDesktop));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +37,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cbEspecialidades = new System.Windows.Forms.ComboBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,21 +65,12 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(304, 202);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // txtID
-            // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtID.Location = new System.Drawing.Point(161, 15);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(103, 20);
-            this.txtID.TabIndex = 0;
-            // 
             // txtDescripcion
             // 
             this.txtDescripcion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtDescripcion.Location = new System.Drawing.Point(149, 65);
+            this.txtDescripcion.Location = new System.Drawing.Point(155, 65);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(128, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(116, 20);
             this.txtDescripcion.TabIndex = 1;
             // 
             // label1
@@ -142,6 +133,15 @@
             this.cbEspecialidades.Name = "cbEspecialidades";
             this.cbEspecialidades.Size = new System.Drawing.Size(120, 21);
             this.cbEspecialidades.TabIndex = 8;
+            // 
+            // txtID
+            // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.Location = new System.Drawing.Point(153, 15);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(119, 20);
+            this.txtID.TabIndex = 0;
             // 
             // PlanDesktop
             // 
