@@ -1,19 +1,29 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UI.Web.Site" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.Site" %>
 
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html>
 <head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Academia</title>
-</head>
+    <link href="CSS/Main.css" rel="stylesheet" />
+    </head>
 <body>
-    <form id="bodyForm"runat="server">
-      <asp:Menu runat="server" ID="menu" DataSourceID="SiteMapDataSource">
-      </asp:Menu>  
-      <asp:SiteMapDataSource ID="SiteMapaDataSource" runat="server" />
-        <div>
+    <form id="bodyForm" runat="server">
+        <div id="navbar">
+            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SISTEMA ACADEMIA</h1>
+            <ul>
+      
+                <li><a href="Usuarios.aspx">Usuarios</a></li>
+                <li><a href="Planes.aspx">Planes</a></li>
+                <li><a href="Especialidades.aspx">Especialidades</a></li>
+            </ul>
+        </div>
+        <section id="bodyContent">
             <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
             </asp:ContentPlaceHolder>
-        </div>  
+        </section>
     </form>
 </body>
 </html>
+

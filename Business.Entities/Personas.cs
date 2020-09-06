@@ -8,7 +8,9 @@ namespace Business.Entities
     public class Personas : BusinessEntity
     {   public enum TipoPersonas
         {
-
+            Profesor,
+            Administrador,
+            Alumno
         }
 
 
@@ -70,10 +72,12 @@ namespace Business.Entities
             set { _Telefono = value; }
         }
 
+        TipoPersonas _TipoPersonas;
+
         public TipoPersonas TipoPersona
         {
-            get { return _TipoPersona; }
-            set { _TipoPersona = value; }
+            get { return _TipoPersonas; }
+            set { _TipoPersonas = value; }
         }
     }
 }

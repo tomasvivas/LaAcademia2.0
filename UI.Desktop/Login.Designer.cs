@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             this.tlLogin.Controls.Add(this.label1, 0, 1);
             this.tlLogin.Controls.Add(this.label2, 0, 2);
             this.tlLogin.Controls.Add(this.label3, 1, 0);
-            this.tlLogin.Controls.Add(this.txtId, 1, 1);
+            this.tlLogin.Controls.Add(this.txtUsuario, 1, 1);
             this.tlLogin.Controls.Add(this.txtClave, 1, 2);
             this.tlLogin.Controls.Add(this.btnIngresar, 0, 3);
             this.tlLogin.Controls.Add(this.btnSalir, 1, 3);
@@ -67,11 +67,11 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 131);
+            this.label1.Location = new System.Drawing.Point(62, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID";
+            this.label1.Text = "Usuario";
             // 
             // label2
             // 
@@ -95,13 +95,13 @@
             this.label3.Text = "Bienvenido/a a la Academia\r\n\r\nPor favor ingrese su ID y contraseña";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // txtId
+            // txtUsuario
             // 
-            this.txtId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtId.Location = new System.Drawing.Point(249, 127);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 3;
+            this.txtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsuario.Location = new System.Drawing.Point(249, 127);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 3;
             // 
             // txtClave
             // 
@@ -154,7 +154,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnSalir;

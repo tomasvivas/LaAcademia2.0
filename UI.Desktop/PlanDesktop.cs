@@ -28,6 +28,7 @@ namespace UI.Desktop
         public PlanDesktop(ModoForm modo) : this()
         {
             Modo = modo;
+            this.MapearEspecialidades();
         }
 
         public PlanDesktop(int ID, ModoForm modo) : this()
@@ -36,6 +37,7 @@ namespace UI.Desktop
             PlanLogic plan = new PlanLogic();
             PlanActual = plan.GetOne(ID);
             this.MapearDeDatos();
+            this.MapearEspecialidades();
 
         }
 
@@ -46,9 +48,9 @@ namespace UI.Desktop
 
         public override void MapearDeDatos()
         {
-            this.txtID.Text = this.PlanActual.ID.ToString();
-            this.txtDescripcion.Text = this.PlanActual.Descripcion;
-            this.txtIdEspecialidad.Text = this.PlanActual.IDEspecialidad.ToString();
+
+            txtID.Text = this.PlanActual.ID.ToString();
+            txtDescripcion.Text = this.PlanActual.Descripcion;
 
             if (Modo == ModoForm.Alta)
             {
@@ -61,6 +63,10 @@ namespace UI.Desktop
             else if (Modo == ModoForm.Baja)
             {
                 btnAceptar.Text = "Eliminar";
+                txtID.Enabled = false;
+                txtDescripcion.Enabled = false;
+                cbEspecialidades.Enabled = false;
+
             }
             else
             {
@@ -70,21 +76,29 @@ namespace UI.Desktop
 
         public override void MapearADatos()
         {
+
             if (Modo == ModoForm.Alta)
             {
                 Plan PlanNuevo = new Plan();
+
+
                 PlanNuevo.Descripcion = this.txtDescripcion.Text;
-                PlanNuevo.IDEspecialidad = int.Parse(this.txtIdEspecialidad.Text); 
-                PlanActual = PlanNuevo;
+                PlanNuevo.IDEspecialidad = Convert.ToInt32(this.cbEspecialidades.SelectedValue.ToString());
                 PlanLogic nuevoplan = new PlanLogic();
+                PlanActual = PlanNuevo;
+                PlanNuevo.State = BusinessEntity.States.New;
                 nuevoplan.Save(PlanActual);
+
             }
 
             else if (Modo == ModoForm.Modificacion)
             {
+
                 PlanActual.Descripcion = this.txtDescripcion.Text;
-                PlanActual.IDEspecialidad = int.Parse(this.txtIdEspecialidad.Text);
+                PlanActual.IDEspecialidad = Convert.ToInt32(this.cbEspecialidades.SelectedValue.ToString());
+
                 PlanLogic nuevoplan = new PlanLogic();
+                PlanActual.State = BusinessEntity.States.Modified;
                 nuevoplan.Save(PlanActual);
 
 
@@ -92,14 +106,24 @@ namespace UI.Desktop
             else if (Modo == ModoForm.Baja)
             {
 
-                PlanActual.Descripcion = "";
-                PlanActual.IDEspecialidad = int.Parse("");
                 PlanLogic nuevoplan = new PlanLogic();
+                PlanActual.State = BusinessEntity.States.Deleted;
                 nuevoplan.Save(PlanActual);
-
             }
             else
                 btnAceptar.Text = "Aceptar";
+        }
+
+        public void MapearEspecialidades()
+        {
+            PlanLogic p1 = new PlanLogic();
+            cbEspecialidades.DataSource = p1.GetEspecialidad();
+            cbEspecialidades.ValueMember = "ID";
+            cbEspecialidades.DisplayMember = "Descripcion";
+            if (Modo != ModoForm.Alta)
+            {
+                cbEspecialidades.SelectedValue = PlanActual.IDEspecialidad;
+            }
         }
 
         public override void GuardarCambios()
@@ -107,9 +131,9 @@ namespace UI.Desktop
             this.MapearADatos();
         }
 
-        public bool Validar(string desc, int idesp)
+        public bool Validar(string desc)
         {
-            if (desc != null && idesp != 0)
+            if (desc.Length > 0 & desc.Length < 50)
             {
                 return true;
             }
@@ -124,10 +148,9 @@ namespace UI.Desktop
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             string desc = this.txtDescripcion.Text;
-            int idesp = int.Parse(this.txtIdEspecialidad.Text); 
+            
 
-
-            if (Validar(desc,idesp) == true)
+            if (Validar(desc) == true)
             {
                 this.GuardarCambios();
             }

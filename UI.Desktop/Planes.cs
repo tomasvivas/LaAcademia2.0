@@ -51,24 +51,18 @@ namespace UI.Desktop
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            if (this.dgvPlanes.SelectedRows != null)
-            {
-                int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
-                PlanDesktop plan = new PlanDesktop(ID, ApplicationForm.ModoForm.Baja);
-                plan.ShowDialog();
-                this.Listar();
-            }
+            int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+            PlanDesktop formPlanes = new PlanDesktop(ID, ApplicationForm.ModoForm.Baja);
+            formPlanes.ShowDialog();
+            this.Listar();
         }
 
         private void tsbModificar_Click(object sender, EventArgs e)
         {
-            if (this.dgvPlanes.SelectedRows != null)
-            {
-                int ID = ((Business.Entities.Usuario)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
-                PlanDesktop plan = new PlanDesktop(ID, ApplicationForm.ModoForm.Modificacion);
-                plan.ShowDialog();
-                this.Listar();
-            }
+            int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
+            PlanDesktop formPlanes = new PlanDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+            formPlanes.ShowDialog();
+            this.Listar();
         }
     }
 }

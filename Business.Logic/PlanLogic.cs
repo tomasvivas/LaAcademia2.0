@@ -30,7 +30,12 @@ namespace Business.Logic
             return PlanData.GetAll();
         }
 
-        public void Save(Business.Entities.Plan plan)
+        public List<Especialidad> GetEspecialidad()
+        {
+            return PlanData.GetEspecialidad();
+        }
+
+        public void Save(Plan plan)
         {
             PlanData.Save(plan);
         }

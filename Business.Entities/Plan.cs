@@ -9,6 +9,7 @@ namespace Business.Entities
     {
         private string _Descripcion;
         private int _IDEspecialidad;
+        public string _DescEspecialidad;
 
         public string Descripcion
         {
@@ -20,6 +21,14 @@ namespace Business.Entities
         {
             get { return _IDEspecialidad; }
             set { _IDEspecialidad = value; }
+        }
+
+        
+
+        public string DescEspecialidad
+        {
+            get { return _DescEspecialidad; }
+            set { _DescEspecialidad = value; }
         }
     }
 }

@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace UI.Web
+namespace WebApplication1
 {
 
 
@@ -15,22 +15,13 @@ namespace UI.Web
     {
 
         /// <summary>
-        /// Control menu.
+        /// Control bodyForm.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu menu;
-
-        /// <summary>
-        /// Control SiteMapaDataSource.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapaDataSource;
+        protected global::System.Web.UI.HtmlControls.HtmlForm bodyForm;
 
         /// <summary>
         /// Control bodyContentPlaceHolder.

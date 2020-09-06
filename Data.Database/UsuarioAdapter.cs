@@ -130,6 +130,43 @@ namespace Data.Database
             
         }
 
+        public Business.Entities.Usuario GetOne(string usuario)
+        {
+            Usuario usr = new Usuario();
+            try
+            {
+                this.OpenConnection();
+
+                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios where nombre_usuario = @nu", sqlConn);
+                cmdUsuarios.Parameters.Add("@nu", SqlDbType.VarChar).Value = usuario;
+                SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
+
+                if (drUsuarios.Read())
+                {
+                    usr.ID = (int)drUsuarios["id_usuario"];
+                    usr.NombreUsuario = (string)drUsuarios["nombre_usuario"];
+                    usr.Clave = (string)drUsuarios["clave"];
+                    usr.Habilitado = (bool)drUsuarios["habilitado"];
+                    usr.Nombre = (string)drUsuarios["nombre"];
+                    usr.Apellido = (string)drUsuarios["apellido"];
+                    usr.Email = (string)drUsuarios["email"];
+
+
+                }
+                drUsuarios.Close();
+            }
+            catch (Exception ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de usuarios", ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+            return usr;
+        }
+
         public void Delete(int ID)
         {
             try

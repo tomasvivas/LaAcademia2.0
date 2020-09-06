@@ -31,29 +31,24 @@ namespace UI.Desktop
 
         }
 
+        
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(this.txtId.Text);
-            string clave = this.txtClave.Text;
-            UsuarioLogic usr = new UsuarioLogic();
-            UsuarioActual = usr.GetOne(id);
-            if (UsuarioActual != null)
+            UsuarioLogic user = new UsuarioLogic();
+            Usuario usuarioActual = new Usuario();
+            usuarioActual = user.GetOne(txtUsuario.Text); 
+
+            if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
             {
-                if (UsuarioActual.Clave == clave)
-                {
-                    //abrir menu
-                    Menu menu = new Menu();
-                    menu.Show();
-                }
-                else
-                {
-                    this.Notificar("La clave no coincide", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                this.Notificar("Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             else
             {
-                this.Notificar("El usuario no existe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.DialogResult = DialogResult.OK;
+                this.Dispose();
             }
+
 
         }
 
