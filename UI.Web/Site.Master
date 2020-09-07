@@ -15,8 +15,7 @@
             <ul>
       
                 <li><a href="Usuarios.aspx">Usuarios</a></li>
-                <li><a href="Planes.aspx">Planes</a></li>
-                <li><a href="Especialidades.aspx">Especialidades</a></li>
+                
             </ul>
         </div>
         <section id="bodyContent">
