@@ -72,7 +72,7 @@
             // 
             this.txtClave.BackColor = System.Drawing.SystemColors.Control;
             this.txtClave.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtClave.Location = new System.Drawing.Point(121, 80);
+            this.txtClave.Location = new System.Drawing.Point(109, 98);
             this.txtClave.Name = "txtClave";
             this.txtClave.Size = new System.Drawing.Size(115, 20);
             this.txtClave.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             this.txtUsuario.BackColor = System.Drawing.SystemColors.Control;
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtUsuario.Location = new System.Drawing.Point(120, 111);
+            this.txtUsuario.Location = new System.Drawing.Point(108, 71);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(116, 20);
             this.txtUsuario.TabIndex = 3;
@@ -127,9 +127,9 @@
             this.chkClave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.chkClave.Location = new System.Drawing.Point(242, 112);
             this.chkClave.Name = "chkClave";
-            this.chkClave.Size = new System.Drawing.Size(90, 17);
+            this.chkClave.Size = new System.Drawing.Size(89, 17);
             this.chkClave.TabIndex = 7;
-            this.chkClave.Text = "Mostrar clave";
+            this.chkClave.Text = "Ocultar clave";
             this.chkClave.UseVisualStyleBackColor = false;
             this.chkClave.CheckedChanged += new System.EventHandler(this.chkClave_CheckedChanged);
             // 
@@ -137,7 +137,9 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtClave);
             this.panel1.Controls.Add(this.btnIngresar);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.label2);
@@ -153,8 +155,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(351, 211);
             this.Controls.Add(this.chkClave);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.txtClave);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Login";

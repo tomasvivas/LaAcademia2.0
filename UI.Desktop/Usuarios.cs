@@ -72,7 +72,7 @@ namespace UI.Desktop
             {
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Baja);
-                ud.ShowDialog();
+                
                 this.Listar();              
             }
         }

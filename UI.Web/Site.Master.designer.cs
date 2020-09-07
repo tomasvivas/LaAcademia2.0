@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1
+namespace UI.Web
 {
 
 
-    public partial class Site
+    public partial class SiteMaster
     {
 
         /// <summary>

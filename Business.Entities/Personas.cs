@@ -22,7 +22,7 @@ namespace Business.Entities
         private int _Legajo;
         private string _Nombre;
         private string _Telefono;
-        private TipoPersonas _TipoPersona;
+        
 
         public string Apellido
         {
@@ -72,7 +72,7 @@ namespace Business.Entities
             set { _Telefono = value; }
         }
 
-        TipoPersonas _TipoPersonas;
+        private TipoPersonas _TipoPersonas;  
 
         public TipoPersonas TipoPersona
         {

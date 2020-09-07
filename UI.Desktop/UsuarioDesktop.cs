@@ -111,13 +111,8 @@ namespace UI.Desktop
             }
             else if (Modo == ModoForm.Baja)
             {
-                UsuarioActual.Habilitado = false;
-                UsuarioActual.Nombre = "";
-                UsuarioActual.Apellido = "";
-                UsuarioActual.Email = "";
-                UsuarioActual.Clave = "";
-                UsuarioActual.NombreUsuario = "";
                 UsuarioLogic nuevousuario = new UsuarioLogic();
+                UsuarioActual.State = BusinessEntity.States.Deleted;
                 nuevousuario.Save(UsuarioActual);
             }
             else
