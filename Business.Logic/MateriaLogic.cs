@@ -31,6 +31,11 @@ namespace Business.Logic
             return MateriaData.GetAll();
         }
 
+        public List<Plan> GetPlanes()
+        {
+            return MateriaData.GetPlanes();
+        }
+
         public void Save(Business.Entities.Materia mat)
         {
             MateriaData.Save(mat);

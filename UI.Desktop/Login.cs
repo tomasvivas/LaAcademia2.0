@@ -40,7 +40,7 @@ namespace UI.Desktop
 
             if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
             {
-                this.Notificar("Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Notificar("El usuario y/o la contraseña son incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
@@ -57,9 +57,19 @@ namespace UI.Desktop
             this.Dispose();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void chkClave_CheckedChanged(object sender, EventArgs e)
         {
+            if (txtClave.PasswordChar == '\0')
+            {
+                txtClave.PasswordChar = '*';
+            }
+            else
+            {
+                txtClave.PasswordChar = '\0';
+            }
 
         }
+
+        
     }
 }
