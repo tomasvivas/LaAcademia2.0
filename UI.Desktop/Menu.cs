@@ -63,8 +63,13 @@ namespace UI.Desktop
 
         private void btnComisiones_Click(object sender, EventArgs e)
         {
-           /* Comisiones comi = new Comisiones(); 
-             comi.Show(); */
+            /* Comisiones comi = new Comisiones(); 
+              comi.Show(); */
+        }
+
+        private void cmbBoxMenu_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
         }
     }
-}
+    }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -43,6 +44,8 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmbBoxMenu = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -76,6 +79,7 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.cmbBoxMenu, 5, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -240,6 +244,28 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Bienvenidos al menu";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // cmbBoxMenu
+            // 
+            this.cmbBoxMenu.FormattingEnabled = true;
+            this.cmbBoxMenu.Items.AddRange(new object[] {
+            "Usuarios",
+            "Especialidades",
+            "Materias",
+            "Planes",
+            "Cursos",
+            "Comisiones"});
+            this.cmbBoxMenu.Location = new System.Drawing.Point(471, 143);
+            this.cmbBoxMenu.Name = "cmbBoxMenu";
+            this.cmbBoxMenu.Size = new System.Drawing.Size(150, 21);
+            this.cmbBoxMenu.TabIndex = 13;
+            this.cmbBoxMenu.Text = "Elija su opción del menu";
+            this.cmbBoxMenu.SelectionChangeCommitted += new System.EventHandler(this.cmbBoxMenu_SelectionChangeCommitted);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,5 +304,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cmbBoxMenu;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
