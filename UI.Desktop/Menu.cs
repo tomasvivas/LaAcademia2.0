@@ -24,6 +24,7 @@ namespace UI.Desktop
             if (ingreso.DialogResult != DialogResult.OK)
             {
                 this.Dispose();
+                
             }
             else
             {
@@ -69,8 +70,12 @@ namespace UI.Desktop
 
         private void cmbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string opc = cmbMenu.SelectedItem.ToString();
+
 
         }
+
+        
     } 
 }
 

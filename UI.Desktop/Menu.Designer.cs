@@ -92,6 +92,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(704, 421);
             this.tableLayoutPanel1.TabIndex = 0;
+
             // 
             // btnUsuarios
             // 
