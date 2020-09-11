@@ -188,7 +188,6 @@
             this.usUsuarios.Name = "usUsuarios";
             this.usUsuarios.Size = new System.Drawing.Size(232, 25);
             this.usUsuarios.TabIndex = 0;
-            this.usUsuarios.Click += new System.EventHandler(this.tbsNuevo_Click);
             // 
             // tsbNuevo
             // 
@@ -199,7 +198,7 @@
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.tsbNuevo.ToolTipText = "Nuevo";
-            this.tsbNuevo.Click += new System.EventHandler(this.tbsNuevo_Click);
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
@@ -208,7 +207,7 @@
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(57, 22);
             this.tsbEditar.Text = "Editar";
-            this.tsbEditar.Click += new System.EventHandler(this.tbsEditar_Click);
+            this.tsbEditar.Click += new System.EventHandler(this.tsbEditar_Click);
             // 
             // tsbEliminar
             // 
@@ -218,7 +217,7 @@
             this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.ToolTipText = "Eliminar";
-            this.tsbEliminar.Click += new System.EventHandler(this.tbsEliminar_Click);
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // Usuarios
             // 

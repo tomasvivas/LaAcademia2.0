@@ -230,7 +230,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@apellido", SqlDbType.VarChar, 50).Value = usuario.Apellido;
                 cmdSave.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = usuario.Email;
                 usuario.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
-                cmdSave.ExecuteNonQuery();
+                
             }
             catch (Exception Ex)
             {

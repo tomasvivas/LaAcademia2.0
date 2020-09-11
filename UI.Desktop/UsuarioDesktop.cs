@@ -18,13 +18,16 @@ namespace UI.Desktop
 {
     public partial class UsuarioDesktop : ApplicationForm
     {
+
+        #region Propiedades
         private Usuario _UsAct;
         public Usuario UsuarioActual
         {
             get { return _UsAct; }
             set { _UsAct = value; }
         }
-
+        #endregion
+        #region Constructores
         public UsuarioDesktop()
         {
             InitializeComponent();
@@ -41,8 +44,8 @@ namespace UI.Desktop
             this.MapearDeDatos();
             
         }
+        #endregion
 
-    
 
         private void UsuarioDesktop_Load(object sender, EventArgs e)
         {
@@ -76,12 +79,13 @@ namespace UI.Desktop
                 btnAceptar.Text = "Aceptar";
             }
         }
+
         public override void MapearADatos()
         {
+
             if (Modo == ModoForm.Alta)
             {
                 Usuario UsuarioNuevo = new Usuario();
-
 
                 UsuarioNuevo.Habilitado = this.chkHabilitado.Checked;
                 UsuarioNuevo.Nombre = this.txtNombre.Text;
@@ -91,12 +95,12 @@ namespace UI.Desktop
                 UsuarioNuevo.NombreUsuario = this.txtUsuario.Text;
                 UsuarioActual = UsuarioNuevo;
                 UsuarioLogic nuevousuario = new UsuarioLogic();
+                UsuarioNuevo.State = BusinessEntity.States.New;
                 nuevousuario.Save(UsuarioActual);
             }
 
             else if (Modo == ModoForm.Modificacion)
             {
-
                 UsuarioActual.Habilitado = this.chkHabilitado.Checked;
                 UsuarioActual.Nombre = this.txtNombre.Text;
                 UsuarioActual.Apellido = this.txtApellido.Text;
@@ -105,9 +109,8 @@ namespace UI.Desktop
                 UsuarioActual.NombreUsuario = this.txtUsuario.Text;
 
                 UsuarioLogic nuevousuario = new UsuarioLogic();
+                UsuarioActual.State = BusinessEntity.States.Modified;
                 nuevousuario.Save(UsuarioActual);
-
-
             }
             else if (Modo == ModoForm.Baja)
             {

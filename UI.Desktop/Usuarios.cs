@@ -43,19 +43,15 @@ namespace UI.Desktop
             this.Close();
         }
 
-        private void tcUsuarios_RightToolStripPanel_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void tbsNuevo_Click(object sender, EventArgs e)
+        private void tsbNuevo_Click(object sender, EventArgs e)
         {
             UsuarioDesktop ud = new UsuarioDesktop(ApplicationForm.ModoForm.Alta);
             ud.ShowDialog();
             this.Listar();
         }
 
-        private void tbsEditar_Click(object sender, EventArgs e)
+        private void tsbEditar_Click(object sender, EventArgs e)
         {
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Modificacion);
@@ -64,13 +60,14 @@ namespace UI.Desktop
             
         }
 
-        private void tbsEliminar_Click(object sender, EventArgs e)
+        private void tsbEliminar_Click(object sender, EventArgs e)
         {
-                int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
-                UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Baja);
-                ud.ShowDialog();
-                this.Listar();              
-            
+            int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
+            UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Baja);
+            ud.ShowDialog();
+            this.Listar();
+
         }
+
     }
 }
