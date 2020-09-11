@@ -103,11 +103,11 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("UPDATE planes SET desc_plan = @descripcion, id_especialidad = @id_especialiadad, " +           
+                SqlCommand cmdSave = new SqlCommand("UPDATE planes SET desc_plan = @desc_plan, id_especialidad = @id_especialidad " +           
                     "WHERE id_plan = @id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = plan.ID;
                 cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = plan.Descripcion;
-                cmdSave.Parameters.Add("@id_especiliadad", SqlDbType.Int).Value = plan.IDEspecialidad;
+                cmdSave.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = plan.IDEspecialidad;
                 cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)
@@ -132,7 +132,7 @@ namespace Data.Database
                 cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = plan.Descripcion;
                 cmdSave.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = plan.IDEspecialidad;
                 plan.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
-                cmdSave.ExecuteNonQuery();
+
             }
             catch (Exception Ex)
             {

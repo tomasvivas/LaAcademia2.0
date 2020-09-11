@@ -14,12 +14,16 @@ namespace UI.Desktop
 {
     public partial class PlanDesktop : ApplicationForm
     {
+        #region Propiedades
         private Plan _PlanAct;
         public Plan PlanActual
         {
             get { return _PlanAct; }
             set { _PlanAct = value; }
         }
+        #endregion
+
+        #region Constructores
         public PlanDesktop()
         {
             InitializeComponent();
@@ -40,12 +44,13 @@ namespace UI.Desktop
             this.MapearEspecialidades();
 
         }
-
+        #endregion
         private void PlanDesktop_Load(object sender, EventArgs e)
         {
 
         }
 
+        #region Metodos
         public override void MapearDeDatos()
         {
 
@@ -81,31 +86,24 @@ namespace UI.Desktop
             {
                 Plan PlanNuevo = new Plan();
 
-
                 PlanNuevo.Descripcion = this.txtDescripcion.Text;
                 PlanNuevo.IDEspecialidad = Convert.ToInt32(this.cbEspecialidades.SelectedValue.ToString());
                 PlanLogic nuevoplan = new PlanLogic();
                 PlanActual = PlanNuevo;
                 PlanNuevo.State = BusinessEntity.States.New;
                 nuevoplan.Save(PlanActual);
-
             }
 
             else if (Modo == ModoForm.Modificacion)
             {
-
                 PlanActual.Descripcion = this.txtDescripcion.Text;
                 PlanActual.IDEspecialidad = Convert.ToInt32(this.cbEspecialidades.SelectedValue.ToString());
-
                 PlanLogic nuevoplan = new PlanLogic();
                 PlanActual.State = BusinessEntity.States.Modified;
                 nuevoplan.Save(PlanActual);
-
-
             }
             else if (Modo == ModoForm.Baja)
             {
-
                 PlanLogic nuevoplan = new PlanLogic();
                 PlanActual.State = BusinessEntity.States.Deleted;
                 nuevoplan.Save(PlanActual);
@@ -162,5 +160,6 @@ namespace UI.Desktop
         {
             this.Close();
         }
+        #endregion
     }
 }
