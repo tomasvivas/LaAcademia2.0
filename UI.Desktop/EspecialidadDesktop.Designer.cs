@@ -113,7 +113,6 @@
             this.txtDescripcion.BackColor = System.Drawing.Color.White;
             this.txtDescripcion.Location = new System.Drawing.Point(142, 44);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ReadOnly = true;
             this.txtDescripcion.Size = new System.Drawing.Size(147, 20);
             this.txtDescripcion.TabIndex = 0;
             // 

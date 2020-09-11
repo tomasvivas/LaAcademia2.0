@@ -17,20 +17,26 @@ namespace UI.Desktop
 {
     public partial class EspecialidadDesktop : ApplicationForm
     {
+        #region Propiedades
         private Especialidad _EspAct;
         public Especialidad EspecialidadActual
         {
             get { return _EspAct; }
             set { _EspAct = value; }
         }
+        #endregion
+
+        #region Constructores
         public EspecialidadDesktop()
         {
             InitializeComponent();
         }
+
         public EspecialidadDesktop(ModoForm modo) : this()
         {
             Modo = modo;
         }
+
         public EspecialidadDesktop(int id, ModoForm modo) : this()
         {
             Modo = modo;
@@ -39,6 +45,10 @@ namespace UI.Desktop
             this.MapearDeDatos();
 
         }
+
+        #endregion
+
+        #region Metodos
         public override void MapearDeDatos()
         {
             this.txtId.Text = this.EspecialidadActual.ID.ToString();
@@ -66,26 +76,26 @@ namespace UI.Desktop
             if (Modo == ModoForm.Alta)
             {
                 Especialidad EspecialidadNueva = new Especialidad();
-                
+
                 EspecialidadNueva.Descripcion = this.txtDescripcion.Text;
-                EspecialidadActual = EspecialidadNueva;
                 EspecialidadLogic nuevaespecialidad = new EspecialidadLogic();
+                EspecialidadActual = EspecialidadNueva;
+                EspecialidadNueva.State = BusinessEntity.States.New;
                 nuevaespecialidad.Save(EspecialidadActual);
             }
 
             else if (Modo == ModoForm.Modificacion)
             {
                 EspecialidadActual.Descripcion = this.txtDescripcion.Text;
+
                 EspecialidadLogic nuevaespecialidad = new EspecialidadLogic();
+                EspecialidadActual.State = BusinessEntity.States.Modified;
                 nuevaespecialidad.Save(EspecialidadActual);
-
-
             }
             else if (Modo == ModoForm.Baja)
             {
-               EspecialidadActual.ID = int.Parse("");
-                EspecialidadActual.Descripcion = "";
-               EspecialidadLogic nuevaespecialidad = new EspecialidadLogic();
+                EspecialidadLogic nuevaespecialidad = new EspecialidadLogic();
+                EspecialidadActual.State = BusinessEntity.States.Deleted;
                 nuevaespecialidad.Save(EspecialidadActual);
             }
             else
@@ -131,6 +141,7 @@ namespace UI.Desktop
         {
 
         }
+        #endregion
     }
 
 }

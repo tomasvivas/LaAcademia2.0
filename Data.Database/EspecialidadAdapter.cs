@@ -127,12 +127,12 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("insert into especialiades(desc_especialidad) " +
-                    "values (@descripcion) " +
+                SqlCommand cmdSave = new SqlCommand("insert into especialidades(desc_especialidad) " +
+                    "values (@desc_especialidad) " +
                     "select @@identity", sqlConn);
-                cmdSave.Parameters.Add("@descripcion", SqlDbType.VarChar, 50).Value = esp.Descripcion;
+                cmdSave.Parameters.Add("@desc_especialidad", SqlDbType.VarChar, 50).Value = esp.Descripcion;
                 esp.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
-                cmdSave.ExecuteNonQuery();
+                
             }
             catch (Exception Ex)
             {

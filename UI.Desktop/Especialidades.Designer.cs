@@ -97,6 +97,7 @@
             this.dgvEspecialidades.Location = new System.Drawing.Point(3, 3);
             this.dgvEspecialidades.Name = "dgvEspecialidades";
             this.dgvEspecialidades.ReadOnly = true;
+            this.dgvEspecialidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEspecialidades.Size = new System.Drawing.Size(544, 77);
             this.dgvEspecialidades.TabIndex = 0;
             // 
@@ -144,7 +145,7 @@
             this.tsbEliminar});
             this.tsEspecialidades.Location = new System.Drawing.Point(3, 0);
             this.tsEspecialidades.Name = "tsEspecialidades";
-            this.tsEspecialidades.Size = new System.Drawing.Size(232, 25);
+            this.tsEspecialidades.Size = new System.Drawing.Size(201, 25);
             this.tsEspecialidades.TabIndex = 0;
             // 
             // tsbNuevo

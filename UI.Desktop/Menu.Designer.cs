@@ -36,20 +36,20 @@
             this.btnCursos = new System.Windows.Forms.Button();
             this.btnComisiones = new System.Windows.Forms.Button();
             this.btnMaterias = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -100,6 +100,7 @@
             this.btnUsuarios.TabIndex = 0;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnEspecialidades
             // 
@@ -112,6 +113,7 @@
             this.btnEspecialidades.TabIndex = 1;
             this.btnEspecialidades.Text = "Especialidades";
             this.btnEspecialidades.UseVisualStyleBackColor = false;
+            this.btnEspecialidades.Click += new System.EventHandler(this.btnEspecialidades_Click);
             // 
             // btnPlanes
             // 
@@ -124,6 +126,7 @@
             this.btnPlanes.TabIndex = 2;
             this.btnPlanes.Text = "Planes";
             this.btnPlanes.UseVisualStyleBackColor = false;
+            this.btnPlanes.Click += new System.EventHandler(this.btnPlan_Click);
             // 
             // btnCursos
             // 
@@ -136,6 +139,7 @@
             this.btnCursos.TabIndex = 3;
             this.btnCursos.Text = "Cursos";
             this.btnCursos.UseVisualStyleBackColor = false;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
             // 
             // btnComisiones
             // 
@@ -148,6 +152,7 @@
             this.btnComisiones.TabIndex = 4;
             this.btnComisiones.Text = "Comisiones";
             this.btnComisiones.UseVisualStyleBackColor = false;
+            this.btnComisiones.Click += new System.EventHandler(this.btnComisiones_Click);
             // 
             // btnMaterias
             // 
@@ -160,26 +165,7 @@
             this.btnMaterias.TabIndex = 5;
             this.btnMaterias.Text = "Materias";
             this.btnMaterias.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(87, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 64);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(92, 220);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 50);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.btnMaterias.Click += new System.EventHandler(this.btnMateria_Click);
             // 
             // pictureBox3
             // 
@@ -191,16 +177,6 @@
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(403, 80);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -211,6 +187,26 @@
             this.pictureBox5.TabIndex = 10;
             this.pictureBox5.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(92, 220);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(49, 50);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(403, 80);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox6
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -220,6 +216,16 @@
             this.pictureBox6.Size = new System.Drawing.Size(46, 55);
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(87, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(60, 64);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -246,12 +252,12 @@
             this.Load += new System.EventHandler(this.Inicio_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
