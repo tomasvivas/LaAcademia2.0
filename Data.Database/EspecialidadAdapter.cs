@@ -105,10 +105,10 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("UPDATE especialidades SET desc_especialidad = @descripcion, " +
+                SqlCommand cmdSave = new SqlCommand("UPDATE especialidades SET desc_especialidad = @desc_especialidad " +
                     "WHERE id_especialidad = @id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = esp.ID;
-                cmdSave.Parameters.Add("@desc_plan", SqlDbType.VarChar, 50).Value = esp.Descripcion;
+                cmdSave.Parameters.Add("@desc_especialidad", SqlDbType.VarChar, 50).Value = esp.Descripcion;
                 cmdSave.ExecuteNonQuery();
             }
             catch (Exception Ex)

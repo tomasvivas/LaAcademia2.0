@@ -64,9 +64,6 @@ namespace UI.Desktop
             this.Listar();
         }
 
-        private void tlEspecialidades_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

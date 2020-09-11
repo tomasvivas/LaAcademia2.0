@@ -54,11 +54,11 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.tlEspecialidades);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(550, 112);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(552, 210);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(550, 137);
+            this.toolStripContainer1.Size = new System.Drawing.Size(552, 235);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -80,9 +80,9 @@
             this.tlEspecialidades.RowCount = 2;
             this.tlEspecialidades.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlEspecialidades.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlEspecialidades.Size = new System.Drawing.Size(550, 112);
+            this.tlEspecialidades.Size = new System.Drawing.Size(552, 210);
             this.tlEspecialidades.TabIndex = 0;
-            this.tlEspecialidades.Paint += new System.Windows.Forms.PaintEventHandler(this.tlEspecialidades_Paint);
+
             // 
             // dgvEspecialidades
             // 
@@ -98,7 +98,7 @@
             this.dgvEspecialidades.Name = "dgvEspecialidades";
             this.dgvEspecialidades.ReadOnly = true;
             this.dgvEspecialidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEspecialidades.Size = new System.Drawing.Size(544, 77);
+            this.dgvEspecialidades.Size = new System.Drawing.Size(546, 175);
             this.dgvEspecialidades.TabIndex = 0;
             // 
             // id
@@ -118,7 +118,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(391, 86);
+            this.btnActualizar.Location = new System.Drawing.Point(393, 184);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
@@ -128,7 +128,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(472, 86);
+            this.btnSalir.Location = new System.Drawing.Point(474, 184);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 137);
+            this.ClientSize = new System.Drawing.Size(552, 235);
             this.Controls.Add(this.toolStripContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Especialidades";
