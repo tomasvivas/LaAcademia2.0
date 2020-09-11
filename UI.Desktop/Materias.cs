@@ -50,13 +50,11 @@ namespace UI.Desktop
         }
 
         private void tbsEditar_Click(object sender, EventArgs e)
-        {
-            
+        {         
                 int ID = ((Business.Entities.Materia)this.dgvMaterias.SelectedRows[0].DataBoundItem).ID;
                 MateriaDesktop md = new MateriaDesktop(ID, ApplicationForm.ModoForm.Modificacion);
                 md.ShowDialog();
-                this.Listar();
-            
+                this.Listar();           
         }
 
         private void tbsEliminar_Click(object sender, EventArgs e)
@@ -64,8 +62,7 @@ namespace UI.Desktop
                 int ID = ((Business.Entities.Materia)this.dgvMaterias.SelectedRows[0].DataBoundItem).ID;
                 MateriaDesktop md = new MateriaDesktop(ID, ApplicationForm.ModoForm.Baja);
                 md.ShowDialog();
-                this.Listar();
-            
+                this.Listar();           
         }
     }
 }

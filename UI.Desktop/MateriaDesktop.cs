@@ -14,13 +14,15 @@ namespace UI.Desktop
 {
     public partial class MateriaDesktop : ApplicationForm
     {
+        #region Propiedades
         private Materia _MatAct;
         public Materia MateriaActual
         {
             get { return _MatAct; }
             set { _MatAct = value; }
         }
-
+        #endregion
+        #region Metodos
         public MateriaDesktop()
         {
             InitializeComponent();
@@ -39,7 +41,7 @@ namespace UI.Desktop
             this.MapearPlanes();
 
         }
-
+        #endregion
 
 
         private void MateriaDesktop_Load(object sender, EventArgs e)
@@ -83,13 +85,15 @@ namespace UI.Desktop
             {
                 Materia MateriaNueva = new Materia();
 
+
                 MateriaNueva.Descripcion = this.txtDescripcion.Text;
                 MateriaNueva.HSSemanales = int.Parse(this.txtHSSemanales.Text);
                 MateriaNueva.HSTotales = int.Parse(this.txtHSTotales.Text);
                 MateriaNueva.IDPlan = Convert.ToInt32(txtIDPlan.SelectedValue.ToString());
                 MateriaActual = MateriaNueva;
-                MateriaLogic nuevamateria = new MateriaLogic();
-                nuevamateria.Save(MateriaActual);
+                MateriaLogic matlogic = new MateriaLogic();
+                MateriaNueva.State = BusinessEntity.States.New;
+                matlogic.Save(MateriaNueva);
             }
 
             else if (Modo == ModoForm.Modificacion)
@@ -99,20 +103,16 @@ namespace UI.Desktop
                 MateriaActual.HSSemanales = int.Parse(this.txtHSSemanales.Text);
                 MateriaActual.HSTotales = int.Parse(this.txtHSTotales.Text);
                 MateriaActual.IDPlan = Convert.ToInt32(txtIDPlan.SelectedValue.ToString());
-
-                MateriaLogic nuevamateria = new MateriaLogic();
-                nuevamateria.Save(MateriaActual);
-
-
+                MateriaLogic ml = new MateriaLogic();
+                MateriaActual.State = BusinessEntity.States.Modified;
+                ml.Save(MateriaActual);
             }
             else if (Modo == ModoForm.Baja)
             {
-                MateriaActual.Descripcion = "";
-                MateriaActual.HSSemanales = int.Parse("");
-                MateriaActual.HSTotales = int.Parse("");
-                MateriaActual.IDPlan = int.Parse("");
-                MateriaLogic nuevamateria = new MateriaLogic();
-                nuevamateria.Save(MateriaActual);
+
+                MateriaLogic ml = new MateriaLogic();
+                MateriaActual.State = BusinessEntity.States.Deleted;
+                ml.Save(MateriaActual);
             }
             else
                 btnAceptar.Text = "Aceptar";

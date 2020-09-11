@@ -77,6 +77,10 @@ namespace UI.Desktop
             else
             {
                 btnAceptar.Text = "Aceptar";
+                txtApellido.Enabled = false;
+                txtEmail.Enabled = false;
+                txtNombre.Enabled = false;
+                txtUsuario.Enabled = false;
             }
         }
 

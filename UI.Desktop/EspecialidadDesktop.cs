@@ -65,6 +65,7 @@ namespace UI.Desktop
             else if (Modo == ModoForm.Baja)
             {
                 btnAceptar.Text = "Eliminar";
+                txtDescripcion.Enabled = false;
             }
             else
             {
@@ -100,6 +101,7 @@ namespace UI.Desktop
             }
             else
                 btnAceptar.Text = "Aceptar";
+
         }
 
         public override void GuardarCambios()

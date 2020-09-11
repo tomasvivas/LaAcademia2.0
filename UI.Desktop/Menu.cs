@@ -67,9 +67,10 @@ namespace UI.Desktop
               comi.Show(); */
         }
 
-        private void cmbBoxMenu_SelectionChangeCommitted(object sender, EventArgs e)
+        private void cmbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-    }
-    }
+    } 
+}
+
