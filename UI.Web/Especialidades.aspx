@@ -6,7 +6,7 @@
                 <asp:GridView Descripcion="gridView" runat="server" AutoGenerateColumns="false"
                     SelectedRowStyle-BackColor="Black"
                     SelectedRowStyle-ForeColor="White"
-                    DataKeyNames="ID" OnSelectedIndexChanged="gridView_selectedIndexChanged" >
+                    DataKeyNames="ID" OnSelectedIndexChanged="gridView_selectedIndexChanged" Height="129px" Width="257px" >
                     <Columns>
                         <asp:BoundField HeaderText="ID" DataField="ID" />
                         <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
