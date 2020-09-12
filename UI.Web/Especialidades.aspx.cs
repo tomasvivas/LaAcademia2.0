@@ -79,7 +79,7 @@ namespace UI.Web
         private void LoadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.ID.Text = this.Entity.ID;
+            this.idTextBox.Text = this.Entity.ID.ToString();
             this.descripcionTextBox.Text = this.Entity.Descripcion;
         }
 
@@ -116,7 +116,7 @@ namespace UI.Web
 
         private void LoadEntity(Especialidad especialidad)
         {
-            especialidad.ID = this.idTextBox.Text;
+            especialidad.ID = int.Parse(this.idTextBox.Text);
            especialidad.Descripcion = this.descripcionTextBox.Text;
 
         }
