@@ -85,15 +85,10 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.LoadGrid();
+            
         }
 
-        private void LoadGrid()
-        {
-            this.gridView.DataSource = this.Logic.GetAll();
-            this.gridView.DataBind();
-
-        }
+        
 
         private void ClearForm()
         {

@@ -127,7 +127,7 @@ namespace UI.Desktop
                 PersonaNueva.Legajo = int.Parse(this.txtLegajo.Text);
                 PersonaNueva.Direccion = this.txtDireccion.Text;
                 PersonaNueva.IDPlan = Convert.ToInt32(cmbIDPlan.SelectedValue.ToString());
-                PersonaNueva.TipoPersona = (Persona.TipoPersonas)Enum.Parse(typeof(Persona.TipoPersonas), cmbIDPlan.SelectedValue.ToString());
+                PersonaNueva.TipoPersona = (Persona.TipoPersonas)Enum.Parse(typeof(Persona.TipoPersonas), cmbTipoPersona.SelectedValue.ToString());
                 PersonaNueva.Email = this.txtEmail.Text;
                 PersonaNueva.FechaNacimiento = Convert.ToDateTime(this.txtFechaNac.Text);
                 PersonaNueva.Telefono = this.txtTelefono.Text;
@@ -147,7 +147,7 @@ namespace UI.Desktop
                 PersonaActual.Legajo = int.Parse(txtLegajo.Text);
                 PersonaActual.Email = this.txtEmail.Text;
                 PersonaActual.IDPlan = Convert.ToInt32(cmbIDPlan.SelectedValue.ToString());
-                PersonaActual.TipoPersona = (Persona.TipoPersonas)Enum.Parse(typeof(Persona.TipoPersonas), cmbIDPlan.SelectedValue.ToString());
+                PersonaActual.TipoPersona = (Persona.TipoPersonas)Enum.Parse(typeof(Persona.TipoPersonas), cmbTipoPersona.SelectedValue.ToString());
                 PersonaActual.FechaNacimiento = Convert.ToDateTime(this.txtFechaNac.Text);
                 PersonaActual.Telefono = this.txtTelefono.Text;
 

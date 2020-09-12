@@ -8,20 +8,29 @@
         <asp:Panel ID="gridPanel" runat="server">
                 <asp:GridView ID="gridView" runat="server" AutoGenerateColumns="False"
                     SelectedRowStyle-BackColor="Black"
-                    SelectedRowStyle-ForeColor="White"
-                    DataKeyNames="ID" OnSelectedIndexChanged="gridView_selectedIndexChanged" DataSourceID="SqlDataSource1" >
+                    SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" DataSourceID="ObjectDataSource1" DataKeyNames="ID" >
                     <Columns>
-                        <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
-                        <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
-                        <asp:BoundField HeaderText="EMail" DataField="EMail" />
-                        <asp:BoundField HeaderText="Usuario" DataField="Usuario" />
-                        <asp:BoundField HeaderText="Habilitado" DataField="Habilitado" />
-                        <asp:CommandField SelectText="Seleccionar" ShowSelectButton="true" />
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
+                        <asp:BoundField HeaderText="NombreUsuario" DataField="NombreUsuario" SortExpression="NombreUsuario" />
+                        <asp:BoundField HeaderText="Clave" DataField="Clave" SortExpression="Clave" />
+                        <asp:BoundField HeaderText="Nombre" DataField="Nombre" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                        <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                        <asp:CheckBoxField DataField="Habilitado" HeaderText="Habilitado" SortExpression="Habilitado" />
                     </Columns>
+                    <SelectedRowStyle BackColor="Black" ForeColor="White" />
                 </asp:GridView>
+                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DataObjectTypeName="Business.Entities.Usuario" DeleteMethod="Delete" SelectMethod="GetAll" TypeName="Business.Logic.UsuarioLogic" UpdateMethod="Save">
+                    <DeleteParameters>
+                        <asp:Parameter Name="id" Type="Int32" />
+                    </DeleteParameters>
+                </asp:ObjectDataSource>
             <asp:Panel ID="gridActionsPanel" runat="server">
               <asp:LinkButton ID="editarLinkButton" runat="server" OnClick="editarLinkButton_Click">Editar</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <asp:LinkButton ID="eliminarLinkButton" runat="server" OnClick="eliminarLinkButton_Click">Eliminar</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <asp:LinkButton ID="nuevoLinkButton" runat="server" OnClick="nuevoLinkButton_Click">Nuevo</asp:LinkButton>
             </asp:Panel>
             </asp:Panel>
