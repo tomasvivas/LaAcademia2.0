@@ -137,8 +137,9 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios where nombre_usuario = @nu", sqlConn);
-                cmdUsuarios.Parameters.Add("@nu", SqlDbType.VarChar).Value = usuario;
+                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios inner join personas " +
+                    "on personas.id_persona = usuarios.id_persona where nombre_usuario = @id", sqlConn);
+                cmdUsuarios.Parameters.Add("@id", SqlDbType.VarChar).Value = usuario;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
 
                 if (drUsuarios.Read())
@@ -150,7 +151,7 @@ namespace Data.Database
                     usr.Nombre = (string)drUsuarios["nombre"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
-
+                    usr.ID_Persona = (int)drUsuarios["id_persona"]
 
                 }
                 drUsuarios.Close();
