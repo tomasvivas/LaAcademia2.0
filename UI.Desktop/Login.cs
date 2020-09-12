@@ -47,6 +47,7 @@ namespace UI.Desktop
             {
                 this.DialogResult = DialogResult.OK;
                 this.Dispose();
+                
             }
 
 

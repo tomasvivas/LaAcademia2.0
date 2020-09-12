@@ -17,14 +17,14 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
-        private void Inicio_Shown(object sender, EventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
-            Login ingreso = new Login();
-            ingreso.ShowDialog();
-            if (ingreso.DialogResult != DialogResult.OK)
+            Login login = new Login();
+            login.ShowDialog();
+            if (login.DialogResult != DialogResult.OK)
             {
                 this.Dispose();
-                
+
             }
             else
             {
@@ -32,7 +32,6 @@ namespace UI.Desktop
             }
         }
 
-        
         private void cmbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opc = cmbMenu.SelectedItem.ToString();
