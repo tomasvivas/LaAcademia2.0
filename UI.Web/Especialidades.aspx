@@ -3,10 +3,10 @@
 <div>
 
     <asp:Panel ID="gridPanel" runat="server">
-                <asp:GridView Descripcion="gridView" runat="server" AutoGenerateColumns="false"
+                <asp:GridView Descripcion="gridView" runat="server" AutoGenerateColumns="False"
                     SelectedRowStyle-BackColor="Black"
                     SelectedRowStyle-ForeColor="White"
-                    DataKeyNames="ID" OnSelectedIndexChanged="gridView_selectedIndexChanged" Height="129px" Width="257px" >
+                    DataKeyNames="ID" OnSelectedIndexChanged="gridView_selectedIndexChanged" ID="gridView" Height="91px" Width="300px" >
                     <Columns>
                         <asp:BoundField HeaderText="ID" DataField="ID" />
                         <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
