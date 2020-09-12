@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Business.Entities
 {
-    public class Personas : BusinessEntity
+    public class Persona : BusinessEntity
     {   public enum TipoPersonas
         {
             Profesor,
@@ -22,7 +22,8 @@ namespace Business.Entities
         private int _Legajo;
         private string _Nombre;
         private string _Telefono;
-        
+        private TipoPersonas _TipoPersonas;
+        private string _DescPlan;
 
         public string Apellido
         {
@@ -54,6 +55,13 @@ namespace Business.Entities
             set { _IDPlan = value; }
         }
 
+        
+        public string DescPlan
+        {
+            get { return _DescPlan; }
+            set { _DescPlan = value; }
+        }
+
         public int Legajo
         {
             get { return _Legajo; }
@@ -72,7 +80,7 @@ namespace Business.Entities
             set { _Telefono = value; }
         }
 
-        private TipoPersonas _TipoPersonas;  
+         
 
         public TipoPersonas TipoPersona
         {

@@ -57,11 +57,11 @@
             // tcCursos.ContentPanel
             // 
             this.tcCursos.ContentPanel.Controls.Add(this.tlCursos);
-            this.tcCursos.ContentPanel.Size = new System.Drawing.Size(549, 298);
+            this.tcCursos.ContentPanel.Size = new System.Drawing.Size(703, 298);
             this.tcCursos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcCursos.Location = new System.Drawing.Point(0, 0);
             this.tcCursos.Name = "tcCursos";
-            this.tcCursos.Size = new System.Drawing.Size(549, 323);
+            this.tcCursos.Size = new System.Drawing.Size(703, 323);
             this.tcCursos.TabIndex = 0;
             this.tcCursos.Text = "toolStripContainer1";
             // 
@@ -83,7 +83,7 @@
             this.tlCursos.RowCount = 2;
             this.tlCursos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlCursos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlCursos.Size = new System.Drawing.Size(549, 298);
+            this.tlCursos.Size = new System.Drawing.Size(703, 298);
             this.tlCursos.TabIndex = 0;
             // 
             // dgvCursos
@@ -99,7 +99,7 @@
             this.dgvCursos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCursos.Location = new System.Drawing.Point(3, 3);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.Size = new System.Drawing.Size(543, 263);
+            this.dgvCursos.Size = new System.Drawing.Size(697, 263);
             this.dgvCursos.TabIndex = 0;
             // 
             // Año
@@ -135,7 +135,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(390, 272);
+            this.btnActualizar.Location = new System.Drawing.Point(544, 272);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
@@ -144,7 +144,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(471, 272);
+            this.btnSalir.Location = new System.Drawing.Point(625, 272);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -158,7 +158,7 @@
             this.tsbNuevo,
             this.tsbEditar,
             this.tsbEliminar});
-            this.tsCursos.Location = new System.Drawing.Point(7, 0);
+            this.tsCursos.Location = new System.Drawing.Point(3, 0);
             this.tsCursos.Name = "tsCursos";
             this.tsCursos.Size = new System.Drawing.Size(201, 25);
             this.tsCursos.TabIndex = 0;
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 323);
+            this.ClientSize = new System.Drawing.Size(703, 323);
             this.Controls.Add(this.tcCursos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cursos";

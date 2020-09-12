@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.btnEspecialidades = new System.Windows.Forms.Button();
-            this.btnPlanes = new System.Windows.Forms.Button();
-            this.btnCursos = new System.Windows.Forms.Button();
-            this.btnComisiones = new System.Windows.Forms.Button();
-            this.btnMaterias = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -66,12 +60,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.22222F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Controls.Add(this.btnUsuarios, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnEspecialidades, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnPlanes, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnCursos, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnComisiones, 5, 5);
-            this.tableLayoutPanel1.Controls.Add(this.btnMaterias, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 4, 3);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 1, 3);
@@ -79,7 +67,7 @@
             this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cmbMenu, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmbMenu, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -92,85 +80,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(704, 421);
             this.tableLayoutPanel1.TabIndex = 0;
-
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUsuarios.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnUsuarios.ForeColor = System.Drawing.Color.Black;
-            this.btnUsuarios.Location = new System.Drawing.Point(159, 93);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(150, 23);
-            this.btnUsuarios.TabIndex = 0;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // btnEspecialidades
-            // 
-            this.btnEspecialidades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEspecialidades.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnEspecialidades.ForeColor = System.Drawing.Color.Black;
-            this.btnEspecialidades.Location = new System.Drawing.Point(159, 233);
-            this.btnEspecialidades.Name = "btnEspecialidades";
-            this.btnEspecialidades.Size = new System.Drawing.Size(150, 23);
-            this.btnEspecialidades.TabIndex = 1;
-            this.btnEspecialidades.Text = "Especialidades";
-            this.btnEspecialidades.UseVisualStyleBackColor = false;
-            this.btnEspecialidades.Click += new System.EventHandler(this.btnEspecialidades_Click);
-            // 
-            // btnPlanes
-            // 
-            this.btnPlanes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPlanes.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnPlanes.ForeColor = System.Drawing.Color.Black;
-            this.btnPlanes.Location = new System.Drawing.Point(471, 93);
-            this.btnPlanes.Name = "btnPlanes";
-            this.btnPlanes.Size = new System.Drawing.Size(150, 23);
-            this.btnPlanes.TabIndex = 2;
-            this.btnPlanes.Text = "Planes";
-            this.btnPlanes.UseVisualStyleBackColor = false;
-            this.btnPlanes.Click += new System.EventHandler(this.btnPlan_Click);
-            // 
-            // btnCursos
-            // 
-            this.btnCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCursos.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnCursos.ForeColor = System.Drawing.Color.Black;
-            this.btnCursos.Location = new System.Drawing.Point(471, 233);
-            this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(150, 23);
-            this.btnCursos.TabIndex = 3;
-            this.btnCursos.Text = "Cursos";
-            this.btnCursos.UseVisualStyleBackColor = false;
-            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
-            // 
-            // btnComisiones
-            // 
-            this.btnComisiones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnComisiones.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnComisiones.ForeColor = System.Drawing.Color.Black;
-            this.btnComisiones.Location = new System.Drawing.Point(471, 374);
-            this.btnComisiones.Name = "btnComisiones";
-            this.btnComisiones.Size = new System.Drawing.Size(150, 23);
-            this.btnComisiones.TabIndex = 4;
-            this.btnComisiones.Text = "Comisiones";
-            this.btnComisiones.UseVisualStyleBackColor = false;
-            this.btnComisiones.Click += new System.EventHandler(this.btnComisiones_Click);
-            // 
-            // btnMaterias
-            // 
-            this.btnMaterias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaterias.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnMaterias.ForeColor = System.Drawing.Color.Black;
-            this.btnMaterias.Location = new System.Drawing.Point(159, 374);
-            this.btnMaterias.Name = "btnMaterias";
-            this.btnMaterias.Size = new System.Drawing.Size(150, 23);
-            this.btnMaterias.TabIndex = 5;
-            this.btnMaterias.Text = "Materias";
-            this.btnMaterias.UseVisualStyleBackColor = false;
-            this.btnMaterias.Click += new System.EventHandler(this.btnMateria_Click);
             // 
             // pictureBox3
             // 
@@ -250,12 +159,11 @@
             this.cmbMenu.FormattingEnabled = true;
             this.cmbMenu.Items.AddRange(new object[] {
             "Usuarios",
+            "Personas",
             "Especialidades",
             "Materias",
-            "Planes",
-            "Cursos",
-            "Comisiones"});
-            this.cmbMenu.Location = new System.Drawing.Point(471, 143);
+            "Planes"});
+            this.cmbMenu.Location = new System.Drawing.Point(159, 73);
             this.cmbMenu.Name = "cmbMenu";
             this.cmbMenu.Size = new System.Drawing.Size(150, 21);
             this.cmbMenu.TabIndex = 13;
@@ -292,12 +200,6 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnEspecialidades;
-        private System.Windows.Forms.Button btnPlanes;
-        private System.Windows.Forms.Button btnCursos;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button btnComisiones;
-        private System.Windows.Forms.Button btnMaterias;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox2;

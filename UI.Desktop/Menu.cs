@@ -32,46 +32,39 @@ namespace UI.Desktop
             }
         }
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            Usuarios usr = new Usuarios();
-            usr.Show();
-        }
-
-        private void btnMateria_Click(object sender, EventArgs e)
-        {
-            Materias mts = new Materias();
-            mts.Show();
-        }
-
-        private void btnPlan_Click(object sender, EventArgs e)
-        {
-            Planes plan = new Planes();
-            plan.Show();
-        }
-
-        private void btnEspecialidades_Click(object sender, EventArgs e)
-        {
-            Especialidades esp = new Especialidades();
-            esp.Show();
-        }
-
-        private void btnCursos_Click(object sender, EventArgs e)
-        {
-            Cursos cur = new Cursos();
-            cur.Show();
-        }
-
-        private void btnComisiones_Click(object sender, EventArgs e)
-        {
-            /* Comisiones comi = new Comisiones(); 
-              comi.Show(); */
-        }
-
+        
         private void cmbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opc = cmbMenu.SelectedItem.ToString();
 
+            switch (opc)
+            {
+                case "Usuarios":
+                    Usuarios usr = new Usuarios();
+                    usr.Show();
+                    break;
+                case "Personas":
+                    Personas per = new Personas();
+                    per.Show();
+                    break;
+                case "Especialidades":
+                    Especialidades esp = new Especialidades();
+                    esp.Show();
+                    break;
+                case "Planes":
+                    Planes plan = new Planes();
+                    plan.Show();
+                    break;
+                case "Materias":
+                    Materias mts = new Materias();
+                    mts.Show();
+                    break;
+                case "Cursos":
+                    Cursos cur = new Cursos();
+                    cur.Show();
+                    break;
+
+            }
 
         }
 
