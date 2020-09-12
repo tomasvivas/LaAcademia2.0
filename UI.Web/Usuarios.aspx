@@ -6,10 +6,10 @@
     <div>
 
         <asp:Panel ID="gridPanel" runat="server">
-                <asp:GridView ID="gridView" runat="server" AutoGenerateColumns="false"
+                <asp:GridView ID="gridView" runat="server" AutoGenerateColumns="False"
                     SelectedRowStyle-BackColor="Black"
                     SelectedRowStyle-ForeColor="White"
-                    DataKeyNames="ID" OnSelectedIndexChanged="gridView_selectedIndexChanged" >
+                    DataKeyNames="ID" OnSelectedIndexChanged="gridView_selectedIndexChanged" DataSourceID="SqlDataSource1" >
                     <Columns>
                         <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                         <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
@@ -35,8 +35,8 @@
             <asp:Label ID="emailLabel" runat="server" Text="Email: "></asp:Label>
             <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="habilitadoLabel" runat="server" Text="Habilitado: "></asp:Label>
-            <asp:CheckBox ID="habilitadoCheckBox" runat="server"></asp:CheckBox>
+            
+            <asp:CheckBox ID="habilitadoCheckBox" runat="server" Text="Habilitado"></asp:CheckBox> 
             <br />
             <asp:Label ID="nombreUsuarioLabel" runat="server" Text="Usuario: "></asp:Label>
             <asp:TextBox ID="nombreUsuarioTextBox" runat="server"></asp:TextBox>
