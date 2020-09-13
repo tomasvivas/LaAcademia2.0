@@ -138,7 +138,59 @@ namespace UI.Web
             this.Logic.Delete(id);
         }
 
-        protected void aceptarLinkButton_Click(object sender, EventArgs e)
+      
+
+        public bool ValidarClave()
+        {
+            if (this.claveTextbox.Text != this.repetirClaveTextBox.Text)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        #endregion
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.isEntitySelected)
+            {
+                this.formPanel.Visible = true;
+                this.FormMode = FormModes.Baja;
+                this.EnableForm(false);
+                this.LoadForm(this.SelectedID);
+            }
+        }
+
+        protected void btnNuevo_Click(object sender, EventArgs e)
+        {
+            this.formPanel.Visible = true;
+            this.FormMode = FormModes.Alta;
+            this.ClearForm();
+            this.EnableForm(true);
+        }
+
+        protected void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (this.isEntitySelected)
+            {
+                this.EnableForm(true);
+                this.formPanel.Visible = true;
+                this.FormMode = FormModes.Modificacion;
+                this.LoadForm(this.SelectedID);
+            }
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.formPanel.Visible = false;
+            gridView.DataBind();
+        }
+
+        protected void btnAceptar_Click(object sender, EventArgs e)
         {
             switch (this.FormMode)
             {
@@ -194,55 +246,5 @@ namespace UI.Web
             }
             this.formPanel.Visible = false;
         }
-
-        protected void editarLinkButton_Click(object sender, EventArgs e)
-        {
-            if (this.isEntitySelected)
-            {
-                this.EnableForm(true);
-                this.formPanel.Visible = true;
-                this.FormMode = FormModes.Modificacion;
-                this.LoadForm(this.SelectedID);
-            }
-        }
-
-        protected void eliminarLinkButton_Click(object sender, EventArgs e)
-        {
-            if (this.isEntitySelected)
-            {
-                this.formPanel.Visible = true;
-                this.FormMode = FormModes.Baja;
-                this.EnableForm(false);
-                this.LoadForm(this.SelectedID);
-            }
-        }
-
-        protected void nuevoLinkButton_Click(object sender, EventArgs e)
-        {
-            this.formPanel.Visible = true;
-            this.FormMode = FormModes.Alta;
-            this.ClearForm();
-            this.EnableForm(true); 
-        }
-
-        protected void cancelarLinkButton_Click(object sender, EventArgs e)
-        {
-            this.formPanel.Visible = false;
-            gridView.DataBind();
-        }
-
-        public bool ValidarClave()
-        {
-            if (this.claveTextbox.Text != this.repetirClaveTextBox.Text)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-        #endregion
     }
 }

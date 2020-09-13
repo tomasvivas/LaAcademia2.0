@@ -160,18 +160,10 @@ namespace UI.Web
             this.formPanel.Visible = false;
         }
 
-        protected void editarLinkButton_Click(object sender, EventArgs e)
-        {
-            if (this.isEntitySelected)
-            {
-                this.EnableForm(true);
-                this.formPanel.Visible = true;
-                this.FormMode = FormModes.Modificacion;
-                this.LoadForm(this.SelectedID);
-            }
-        }
 
-        protected void eliminarLinkButton_Click(object sender, EventArgs e)
+        #endregion
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
         {
             if (this.isEntitySelected)
             {
@@ -180,9 +172,10 @@ namespace UI.Web
                 this.EnableForm(false);
                 this.LoadForm(this.SelectedID);
             }
+
         }
 
-        protected void nuevoLinkButton_Click(object sender, EventArgs e)
+        protected void btnNuevo_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = true;
             this.FormMode = FormModes.Alta;
@@ -190,13 +183,54 @@ namespace UI.Web
             this.EnableForm(true);
         }
 
-        protected void cancelarLinkButton_Click(object sender, EventArgs e)
+        protected void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (this.isEntitySelected)
+            {
+                this.EnableForm(true);
+                this.formPanel.Visible = true;
+                this.FormMode = FormModes.Modificacion;
+                this.LoadForm(this.SelectedID);
+            }
+
+        }
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = false;
             gridView.DataBind();
         }
 
-        #endregion
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            switch (this.FormMode)
+            {
+                case FormModes.Baja:
 
+                    this.DeleteEntity(this.SelectedID);
+                    this.formPanel.Visible = false;
+                    this.gridView.DataBind();
+
+                    break;
+                case FormModes.Modificacion:
+                    this.Entity = new Plan();
+                    this.Entity.ID = this.SelectedID;
+                    this.Entity.State = BusinessEntity.States.Modified;
+                    this.LoadEntity(this.Entity);
+                    this.SaveEntity(this.Entity);
+                    this.gridView.DataBind();
+                    this.formPanel.Visible = false;
+                    break;
+                case FormModes.Alta:
+
+                    this.Entity = new Plan();
+                    this.LoadEntity(this.Entity);
+                    this.SaveEntity(this.Entity);
+                    this.gridView.DataBind();
+                    this.formPanel.Visible = false;
+                    break;
+            }
+            this.formPanel.Visible = false;
+        }
     }
-}
+    }
