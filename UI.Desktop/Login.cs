@@ -21,6 +21,14 @@ namespace UI.Desktop
             set { _UsAct = value; }
         }
 
+        private Persona.TipoPersonas tipoper;
+
+        public Persona.TipoPersonas tipoPersona
+        {
+            get { return tipoper; }
+            set { tipoper = value; }
+        }
+
         public Login()
         {
             InitializeComponent();
@@ -36,7 +44,8 @@ namespace UI.Desktop
         {
             UsuarioLogic user = new UsuarioLogic();
             Usuario usuarioActual = new Usuario();
-            usuarioActual = user.GetOne(txtUsuario.Text); 
+            usuarioActual = user.GetOne(txtUsuario.Text);
+            
 
             if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
             {
@@ -45,6 +54,10 @@ namespace UI.Desktop
             }
             else
             {
+                PersonaLogic pl = new PersonaLogic();
+                Persona PersonaActual = new Persona();
+                PersonaActual = pl.GetOne(usuarioActual.ID_Persona);
+                tipoper = PersonaActual.TipoPersona;
                 this.DialogResult = DialogResult.OK;
                 this.Dispose();
                 

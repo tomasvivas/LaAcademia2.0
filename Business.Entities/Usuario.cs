@@ -57,5 +57,18 @@ namespace Business.Entities
             set { _ID_Persona = value; }
         }
 
+        private int leg;
+        public int Legajo
+        {
+            get { return leg; }
+            set { leg = value; }
+        }
+        private Persona.TipoPersonas tipoper;
+        public Persona.TipoPersonas TipoPer
+        {
+            get { return tipoper; }
+            set { tipoper = value; }
+        }
+
     }
 }

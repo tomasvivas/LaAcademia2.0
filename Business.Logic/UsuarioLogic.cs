@@ -35,6 +35,10 @@ namespace Business.Logic
             return UsuarioData.GetAll();
         }
 
+        public List<Persona> GetPersonas()
+        {
+            return UsuarioData.GetPersonas();
+        }
 
         public void Save(Business.Entities.Usuario user)
         {

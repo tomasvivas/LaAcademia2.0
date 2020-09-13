@@ -35,6 +35,7 @@ namespace UI.Desktop
         public UsuarioDesktop(ModoForm modo) : this()
         {
             Modo = modo;
+            this.MapearPersonas();
         }
         public UsuarioDesktop(int ID, ModoForm modo) : this()
         {
@@ -42,6 +43,7 @@ namespace UI.Desktop
             UsuarioLogic usuario = new UsuarioLogic();
             UsuarioActual = usuario.GetOne(ID);
             this.MapearDeDatos();
+            this.MapearPersonas();
             
         }
         #endregion
@@ -97,6 +99,7 @@ namespace UI.Desktop
                 UsuarioNuevo.Email = this.txtEmail.Text;
                 UsuarioNuevo.Clave = this.txtClave.Text;
                 UsuarioNuevo.NombreUsuario = this.txtUsuario.Text;
+                UsuarioNuevo.ID_Persona = Convert.ToInt32(this.cmbLegajo.SelectedValue.ToString());
                 UsuarioActual = UsuarioNuevo;
                 UsuarioLogic nuevousuario = new UsuarioLogic();
                 UsuarioNuevo.State = BusinessEntity.States.New;
@@ -111,7 +114,7 @@ namespace UI.Desktop
                 UsuarioActual.Email = this.txtEmail.Text;
                 UsuarioActual.Clave = this.txtClave.Text;
                 UsuarioActual.NombreUsuario = this.txtUsuario.Text;
-
+                UsuarioActual.ID_Persona = Convert.ToInt32(this.cmbLegajo.SelectedValue.ToString());
                 UsuarioLogic nuevousuario = new UsuarioLogic();
                 UsuarioActual.State = BusinessEntity.States.Modified;
                 nuevousuario.Save(UsuarioActual);
@@ -124,6 +127,18 @@ namespace UI.Desktop
             }
             else
                 btnAceptar.Text = "Aceptar";
+        }
+
+        public void MapearPersonas()
+        {
+            UsuarioLogic ul = new UsuarioLogic();
+            cmbLegajo.DataSource = ul.GetPersonas();
+            cmbLegajo.ValueMember = "ID";
+            cmbLegajo.DisplayMember = "legajo";
+            if (Modo != ModoForm.Alta)
+            {
+                cmbLegajo.SelectedValue = UsuarioActual.Legajo;
+            }
         }
 
         public override void GuardarCambios()
