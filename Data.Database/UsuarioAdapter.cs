@@ -67,7 +67,9 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios", sqlConn);
+                SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario, u.nombre_usuario, u.clave, u.habilitado," +
+                    "u.nombre, u.apellido, u.email, personas.id_persona, personas.legajo from usuarios u inner join personas " +
+                    "on personas.id_persona = u.id_persona" , sqlConn);
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 while (drUsuarios.Read())
                 {
@@ -79,6 +81,9 @@ namespace Data.Database
                     usr.Nombre = (string)drUsuarios["nombre"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
+                    usr.ID_Persona = (int)drUsuarios["id_persona"];
+                    usr.Legajo = (int)drUsuarios["legajo"];
+                    
                     usuarios.Add(usr);
                 }
                 drUsuarios.Close();
@@ -102,8 +107,9 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios where id_usuario=@id", sqlConn);
-                cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+                SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario, u.nombre_usuario, u.clave, u.habilitado," +
+                    "u.nombre, u.apellido, u.email, personas.id_persona, personas.legajo from usuarios u inner join personas " +
+                    "on personas.id_persona = u.id_persona where id_usuario = @id", sqlConn);
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 if (drUsuarios.Read())
                 {
@@ -114,6 +120,9 @@ namespace Data.Database
                     usr.Nombre = (string)drUsuarios["nombre"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
+                    usr.ID_Persona = (int)drUsuarios["id_persona"];
+                    usr.Legajo = (int)drUsuarios["legajo"];
+                    
                 }
                 drUsuarios.Close();
             }
@@ -137,7 +146,9 @@ namespace Data.Database
             {
                 this.OpenConnection();
 
-                SqlCommand cmdUsuarios = new SqlCommand("select * from usuarios where nombre_usuario = @nu", sqlConn);
+                SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario, u.nombre_usuario, u.clave, u.habilitado," +
+                    "u.nombre, u.apellido, u.email, personas.id_persona, personas.legajo, personas.tipo_persona " +
+                    "from usuarios u inner join personas on personas.id_persona = u.id_persona where nombre_usuario = @nu", sqlConn);
                 cmdUsuarios.Parameters.Add("@nu", SqlDbType.VarChar).Value = usuario;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
 
@@ -150,7 +161,9 @@ namespace Data.Database
                     usr.Nombre = (string)drUsuarios["nombre"];
                     usr.Apellido = (string)drUsuarios["apellido"];
                     usr.Email = (string)drUsuarios["email"];
-
+                    usr.ID_Persona = (int)drUsuarios["id_persona"];
+                    usr.Legajo = (int)drUsuarios["legajo"];
+                    usr.TipoPer = (Persona.TipoPersonas)drUsuarios["tipo_persona"];
 
                 }
                 drUsuarios.Close();
@@ -241,6 +254,25 @@ namespace Data.Database
             {
                 this.CloseConnection();
             }
+        }
+
+        public List<Persona> GetPersonas()
+        {
+            List<Persona> personas = new List<Persona>();
+            this.OpenConnection();
+            SqlCommand cmdPersonas = new SqlCommand("SELECT id_persona, legajo FROM personas", sqlConn);
+            SqlDataReader drPersonas = cmdPersonas.ExecuteReader();
+
+            while (drPersonas.Read())
+            {
+                Persona per = new Persona();
+                per.ID = (int)drPersonas["id_persona"];
+                per.Legajo = (int)drPersonas["legajo"];
+                
+                personas.Add(per);
+            }
+
+            return personas;
         }
 
         public void Save(Usuario usuario)

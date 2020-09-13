@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuarioDesktop));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -47,6 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.cmbLegajo = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.12361F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.98173F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.12741F));
+            this.tableLayoutPanel1.Controls.Add(this.label8, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtNombre, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 2);
@@ -74,6 +77,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.cmbLegajo, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -85,6 +89,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(404, 165);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(3, 116);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 49);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Legajo";
             // 
             // txtID
             // 
@@ -241,6 +255,14 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // cmbLegajo
+            // 
+            this.cmbLegajo.FormattingEnabled = true;
+            this.cmbLegajo.Location = new System.Drawing.Point(58, 119);
+            this.cmbLegajo.Name = "cmbLegajo";
+            this.cmbLegajo.Size = new System.Drawing.Size(121, 21);
+            this.cmbLegajo.TabIndex = 18;
+            // 
             // UsuarioDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,5 +299,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbLegajo;
     }
 }

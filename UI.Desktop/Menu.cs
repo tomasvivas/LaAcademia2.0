@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Business.Entities;
+using Business.Logic;
 
 namespace UI.Desktop
 {
@@ -29,6 +31,7 @@ namespace UI.Desktop
             else
             {
                 this.Opacity = 100;
+                Validar(login.tipoPersona);
             }
         }
 
@@ -65,6 +68,28 @@ namespace UI.Desktop
 
             }
 
+        }
+
+        public void Validar(Persona.TipoPersonas tipoper)
+        {
+            switch (tipoper)
+            {
+
+                case Persona.TipoPersonas.Profesor:
+                    MessageBox.Show("Usted ha ingresado como profesor");
+                    cmbMenu.Items.Remove("Especialidades");
+                    break;
+                case Persona.TipoPersonas.Administrador:
+                    MessageBox.Show("Usted ha ingresado como administrador");
+                    break;
+                case Persona.TipoPersonas.Alumno:
+                    MessageBox.Show("Usted ha ingresado como alumno");
+                    break;
+                default:
+                    break;
+
+
+            }
         }
 
         
