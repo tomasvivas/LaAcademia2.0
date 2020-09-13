@@ -10,6 +10,20 @@
         .auto-style2 {
             width: 211px;
         }
+        .auto-style3 {
+            width: 211px;
+            height: 11px;
+        }
+        .auto-style4 {
+            height: 11px;
+        }
+        .auto-style5 {
+            width: 211px;
+            height: 12px;
+        }
+        .auto-style6 {
+            height: 12px;
+        }
     </style>
 </head>
 <body>
@@ -30,18 +44,17 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style2">
-                    &nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style3">
+                    </td>
+                <td class="auto-style4"></td>
             </tr>
             <tr>
-                <td class="auto-style2">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <td class="auto-style5">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
         <asp:Label ID="lblUsuario" runat="server" Text="Usuario"></asp:Label>
                 </td>
-                <td>
-        <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
+                <td class="auto-style6">
+        <asp:TextBox ID="txtUsuario" runat="server" Width="154px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -50,7 +63,7 @@
         <asp:Label ID="lblClave" runat="server" Text="Contraseña"></asp:Label>
                 </td>
                 <td>
-            <asp:TextBox ID="txtClave" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtClave" runat="server" Width="154px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
