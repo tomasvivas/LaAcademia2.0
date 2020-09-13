@@ -23,9 +23,9 @@ namespace Business.Logic
             ModuloData = new ModuloAdapter();
         }
 
-        public Business.Entities.Modulo GetOne(string descripcion)
+        public Business.Entities.Modulo GetOne(string deesc)
         {
-            return ModuloData.GetOne(descripcion);
+            return ModuloData.GetOne(deesc);
         }
 
         public List<Modulo> GetAll()
@@ -33,14 +33,16 @@ namespace Business.Logic
             return ModuloData.GetAll();
         }
 
+        
+
         public void Save(Business.Entities.Modulo modulo)
         {
             ModuloData.Save(modulo);
         }
 
-        public void Delete(string descripcion)
+        public void Delete(int id)
         {
-            ModuloData.Delete(descripcion);
+            //ModuloData.Delete(id);
         }
     }
 }
