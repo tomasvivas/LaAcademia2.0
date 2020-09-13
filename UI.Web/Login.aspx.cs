@@ -11,6 +11,20 @@ namespace UI.Web
 {
     public partial class Login : System.Web.UI.Page
     {
+
+        public Login()
+        {
+
+        }
+
+        private Persona.TipoPersonas tipoper;
+
+        public Persona.TipoPersonas tipoPersona
+        {
+            get { return tipoper; }
+            set { tipoper = value; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -25,7 +39,7 @@ namespace UI.Web
 
             if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
             {
-                this.Notificar("El usuario y/o la contraseña son incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
 
             }
             else
@@ -34,7 +48,6 @@ namespace UI.Web
                 Persona PersonaActual = new Persona();
                 PersonaActual = pl.GetOne(usuarioActual.ID_Persona);
                 tipoper = PersonaActual.TipoPersona;
-                this.DialogResult = DialogResult.OK;
                 this.Dispose();
 
             }

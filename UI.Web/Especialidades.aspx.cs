@@ -107,6 +107,7 @@ namespace UI.Web
         protected void gridView_selectedIndexChanged(object sender, EventArgs e)
         {
             this.SelectedID = (int)this.gridView.SelectedValue;
+            
         }
 
         private void LoadEntity(Especialidad especialidad)
