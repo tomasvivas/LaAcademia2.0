@@ -1,0 +1,31 @@
+﻿body {
+   
+    background-color: white;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: 50% 0;
+    width: 703px;
+    height: 504px;
+}
+
+h1 {
+    color: white;
+    font-family: 'Microsoft Sans Serif';
+    font-size: xx-large;
+    background-color: cornflowerblue;
+       }
+
+li { 
+    font-family: 'Microsoft Sans Serif';
+    font-size: medium;
+    font-weight: bold;
+    height: 34px;
+    background-color: white;
+}
+
+
+
+
+
+
+

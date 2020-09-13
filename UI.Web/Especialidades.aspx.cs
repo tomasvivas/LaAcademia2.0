@@ -126,39 +126,31 @@ namespace UI.Web
             this.Logic.Delete(id);
         }
 
-        protected void aceptarLinkButton_Click(object sender, EventArgs e)
-        {
-            switch (this.FormMode)
-            {
-                case FormModes.Baja:
-                    
-                        this.DeleteEntity(this.SelectedID);
-                        this.formPanel.Visible = false;
-                        this.gridView.DataBind();
 
-                    break;
-                case FormModes.Modificacion:
-                    this.Entity = new Especialidad();
-                    this.Entity.ID = this.SelectedID;
-                    this.Entity.State = BusinessEntity.States.Modified;
-                    this.LoadEntity(this.Entity);
-                        this.SaveEntity(this.Entity);
-                        this.gridView.DataBind();
-                        this.formPanel.Visible = false;
-                    break;
-                case FormModes.Alta:
-                    
-                        this.Entity = new Especialidad();
-                        this.LoadEntity(this.Entity);
-                        this.SaveEntity(this.Entity);
-                        this.gridView.DataBind();
-                        this.formPanel.Visible = false;
-                    break;
-            }
-            this.formPanel.Visible = false;
+        #endregion
+
+        protected void btnNuevo_Click(object sender, EventArgs e)
+        {
+            this.formPanel.Visible = true;
+            this.FormMode = FormModes.Alta;
+            this.ClearForm();
+            this.EnableForm(true);
+
         }
 
-        protected void editarLinkButton_Click(object sender, EventArgs e)
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (this.isEntitySelected)
+            {
+                this.formPanel.Visible = true;
+                this.FormMode = FormModes.Baja;
+                this.EnableForm(false);
+                this.LoadForm(this.SelectedID);
+            }
+
+        }
+
+        protected void btnEditar_Click(object sender, EventArgs e)
         {
             if (this.isEntitySelected)
             {
@@ -169,32 +161,44 @@ namespace UI.Web
             }
         }
 
-        protected void eliminarLinkButton_Click(object sender, EventArgs e)
-        {
-            if (this.isEntitySelected)
-            {
-                this.formPanel.Visible = true;
-                this.FormMode = FormModes.Baja;
-                this.EnableForm(false);
-                this.LoadForm(this.SelectedID);
-            }
-        }
-
-        protected void nuevoLinkButton_Click(object sender, EventArgs e)
-        {
-            this.formPanel.Visible = true;
-            this.FormMode = FormModes.Alta;
-            this.ClearForm();
-            this.EnableForm(true);
-        }
-
-        protected void cancelarLinkButton_Click(object sender, EventArgs e)
+        protected void btnCancelar_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = false;
             gridView.DataBind();
         }
 
-        #endregion
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            switch (this.FormMode)
+            {
+                case FormModes.Baja:
+
+                    this.DeleteEntity(this.SelectedID);
+                    this.formPanel.Visible = false;
+                    this.gridView.DataBind();
+
+                    break;
+                case FormModes.Modificacion:
+                    this.Entity = new Especialidad();
+                    this.Entity.ID = this.SelectedID;
+                    this.Entity.State = BusinessEntity.States.Modified;
+                    this.LoadEntity(this.Entity);
+                    this.SaveEntity(this.Entity);
+                    this.gridView.DataBind();
+                    this.formPanel.Visible = false;
+                    break;
+                case FormModes.Alta:
+
+                    this.Entity = new Especialidad();
+                    this.LoadEntity(this.Entity);
+                    this.SaveEntity(this.Entity);
+                    this.gridView.DataBind();
+                    this.formPanel.Visible = false;
+                    break;
+            }
+            this.formPanel.Visible = false;
+
+        }
     }
 
 }

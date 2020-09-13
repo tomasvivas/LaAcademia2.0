@@ -6,17 +6,17 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Academia</title>
-    <link href="CSS/Main.css" rel="stylesheet" />
+    <link href="CSS/Estilo%201.css" rel="stylesheet" />
     </head>
-<body>
+<body style="Estilo 1">
     <form id="bodyForm" runat="server">
         <div id="navbar">
-            <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SISTEMA ACADEMIA</h1>
+            <h1>&nbsp;&nbsp;<asp:Image ID="Image1" runat="server" Height="40px" ImageUrl="~/CSS/academia.png" Width="41px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SISTEMA ACADEMIA</h1>
             <ul>
-      
-                <li><a href="Usuarios.aspx">Usuarios</a></li>
-                <li><a href="Especialidades.aspx">Especialidades</a></li>
-                <li><a href="Planes.aspx">Planes</a></li>
+                <li><a href="Usuarios.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000;">Usuarios</a></li>
+                <li><a href="Especialidades.aspx" style="color: #000000">Especialidades</a></li>
+                <li><a href="Planes.aspx" style="color: #000000">Planes</a></li>
                 
             </ul>
         </div>
