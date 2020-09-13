@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Academia</title>
-    <link href="CSS/Main.css" rel="stylesheet" />
+    <link href="CSS/Estilo%201.css" rel="stylesheet" />
     </head>
 <body>
     <form id="bodyForm" runat="server">
