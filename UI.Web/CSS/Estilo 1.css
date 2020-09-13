@@ -1,9 +1,11 @@
 ﻿body {
-    background: inactiveborder;
+   
+    background-color: InactiveBorder;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    
 }
 
 h1 {
     color: black;
-
-
 }
