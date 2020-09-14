@@ -29,28 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.UsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.academiaDataSet1 = new UI.Desktop.AcademiaDataSet();
+            this.usuariosTableAdapter1 = new UI.Desktop.AcademiaDataSetTableAdapters.usuariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // UsuarioBindingSource
+            // 
+            this.UsuarioBindingSource.DataSource = typeof(Business.Entities.Usuario);
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "Usuarios";
-            reportDataSource1.Value = this.UsuarioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "Usuarios";
+            reportDataSource2.Value = this.UsuarioBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "UI.Desktop.Reportes.Usuarios.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.UsuariosReporte_Load);
             // 
-            // UsuarioBindingSource
+            // academiaDataSet1
             // 
-            this.UsuarioBindingSource.DataSource = typeof(Business.Entities.Usuario);
+            this.academiaDataSet1.DataSetName = "AcademiaDataSet";
+            this.academiaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosTableAdapter1
+            // 
+            this.usuariosTableAdapter1.ClearBeforeFill = true;
             // 
             // UsuariosReporte
             // 
@@ -62,6 +75,7 @@
             this.Text = "Reporte de Usuarios";
             this.Load += new System.EventHandler(this.UsuariosReporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -70,5 +84,7 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource UsuarioBindingSource;
+        private AcademiaDataSet academiaDataSet1;
+        private AcademiaDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter1;
     }
 }

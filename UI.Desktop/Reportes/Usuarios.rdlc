@@ -691,18 +691,18 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DataSetAcademia">
+    <DataSource Name="AcademiaDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>4ba1d98d-ec13-4bcd-ac96-88ca80560d8c</rd:DataSourceID>
+      <rd:DataSourceID>16b5e7ce-cc1a-404d-8289-0f482e7b5b1c</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="Usuarios">
       <Query>
-        <DataSourceName>DataSetAcademia</DataSourceName>
+        <DataSourceName>AcademiaDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -744,8 +744,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DataSetAcademia</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\Tomas Vivas\Source\Repos\LaAcademia2.02\UI.Desktop\DataSetAcademia.xsd</rd:SchemaPath>
+        <rd:DataSetName>AcademiaDataSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\Tomas Vivas\Source\Repos\LaAcademia2.02\UI.Desktop\AcademiaDataSet1.xsd</rd:SchemaPath>
         <rd:TableName>usuarios</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

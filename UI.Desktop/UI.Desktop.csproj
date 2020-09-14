@@ -64,6 +64,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcademiaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcademiaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,11 +92,6 @@
     </Compile>
     <Compile Include="Cursos.Designer.cs">
       <DependentUpon>Cursos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetAcademia.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetAcademia.xsd</DependentUpon>
     </Compile>
     <Compile Include="UsuariosReporte.cs">
       <SubType>Form</SubType>
@@ -223,6 +223,17 @@
     <EmbeddedResource Include="UsuariosReporte.resx">
       <DependentUpon>UsuariosReporte.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AcademiaDataSet1.xsc">
+      <DependentUpon>AcademiaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AcademiaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AcademiaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AcademiaDataSet1.xss">
+      <DependentUpon>AcademiaDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Business.Entities.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -234,17 +245,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="DataSetAcademia.xsc">
-      <DependentUpon>DataSetAcademia.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetAcademia.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetAcademia.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetAcademia.xss">
-      <DependentUpon>DataSetAcademia.xsd</DependentUpon>
-    </None>
     <None Include="Settings1.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
