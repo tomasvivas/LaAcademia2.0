@@ -11,7 +11,7 @@ namespace UI.Web
     {
         private void cmbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string opc = cmbMenu.SelectedItem.ToString();
+           /* string opc = cmbMenu.SelectedItem.ToString(); 
 
             switch (opc)
             {
@@ -29,7 +29,7 @@ namespace UI.Web
                     Page.Response.Redirect("Planes");
                     break;
                 
-            }
+            }*/
 
         }
     }

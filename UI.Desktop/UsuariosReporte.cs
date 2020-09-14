@@ -21,7 +21,7 @@ namespace UI.Desktop
         {
             // TODO: esta línea de código carga datos en la tabla 'DataSetAcademia.usuarios' Puede moverla o quitarla según sea necesario.
 
-            this.usuarioTableAdapter.Fill(this.DataSetAcademia.usuarios);
+            //this.usuarioTableAdapter.Fill(this.DataSetAcademia.usuarios);
             this.reportViewer1.RefreshReport();
             
         }
