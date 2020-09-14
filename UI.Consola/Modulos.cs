@@ -166,9 +166,9 @@ namespace UI.Consola
             try
             {
                 Console.Clear();
-                Console.WriteLine("Ingrese la descripción del modulo a eliminar: ");
-                string descripcion = Console.ReadLine();
-                ModuloNegocio.Delete(descripcion);
+                Console.WriteLine("Ingrese el ID del modulo a eliminar: ");
+                int id = int.Parse(Console.ReadLine());
+                ModuloNegocio.Delete(id);
             }
             catch (FormatException fe)
             {
