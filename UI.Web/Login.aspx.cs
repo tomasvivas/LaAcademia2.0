@@ -35,21 +35,17 @@ namespace UI.Web
             UsuarioLogic user = new UsuarioLogic();
             Usuario usuarioActual = new Usuario();
             usuarioActual = user.GetOne(txtUsuario.Text);
-
+            string valida; 
 
             if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
             {
-                
+                Page.Response.Write("Ingreso ok");
 
             }
             else
             {
-                PersonaLogic pl = new PersonaLogic();
-                Persona PersonaActual = new Persona();
-                PersonaActual = pl.GetOne(usuarioActual.ID_Persona);
-                tipoper = PersonaActual.TipoPersona;
+                Page.Response.Write("Usuario y/o contrasña incorrectos");
                 this.Dispose();
-
             }
 
 
@@ -59,5 +55,6 @@ namespace UI.Web
         {
             Response.Redirect("~/Default.aspx?msg= Es ud. Un usuario muy descuidado, deje de olvidar.");
         }
+
     }
 }
