@@ -35,11 +35,12 @@ namespace UI.Web
             UsuarioLogic user = new UsuarioLogic();
             Usuario usuarioActual = new Usuario();
             usuarioActual = user.GetOne(txtUsuario.Text);
-            string valida; 
+             
 
             if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
             {
                 Page.Response.Write("Ingreso ok");
+                Page.Response.Redirect("MenuPrincipal");
 
             }
             else

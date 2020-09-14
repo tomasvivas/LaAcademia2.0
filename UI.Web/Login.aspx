@@ -13,9 +13,7 @@
         .auto-style6 {
             height: 12px;
         }
-        .auto-style7 {
-            width: 116px;
-        }
+        
         .auto-style8 {
             height: 11px;
             width: 116px;
@@ -46,14 +44,12 @@
             height: 60px;
         }
         .auto-style16 {
-            width: 64%;
+            width: 46%;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="margin-right: 0px;" class="auto-style16">
-        </div>
         <table style="margin-right: 0px;" class="auto-style16">
             <tr>
                 <td class="auto-style14" style="background-color: #6699FF; font-family: 'Microsoft Sans Serif'; font-size: 28px; color: #FFFFFF; font-weight: bold; right: auto;">

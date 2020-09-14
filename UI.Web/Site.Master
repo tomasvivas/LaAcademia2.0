@@ -8,11 +8,11 @@
     <title>Academia</title>
     <link href="CSS/Estilo%201.css" rel="stylesheet" />
     </head>
-<body style="Estilo 1">
+<body style="Estilo 1; width: 710px;">
     <form id="bodyForm" runat="server">
         <div id="navbar">
-            <h1>&nbsp;&nbsp;<asp:Image ID="Image1" runat="server" Height="40px" ImageUrl="~/CSS/academia.png" Width="41px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SISTEMA ACADEMIA</h1>
+            <h1 style="right: 50%">&nbsp;&nbsp;<asp:Image ID="Image1" runat="server" Height="40px" ImageUrl="~/CSS/academia.png" Width="41px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACADEMIA</h1>
             <ul>
                 <li><a href="Usuarios.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000;">Usuarios</a></li>
                 <li><a href="Especialidades.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Especialidades</a></li>
