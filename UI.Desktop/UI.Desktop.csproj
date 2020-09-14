@@ -88,6 +88,17 @@
     <Compile Include="Cursos.Designer.cs">
       <DependentUpon>Cursos.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetAcademia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAcademia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UsuariosReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsuariosReporte.Designer.cs">
+      <DependentUpon>UsuariosReporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonaDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,14 +146,6 @@
     </Compile>
     <Compile Include="Planes.Designer.cs">
       <DependentUpon>Planes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\Desktop.cs">
-      <DependentUpon>Desktop.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reportes\Desktop.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Desktop.xsd</DependentUpon>
     </Compile>
     <Compile Include="Settings1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -200,6 +203,7 @@
     <EmbeddedResource Include="Planes.resx">
       <DependentUpon>Planes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Usuarios.rdlc" />
     <EmbeddedResource Include="UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,7 +220,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UsuariosReporte.resx">
+      <DependentUpon>UsuariosReporte.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Business.Entities.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,16 +234,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Reportes\Desktop.xsc">
-      <DependentUpon>Desktop.xsd</DependentUpon>
+    <None Include="DataSetAcademia.xsc">
+      <DependentUpon>DataSetAcademia.xsd</DependentUpon>
     </None>
-    <None Include="Reportes\Desktop.xsd">
+    <None Include="DataSetAcademia.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Desktop.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSetAcademia.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reportes\Desktop.xss">
-      <DependentUpon>Desktop.xsd</DependentUpon>
+    <None Include="DataSetAcademia.xss">
+      <DependentUpon>DataSetAcademia.xsd</DependentUpon>
     </None>
     <None Include="Settings1.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

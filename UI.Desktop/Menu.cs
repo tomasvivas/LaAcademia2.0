@@ -92,7 +92,16 @@ namespace UI.Desktop
             }
         }
 
-        
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnReporteUsuarios_Click(object sender, EventArgs e)
+        {
+            UsuariosReporte ur = new UsuariosReporte();
+            ur.Show();
+        }
     } 
 }
 
