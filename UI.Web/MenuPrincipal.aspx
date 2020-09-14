@@ -40,14 +40,17 @@
             </tr>
             <tr>
                 <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <select id="cmbMenu" class="auto-style6" name="cmbMenu">
-                        <option value="Usuarios.aspx"></option>
-                        <option value="Personas"></option>
-                        <option value="Especialidades"></option>
-                        <option value="Planes"></option>
-                        <option value="Materias"></option>
-                        <option value="Cursos"></option>
-                    </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                    <select class="auto-style6" name="cmbMenu">
+                        <option >Seleccione una opcion</option>
+                        <option value="Usuarios">Usuarios</option>
+                        <option value="Personas">Personas</option>
+                        <option value="Especialidades">Especialidades</option>
+                        <option value="Planes">Planes</option>
+                        <option value="Materias">Materias</option>
+                        <option value="Cursos">Cursos</option>
+                    </select>
+                    <input type="submit" value="Enviar" /> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td>&nbsp;</td>
             </tr>
         </table>
