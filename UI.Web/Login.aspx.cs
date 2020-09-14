@@ -44,7 +44,7 @@ namespace UI.Web
             else
             {
                 Page.Response.Write("Ingreso ok");
-                Page.Response.Redirect("MenuPrincipal");
+                Page.Response.Redirect("Menu");
                 this.Dispose();
             }
 
