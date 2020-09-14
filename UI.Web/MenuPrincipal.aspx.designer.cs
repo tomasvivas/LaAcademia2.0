@@ -11,18 +11,9 @@ namespace UI.Web
 {
 
 
-    public partial class WebForm1
+    public partial class MenuPrincipal
     {
 
-        /// <summary>
-        /// Control Menú Principal.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm MenuPrincipal;
-        
         /// <summary>
         /// Control Image1.
         /// </summary>

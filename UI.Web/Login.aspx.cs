@@ -39,13 +39,12 @@ namespace UI.Web
 
             if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
             {
-                Page.Response.Write("Ingreso ok");
-                Page.Response.Redirect("MenuPrincipal");
-
+                Page.Response.Write("Usuario y/o contrasña incorrectos");
             }
             else
             {
-                Page.Response.Write("Usuario y/o contrasña incorrectos");
+                Page.Response.Write("Ingreso ok");
+                Page.Response.Redirect("MenuPrincipal");
                 this.Dispose();
             }
 

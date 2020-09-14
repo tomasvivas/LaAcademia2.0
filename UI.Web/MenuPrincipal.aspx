@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuPrincipal.aspx.cs" Inherits="UI.Web.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MenuPrincipal.aspx.cs" Inherits="UI.Web.MenuPrincipal" %>
 
 <!DOCTYPE html>
 
@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <form id="Menú Principal" runat="server" class="auto-style1">
+    <form id="MenuPrincipal" runat="server" class="auto-style1">
         <table class="auto-style2">
             <tr>
                 <td class="auto-style7" style="background-color: #6699FF; font-family: 'microsoft sans Serif'; font-size: 28px; font-weight: bold; color: #FFFFFF;">
@@ -41,7 +41,7 @@
             <tr>
                 <td class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <select id="cmbMenu" class="auto-style6" name="cmbMenu">
-                        <option value="Usuarios"></option>
+                        <option value="Usuarios.aspx"></option>
                         <option value="Personas"></option>
                         <option value="Especialidades"></option>
                         <option value="Planes"></option>
