@@ -184,5 +184,11 @@ namespace UI.Desktop
         {
             this.Close(); 
         }
+
+        private void btnCrearPersona_Click(object sender, EventArgs e)
+        {
+            PersonaDesktop pd = new PersonaDesktop(ApplicationForm.ModoForm.Alta);
+            pd.ShowDialog(); 
+        }
     }
 }

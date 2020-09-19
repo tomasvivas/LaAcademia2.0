@@ -75,22 +75,34 @@
     <Compile Include="ApplicationForm.Designer.cs">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Especialidades.cs">
+    <Compile Include="FormsEntidades\ComisionDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Especialidades.Designer.cs">
+    <Compile Include="FormsEntidades\ComisionDesktop.Designer.cs">
+      <DependentUpon>ComisionDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEntidades\Comisiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEntidades\Comisiones.Designer.cs">
+      <DependentUpon>Comisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEntidades\Especialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEntidades\Especialidades.Designer.cs">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="EspecialidadDesktop.cs">
+    <Compile Include="FormsEntidades\EspecialidadDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EspecialidadDesktop.Designer.cs">
+    <Compile Include="FormsEntidades\EspecialidadDesktop.Designer.cs">
       <DependentUpon>EspecialidadDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cursos.cs">
+    <Compile Include="FormsEntidades\Cursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cursos.Designer.cs">
+    <Compile Include="FormsEntidades\Cursos.Designer.cs">
       <DependentUpon>Cursos.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuariosReporte.cs">
@@ -99,16 +111,16 @@
     <Compile Include="UsuariosReporte.Designer.cs">
       <DependentUpon>UsuariosReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonaDesktop.cs">
+    <Compile Include="FormsEntidades\PersonaDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonaDesktop.Designer.cs">
+    <Compile Include="FormsEntidades\PersonaDesktop.Designer.cs">
       <DependentUpon>PersonaDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personas.cs">
+    <Compile Include="FormsEntidades\Personas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personas.Designer.cs">
+    <Compile Include="FormsEntidades\Personas.Designer.cs">
       <DependentUpon>Personas.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
@@ -117,16 +129,16 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MateriaDesktop.cs">
+    <Compile Include="FormsEntidades\MateriaDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MateriaDesktop.Designer.cs">
+    <Compile Include="FormsEntidades\MateriaDesktop.Designer.cs">
       <DependentUpon>MateriaDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Materias.cs">
+    <Compile Include="FormsEntidades\Materias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Materias.Designer.cs">
+    <Compile Include="FormsEntidades\Materias.Designer.cs">
       <DependentUpon>Materias.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -135,16 +147,16 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlanDesktop.cs">
+    <Compile Include="FormsEntidades\PlanDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlanDesktop.Designer.cs">
+    <Compile Include="FormsEntidades\PlanDesktop.Designer.cs">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Planes.cs">
+    <Compile Include="FormsEntidades\Planes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Planes.Designer.cs">
+    <Compile Include="FormsEntidades\Planes.Designer.cs">
       <DependentUpon>Planes.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings1.Designer.cs">
@@ -153,16 +165,16 @@
       <DependentUpon>Settings1.settings</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="UsuarioDesktop.cs">
+    <Compile Include="FormsEntidades\UsuarioDesktop.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UsuarioDesktop.Designer.cs">
+    <Compile Include="FormsEntidades\UsuarioDesktop.Designer.cs">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios.cs">
+    <Compile Include="FormsEntidades\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuarios.Designer.cs">
+    <Compile Include="FormsEntidades\Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -170,13 +182,19 @@
     <EmbeddedResource Include="ApplicationForm.resx">
       <DependentUpon>ApplicationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cursos.resx">
+    <EmbeddedResource Include="FormsEntidades\ComisionDesktop.resx">
+      <DependentUpon>ComisionDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\Comisiones.resx">
+      <DependentUpon>Comisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\Cursos.resx">
       <DependentUpon>Cursos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EspecialidadDesktop.resx">
+    <EmbeddedResource Include="FormsEntidades\EspecialidadDesktop.resx">
       <DependentUpon>EspecialidadDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Especialidades.resx">
+    <EmbeddedResource Include="FormsEntidades\Especialidades.resx">
       <DependentUpon>Especialidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
@@ -185,29 +203,29 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MateriaDesktop.resx">
+    <EmbeddedResource Include="FormsEntidades\MateriaDesktop.resx">
       <DependentUpon>MateriaDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Materias.resx">
+    <EmbeddedResource Include="FormsEntidades\Materias.resx">
       <DependentUpon>Materias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonaDesktop.resx">
+    <EmbeddedResource Include="FormsEntidades\PersonaDesktop.resx">
       <DependentUpon>PersonaDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personas.resx">
+    <EmbeddedResource Include="FormsEntidades\Personas.resx">
       <DependentUpon>Personas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlanDesktop.resx">
+    <EmbeddedResource Include="FormsEntidades\PlanDesktop.resx">
       <DependentUpon>PlanDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Planes.resx">
+    <EmbeddedResource Include="FormsEntidades\Planes.resx">
       <DependentUpon>Planes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Usuarios.rdlc" />
-    <EmbeddedResource Include="UsuarioDesktop.resx">
+    <EmbeddedResource Include="FormsEntidades\UsuarioDesktop.resx">
       <DependentUpon>UsuarioDesktop.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios.resx">
+    <EmbeddedResource Include="FormsEntidades\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -291,5 +309,6 @@
   <ItemGroup>
     <None Include="Resources\add_insert_plus_1588.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

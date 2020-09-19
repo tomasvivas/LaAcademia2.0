@@ -22,7 +22,7 @@ namespace UI.Desktop
             set { _MatAct = value; }
         }
         #endregion
-        #region Metodos
+        #region Constructores
         public MateriaDesktop()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace UI.Desktop
         }
         #endregion
 
-
+        #region Metodos
         private void MateriaDesktop_Load(object sender, EventArgs e)
         {
 
@@ -171,5 +171,7 @@ namespace UI.Desktop
         {
             this.Close();
         }
+
+        #endregion
     }
 }

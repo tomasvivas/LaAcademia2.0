@@ -8,7 +8,7 @@ using Data.Database;
 
 namespace Business.Logic
 {
-    class ComisionLogic : BusinessLogic
+    public class ComisionLogic : BusinessLogic
     {
         private Data.Database.ComisionAdapter _ComData;
         public Data.Database.ComisionAdapter ComisionData
@@ -30,7 +30,7 @@ namespace Business.Logic
             return ComisionData.GetAll();
         }
 
-        public List<Plan> GetPlan()
+        public List<Plan> GetPlanes()
         {
             return ComisionData.GetPlanes();
         }

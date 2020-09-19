@@ -36,11 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chkClave = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnIngresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -109,11 +109,11 @@
             this.chkClave.AutoSize = true;
             this.chkClave.BackColor = System.Drawing.Color.Transparent;
             this.chkClave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.chkClave.Location = new System.Drawing.Point(266, 114);
+            this.chkClave.Location = new System.Drawing.Point(267, 119);
             this.chkClave.Name = "chkClave";
-            this.chkClave.Size = new System.Drawing.Size(89, 17);
+            this.chkClave.Size = new System.Drawing.Size(90, 17);
             this.chkClave.TabIndex = 7;
-            this.chkClave.Text = "Ocultar clave";
+            this.chkClave.Text = "Mostrar clave";
             this.chkClave.UseVisualStyleBackColor = false;
             this.chkClave.CheckedChanged += new System.EventHandler(this.chkClave_CheckedChanged);
             // 
@@ -136,6 +136,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(393, 200);
             this.panel1.TabIndex = 8;
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnIngresar.BackColor = System.Drawing.Color.Lavender;
+            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIngresar.Location = new System.Drawing.Point(190, 165);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresar.TabIndex = 12;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSalir.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.Location = new System.Drawing.Point(281, 165);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 11;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox2
             // 
@@ -167,32 +193,6 @@
             this.label4.Size = new System.Drawing.Size(202, 15);
             this.label4.TabIndex = 8;
             this.label4.Text = "Por favor ingrese su ID y contraseña";
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSalir.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalir.Location = new System.Drawing.Point(281, 165);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 11;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnIngresar.BackColor = System.Drawing.Color.Lavender;
-            this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIngresar.Location = new System.Drawing.Point(190, 165);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(75, 23);
-            this.btnIngresar.TabIndex = 12;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = false;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // Login
             // 

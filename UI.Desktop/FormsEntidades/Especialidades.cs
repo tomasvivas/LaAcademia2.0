@@ -50,18 +50,32 @@ namespace UI.Desktop
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            int ID = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
-            EspecialidadDesktop esp = new EspecialidadDesktop(ID, ApplicationForm.ModoForm.Modificacion);
-            esp.ShowDialog();
-            this.Listar();
+            try
+            {
+                int ID = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                EspecialidadDesktop ed = new EspecialidadDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+                ed.ShowDialog();
+                this.Listar();
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            int ID = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
-            EspecialidadDesktop esp = new EspecialidadDesktop(ID, ApplicationForm.ModoForm.Baja);
-            esp.ShowDialog();
-            this.Listar();
+            try
+            {
+                int ID = ((Business.Entities.Especialidad)this.dgvEspecialidades.SelectedRows[0].DataBoundItem).ID;
+                EspecialidadDesktop ed = new EspecialidadDesktop(ID, ApplicationForm.ModoForm.Baja);
+                ed.ShowDialog();
+                this.Listar();
+            }
+            catch
+            {
+                MessageBox.Show("Debe seleccionar una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         

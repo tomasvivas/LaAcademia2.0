@@ -36,7 +36,7 @@ namespace UI.Desktop
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            txtClave.PasswordChar = '*'; 
         }
 
         
@@ -73,7 +73,7 @@ namespace UI.Desktop
 
         private void chkClave_CheckedChanged(object sender, EventArgs e)
         {
-            if (txtClave.PasswordChar == '\0')
+            if (chkClave.Checked == false)
             {
                 txtClave.PasswordChar = '*';
             }

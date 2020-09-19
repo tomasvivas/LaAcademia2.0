@@ -75,7 +75,8 @@
             "Personas",
             "Especialidades",
             "Materias",
-            "Planes"});
+            "Planes",
+            "Comisiones"});
             this.cmbMenu.Location = new System.Drawing.Point(144, 165);
             this.cmbMenu.Name = "cmbMenu";
             this.cmbMenu.Size = new System.Drawing.Size(277, 21);

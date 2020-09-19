@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business.Entities;
 using Business.Logic;
+using UI.Desktop.FormsEntidades; 
 
 namespace UI.Desktop
 {
@@ -65,6 +66,10 @@ namespace UI.Desktop
                     Cursos cur = new Cursos();
                     cur.Show();
                     break;
+                case "Comisiones":
+                    Comisiones com = new Comisiones();
+                    com.Show();
+                    break; 
 
             }
 
