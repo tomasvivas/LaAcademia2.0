@@ -9,7 +9,7 @@ using Business.Entities;
 
 namespace UI.Web
 {
-    public partial class Usuarios : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         #region Enum
         public enum FormModes
@@ -17,9 +17,9 @@ namespace UI.Web
             Alta,
             Baja,
             Modificacion
-        }
 
-        #endregion
+        }
+         #endregion
 
         #region Propiedades
         public FormModes FormMode
@@ -28,20 +28,21 @@ namespace UI.Web
             set { this.ViewState["FormMode"] = value; }
         }
 
-        UsuarioLogic _logic;
-        private UsuarioLogic Logic
+       
+        PersonaLogic _logic;
+        private PersonaLogic Logic
         {
             get
             {
                 if (_logic == null)
                 {
-                    _logic = new UsuarioLogic();
+                    _logic = new PersonaLogic();
                 }
                 return _logic;
             }
         }
 
-        private Usuario Entity
+        private Persona Entity
         {
             get;
             set;
@@ -82,24 +83,21 @@ namespace UI.Web
             this.nombreTextBox.Text = this.Entity.Nombre;
             this.apellidoTextBox.Text = this.Entity.Apellido;
             this.emailTextBox.Text = this.Entity.Email;
-            this.habilitadoCheckBox.Checked = this.Entity.Habilitado;
-            this.nombreUsuarioTextBox.Text = this.Entity.NombreUsuario;
-            
+          
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-    
+
         }
-      
+
 
         private void ClearForm()
         {
             this.nombreTextBox.Text = string.Empty;
             this.apellidoTextBox.Text = string.Empty;
             this.emailTextBox.Text = string.Empty;
-            this.habilitadoCheckBox.Checked = false;
-            this.nombreUsuarioTextBox.Text = string.Empty;
+          
         }
 
         private void EnableForm(bool enable)
@@ -107,11 +105,15 @@ namespace UI.Web
             this.nombreTextBox.Enabled = enable;
             this.apellidoTextBox.Enabled = enable;
             this.emailTextBox.Enabled = enable;
-            this.nombreUsuarioTextBox.Enabled = enable;
-            this.claveTextbox.Visible = enable;
-            this.claveLabel.Visible = enable;
-            this.repetirClaveTextBox.Visible = enable;
-            this.repetirClaveLabel.Visible = enable;
+            this.direccionTextBox.Enabled = enable;
+            this.fechNacTextBox.Enabled = enable;
+            this.planTextBox.Enabled = enable;
+            this.telefonoTextBox.Enabled = enable;
+            this.tipoPersonaTextBox.Enabled = enable;
+            this.descPlanTextBox.Enabled = enable;
+
+
+
         }
 
         protected void gridView_selectedIndexChanged(object sender, EventArgs e)
@@ -119,19 +121,17 @@ namespace UI.Web
             this.SelectedID = (int)this.gridView.SelectedValue;
         }
 
-        private void LoadEntity(Usuario usuario)
+        private void LoadEntity(Persona persona)
         {
-            usuario.Nombre = this.nombreTextBox.Text;
-            usuario.Apellido = this.apellidoTextBox.Text;
-            usuario.Email = this.emailTextBox.Text;
-            usuario.Habilitado = this.habilitadoCheckBox.Checked;
-            usuario.NombreUsuario = this.nombreUsuarioTextBox.Text;
-            usuario.Clave = this.claveTextbox.Text;
+            persona.Nombre = this.nombreTextBox.Text;
+            persona.Apellido = this.apellidoTextBox.Text;
+            persona.Email = this.emailTextBox.Text;
+            
         }
 
-        private void SaveEntity(Usuario usuario)
+        private void SaveEntity(Persona persona)
         {
-            this.Logic.Save(usuario);
+            this.Logic.Save(persona);
         }
 
         private void DeleteEntity(int id)
@@ -139,19 +139,6 @@ namespace UI.Web
             this.Logic.Delete(id);
         }
 
-      
-
-        public bool ValidarClave()
-        {
-            if (this.claveTextbox.Text != this.repetirClaveTextBox.Text)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
 
         #endregion
 
@@ -196,56 +183,36 @@ namespace UI.Web
             switch (this.FormMode)
             {
                 case FormModes.Baja:
-                    if (ValidarClave() == true)
-                    {
+                   
                         this.DeleteEntity(this.SelectedID);
                         this.formPanel.Visible = false;
                         this.gridView.DataBind();
-                    }
-                    else
-                    {
-                        string script = "alert(\"La clave no es la misma\");";
-                        ScriptManager.RegisterStartupScript(this, GetType(),
-                                              "ServerControlScript", script, true);
-                    }
+      
 
                     break;
                 case FormModes.Modificacion:
-                    this.Entity = new Usuario();
+                    this.Entity = new Persona();
                     this.Entity.ID = this.SelectedID;
                     this.Entity.State = BusinessEntity.States.Modified;
                     this.LoadEntity(this.Entity);
-                    if (ValidarClave() == true)
-                    {
-                        this.SaveEntity(this.Entity);
-                        this.gridView.DataBind();
-                        this.formPanel.Visible = false;
-                    }
-                    else
-                    {
-                        string script = "alert(\"La clave no es la misma\");";
-                        ScriptManager.RegisterStartupScript(this, GetType(),
-                                              "ServerControlScript", script, true);
-                    }
+                    this.SaveEntity(this.Entity);
+                    this.gridView.DataBind();
+                    this.formPanel.Visible = false;
+                    
                     break;
                 case FormModes.Alta:
-                    if (ValidarClave() == true)
-                    {
-                        this.Entity = new Usuario();
+                        this.Entity = new Persona();
                         this.LoadEntity(this.Entity);
                         this.SaveEntity(this.Entity);
                         this.gridView.DataBind();
                         this.formPanel.Visible = false;
-                    }
-                    else
-                    {
-                        string script = "alert(\"La clave no es la misma\");";
-                        ScriptManager.RegisterStartupScript(this, GetType(),
-                                              "ServerControlScript", script, true);
-                    }
+                    
                     break;
             }
             this.formPanel.Visible = false;
         }
     }
+
+
 }
+
