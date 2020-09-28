@@ -66,7 +66,7 @@ namespace Data.Database
                     "INNER JOIN planes ON planes.id_plan = materias.id_plan where materias.id_materia = @id; ", sqlConn);
                 cmdMaterias.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drMaterias = cmdMaterias.ExecuteReader();
-                if (drMaterias.Read())
+                while (drMaterias.Read())
                 {
                     mat.ID = (int)drMaterias["id_materia"];
                     mat.Descripcion = (string)drMaterias["desc_materia"];
