@@ -9,7 +9,7 @@ using Business.Entities;
 
 namespace UI.Web
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class Personas : System.Web.UI.Page
     {
         #region Enum
         public enum FormModes

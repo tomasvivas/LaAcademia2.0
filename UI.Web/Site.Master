@@ -17,6 +17,7 @@
                 <li><a href="Usuarios.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000;">Usuarios</a></li>
                 <li><a href="Especialidades.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Especialidades</a></li>
                 <li><a href="Planes.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Planes</a></li>
+                <li><a href="Personas.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Personas</a></li>
                 
             </ul>
         </div>

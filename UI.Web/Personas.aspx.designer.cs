@@ -11,7 +11,7 @@ namespace UI.Web
 {
 
 
-    public partial class WebForm2
+    public partial class Personas
     {
 
         /// <summary>
