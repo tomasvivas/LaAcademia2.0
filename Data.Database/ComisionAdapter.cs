@@ -33,6 +33,7 @@ namespace Data.Database
                     com.Descripcion = (string)drComision["desc_comision"];
                     com.AnioEspecialidad = (int)drComision["anio_especialidad"];
                     com.IDPlan = (int)drComision["id_plan"];
+                    com.descPlan = (string)drComision["desc_plan"];
 
                     comisiones.Add(com);
                 }
@@ -68,6 +69,7 @@ namespace Data.Database
                     com.Descripcion = (string)drComision["desc_comision"];
                     com.AnioEspecialidad = (int)drComision["anio_especialidad"];
                     com.IDPlan = (int)drComision["id_plan"];
+                    com.descPlan = (string)drComision["desc_plan"];
                 }
                 drComision.Close();
             }

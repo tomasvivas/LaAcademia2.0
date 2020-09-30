@@ -69,7 +69,8 @@ namespace UI.Desktop
                 case "Comisiones":
                     Comisiones com = new Comisiones();
                     com.Show();
-                    break; 
+                    break;
+                
 
             }
 

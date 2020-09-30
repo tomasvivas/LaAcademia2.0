@@ -22,7 +22,7 @@ namespace UI.Desktop.FormsEntidades
 
         private void Comisiones_Load(object sender, EventArgs e)
         {
-            
+            this.Listar();
         }
 
         private void Listar()

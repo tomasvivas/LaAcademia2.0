@@ -19,8 +19,8 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdCursos = new SqlCommand("SELECT cur.id_curso, cur.id_materia, cur.id_comision, " +
-                    "cur.anio_calendario, cur.cupo, materias.desc_materia, comisiones.desc_comision FROM cursos cur" +
-                    "INNER JOIN materias ON materias.id_materia = cur.id_materia" +
+                    "cur.anio_calendario, cur.cupo, materias.desc_materia, comisiones.desc_comision FROM cursos cur " +
+                    "INNER JOIN materias ON materias.id_materia = cur.id_materia " +
                     "INNER JOIN comisiones ON comisiones.id_comision = cur.id_comision", sqlConn);
                 SqlDataReader drCursos = cmdCursos.ExecuteReader();
                 while (drCursos.Read())
@@ -58,9 +58,9 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdCursos = new SqlCommand("SELECT cur.id_curso, cur.id_materia, cur.id_comision, " +
-                    "cur.anio_calendario, cur.cupo, materias.desc_materia, comisiones.desc_comision FROM cursos cur" +
-                    "INNER JOIN materias ON materias.id_materia = cur.id_materia" +
-                    "INNER JOIN comisiones ON comisiones.id_comision = cur.id_comision" +
+                    "cur.anio_calendario, cur.cupo, materias.desc_materia, comisiones.desc_comision FROM cursos cur " +
+                    "INNER JOIN materias ON materias.id_materia = cur.id_materia " +
+                    "INNER JOIN comisiones ON comisiones.id_comision = cur.id_comision " +
                     "WHERE cur.id_curso = @id", sqlConn);
                 cmdCursos.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drCursos = cmdCursos.ExecuteReader();
@@ -106,7 +106,7 @@ namespace Data.Database
             return materias;
         }
 
-        public List<Comision> Getcomisiones()
+        public List<Comision> GetComisiones()
         {
             List<Comision> comisiones = new List<Comision>();
             this.OpenConnection();
@@ -149,7 +149,7 @@ namespace Data.Database
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("UPDATE cursos SET cupo = @cupo, anio_calendario = @AnioCalendario," +
+                SqlCommand cmdSave = new SqlCommand("UPDATE cursos SET cupo = @cupo, anio_calendario = @AnioCalendario, " +
                     "id_materia = @IDMateria, id_comision = @IDComision, " +
                     "WHERE id_curso = @id", sqlConn);
                 cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = cur.ID;
