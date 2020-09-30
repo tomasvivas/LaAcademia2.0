@@ -22,6 +22,7 @@ namespace UI.Desktop
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            fecha.Text = DateTime.Today.ToString("D"); 
             Login login = new Login();
             login.ShowDialog();
             if (login.DialogResult != DialogResult.OK)
@@ -82,14 +83,15 @@ namespace UI.Desktop
             {
 
                 case Persona.TipoPersonas.Profesor:
-                    MessageBox.Show("Usted ha ingresado como profesor");
+                    
+                    tipo.Text = "Usted ha ingresado como profesor"; 
                     cmbMenu.Items.Remove("Especialidades");
                     break;
                 case Persona.TipoPersonas.Administrador:
-                    MessageBox.Show("Usted ha ingresado como administrador");
+                    tipo.Text = "Usted ha ingresado como administrador";
                     break;
                 case Persona.TipoPersonas.Alumno:
-                    MessageBox.Show("Usted ha ingresado como alumno");
+                    tipo.Text = "Usted ha ingresado como alumno";
                     break;
                 default:
                     break;
