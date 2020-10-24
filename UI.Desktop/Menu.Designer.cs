@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cmbMenu = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnReporteUsuarios = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tipo = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Label();
+            this.cmbMenu = new System.Windows.Forms.ComboBox();
+            this.btnReporteUsuarios = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,28 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // tipo
+            // 
+            this.tipo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tipo.AutoSize = true;
+            this.tipo.ForeColor = System.Drawing.Color.Black;
+            this.tipo.Location = new System.Drawing.Point(468, 289);
+            this.tipo.Name = "tipo";
+            this.tipo.Size = new System.Drawing.Size(24, 13);
+            this.tipo.TabIndex = 17;
+            this.tipo.Text = "tipo";
+            // 
+            // fecha
+            // 
+            this.fecha.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.fecha.AutoSize = true;
+            this.fecha.ForeColor = System.Drawing.Color.Black;
+            this.fecha.Location = new System.Drawing.Point(458, 6);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(34, 13);
+            this.fecha.TabIndex = 18;
+            this.fecha.Text = "fecha";
+            // 
             // cmbMenu
             // 
             this.cmbMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -84,12 +106,37 @@
             "Planes",
             "Comisiones",
             "Cursos"});
-            this.cmbMenu.Location = new System.Drawing.Point(167, 202);
+            this.cmbMenu.Location = new System.Drawing.Point(168, 202);
             this.cmbMenu.Name = "cmbMenu";
-            this.cmbMenu.Size = new System.Drawing.Size(325, 21);
+            this.cmbMenu.Size = new System.Drawing.Size(324, 21);
             this.cmbMenu.TabIndex = 13;
             this.cmbMenu.Text = "Elija su opción";
             this.cmbMenu.SelectedIndexChanged += new System.EventHandler(this.cmbMenu_SelectedIndexChanged);
+            // 
+            // btnReporteUsuarios
+            // 
+            this.btnReporteUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReporteUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReporteUsuarios.ForeColor = System.Drawing.Color.Black;
+            this.btnReporteUsuarios.Location = new System.Drawing.Point(3, 202);
+            this.btnReporteUsuarios.Name = "btnReporteUsuarios";
+            this.btnReporteUsuarios.Size = new System.Drawing.Size(159, 29);
+            this.btnReporteUsuarios.TabIndex = 16;
+            this.btnReporteUsuarios.Text = "Reporte Usuarios";
+            this.btnReporteUsuarios.UseVisualStyleBackColor = true;
+            this.btnReporteUsuarios.Click += new System.EventHandler(this.btnReporteUsuarios_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 150);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -116,57 +163,10 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "\"La Academia\"";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(125, 150);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnReporteUsuarios
-            // 
-            this.btnReporteUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReporteUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReporteUsuarios.ForeColor = System.Drawing.Color.Black;
-            this.btnReporteUsuarios.Location = new System.Drawing.Point(3, 202);
-            this.btnReporteUsuarios.Name = "btnReporteUsuarios";
-            this.btnReporteUsuarios.Size = new System.Drawing.Size(158, 29);
-            this.btnReporteUsuarios.TabIndex = 16;
-            this.btnReporteUsuarios.Text = "Reporte Usuarios";
-            this.btnReporteUsuarios.UseVisualStyleBackColor = true;
-            this.btnReporteUsuarios.Click += new System.EventHandler(this.btnReporteUsuarios_Click);
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // tipo
-            // 
-            this.tipo.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tipo.AutoSize = true;
-            this.tipo.ForeColor = System.Drawing.Color.Black;
-            this.tipo.Location = new System.Drawing.Point(468, 289);
-            this.tipo.Name = "tipo";
-            this.tipo.Size = new System.Drawing.Size(24, 13);
-            this.tipo.TabIndex = 17;
-            this.tipo.Text = "tipo";
-            // 
-            // fecha
-            // 
-            this.fecha.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.fecha.AutoSize = true;
-            this.fecha.ForeColor = System.Drawing.Color.Black;
-            this.fecha.Location = new System.Drawing.Point(458, 6);
-            this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(34, 13);
-            this.fecha.TabIndex = 18;
-            this.fecha.Text = "fecha";
             // 
             // Menu
             // 
