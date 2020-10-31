@@ -93,6 +93,18 @@
     <Compile Include="FormsEntidades\CursoDesktop.Designer.cs">
       <DependentUpon>CursoDesktop.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsEntidades\DocentesCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEntidades\DocentesCursos.Designer.cs">
+      <DependentUpon>DocentesCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEntidades\DocentesCursosDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEntidades\DocentesCursosDesktop.Designer.cs">
+      <DependentUpon>DocentesCursosDesktop.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsEntidades\Especialidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsEntidades\Cursos.resx">
       <DependentUpon>Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\DocentesCursos.resx">
+      <DependentUpon>DocentesCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\DocentesCursosDesktop.resx">
+      <DependentUpon>DocentesCursosDesktop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsEntidades\EspecialidadDesktop.resx">
       <DependentUpon>EspecialidadDesktop.cs</DependentUpon>

@@ -105,7 +105,8 @@
             "Materias",
             "Planes",
             "Comisiones",
-            "Cursos"});
+            "Cursos",
+            "Docentes Cursos"});
             this.cmbMenu.Location = new System.Drawing.Point(168, 202);
             this.cmbMenu.Name = "cmbMenu";
             this.cmbMenu.Size = new System.Drawing.Size(324, 21);

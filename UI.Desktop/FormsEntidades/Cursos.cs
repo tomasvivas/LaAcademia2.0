@@ -80,5 +80,9 @@ namespace UI.Desktop
             }
         }
 
+        private void tcCursos_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

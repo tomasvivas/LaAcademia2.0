@@ -46,7 +46,7 @@ namespace Data.Database
             return docentescursos;
         }
 
-        public DocenteCurso GetOne(int ID)
+        public Business.Entities.DocenteCurso GetOne(int ID)
         {
             DocenteCurso dc = new DocenteCurso();
             try

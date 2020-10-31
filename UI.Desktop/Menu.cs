@@ -71,7 +71,11 @@ namespace UI.Desktop
                     Comisiones com = new Comisiones();
                     com.Show();
                     break;
-                
+                case "Docentes Cursos":
+                    DocentesCursos doc = new DocentesCursos();
+                    doc.Show();
+                    break;
+
 
             }
 
