@@ -7,9 +7,10 @@ using System.Web.UI.WebControls;
 using Business.Logic;
 using Business.Entities;
 
+
 namespace UI.Web
 {
-    public partial class DocentesCursos : System.Web.UI.Page
+    public partial class Materias : System.Web.UI.Page
     {
         #region Enum
         public enum FormModes
@@ -28,20 +29,20 @@ namespace UI.Web
             set { this.ViewState["FormMode"] = value; }
         }
 
-        DocenteCursoLogic _logic;
-        private DocenteCursoLogic Logic
+        MateriaLogic _logic;
+        private MateriaLogic Logic
         {
             get
             {
                 if (_logic == null)
                 {
-                    _logic = new DocenteCursoLogic();
+                    _logic = new MateriaLogic();
                 }
                 return _logic;
             }
         }
 
-        private DocenteCurso Entity
+        private Materia Entity
         {
             get;
             set;
@@ -79,10 +80,12 @@ namespace UI.Web
         private void LoadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.IDTextBox.Text = this.Entity.ID.ToString();
-            this.IDDocenteTextBox.Text = this.Entity.IDDocente.ToString();
-            this.CargoTextBox.Text = this.Entity.Cargo.ToString();
-            this.CursoTextBox.Text = this.Entity.IDCurso.ToString();
+            this.txtID.Text = this.Entity.ID.ToString();
+            this.txtDesc.Text = this.Entity.Descripcion.ToString();
+            this.txtHsSemanales.Text = this.Entity.HSSemanales.ToString();
+            this.txtHsTotales.Text = this.Entity.HSTotales.ToString();
+            this.txtIDPlan.Text = this.Entity.IDPlan.ToString();
+            this.txtDescPlan.Text = this.Entity.descPlan.ToString();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -90,31 +93,25 @@ namespace UI.Web
 
         }
 
-        protected void ObjectDataSource1_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
-        {
-
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ClearForm()
         {
-            this.IDTextBox.Text = string.Empty;
-            this.IDDocenteTextBox.Text = string.Empty;
-            this.CargoTextBox.Text = string.Empty;
-            this.CursoTextBox.Text = string.Empty;
+            this.txtID.Text = string.Empty;
+            this.txtDesc.Text = string.Empty;
+            this.txtHsSemanales.Text = string.Empty;
+            this.txtHsTotales.Text = string.Empty;
+            this.txtIDPlan.Text = string.Empty;
+            this.txtDescPlan.Text = string.Empty;
 
         }
 
         private void EnableForm(bool enable)
         {
-            this.IDTextBox.Enabled = enable;
-            this.IDDocenteTextBox.Enabled = enable;
-            this.CursoTextBox.Enabled = enable;
-            this.CargoTextBox.Enabled = enable;
+            this.txtID.Enabled = enable;
+            this.txtDesc.Enabled = enable;
+            this.txtHsSemanales.Enabled = enable;
+            this.txtHsTotales.Enabled = enable;
+            this.txtIDPlan.Enabled = enable;
+            this.txtDescPlan.Enabled = enable;
 
         }
 
@@ -124,18 +121,20 @@ namespace UI.Web
 
         }
 
-        private void LoadEntity(DocenteCurso docentecurso)
+        private void LoadEntity(Materia materia)
         {
-            docentecurso.ID = int.Parse(this.IDTextBox.Text);
-            docentecurso.IDDocente = int.Parse(this.IDDocenteTextBox.Text);
-            docentecurso.Cargo = Business.Entities.DocenteCurso.TiposCargos.set(this.CargoTextBox.Text);
-            docentecurso.IDCurso = int.Parse(this.CursoTextBox.Text);
+            materia.ID = int.Parse(this.txtID.Text);
+            materia.Descripcion = this.txtDesc.Text;
+            materia.HSSemanales = int.Parse(this.txtHsSemanales.Text);
+            materia.HSTotales = int.Parse(this.txtHsTotales.Text);
+            materia.IDPlan = int.Parse(this.txtIDPlan.Text);
+            materia.descPlan = this.txtDescPlan.Text;
 
         }
 
-        private void SaveEntity(DocenteCurso docentecurso)
+        private void SaveEntity(Materia materia)
         {
-            this.Logic.Save(docentecurso);
+            this.Logic.Save(materia);
         }
 
         private void DeleteEntity(int id)
@@ -194,7 +193,7 @@ namespace UI.Web
 
                     break;
                 case FormModes.Modificacion:
-                    this.Entity = new DocenteCurso();
+                    this.Entity = new Materia();
                     this.Entity.ID = this.SelectedID;
                     this.Entity.State = BusinessEntity.States.Modified;
                     this.LoadEntity(this.Entity);
@@ -204,7 +203,7 @@ namespace UI.Web
                     break;
                 case FormModes.Alta:
 
-                    this.Entity = new DocenteCurso();
+                    this.Entity = new Materia();
                     this.LoadEntity(this.Entity);
                     this.SaveEntity(this.Entity);
                     this.gridView.DataBind();

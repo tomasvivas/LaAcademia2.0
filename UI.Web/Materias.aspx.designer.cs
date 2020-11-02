@@ -11,17 +11,17 @@ namespace UI.Web
 {
 
 
-    public partial class DocentesCursos
+    public partial class Materias
     {
 
         /// <summary>
-        /// Control odsDocentesCursos.
+        /// Control ObjectDataSource1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource odsDocentesCursos;
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
 
         /// <summary>
         /// Control gridView.
@@ -87,13 +87,13 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// Control IDTextBox.
+        /// Control txtID.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IDTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtID;
 
         /// <summary>
         /// Control Label2.
@@ -105,13 +105,13 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Control IDDocenteTextBox.
+        /// Control txtDesc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox IDDocenteTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtDesc;
 
         /// <summary>
         /// Control Label3.
@@ -123,13 +123,13 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// Control CursoTextBox.
+        /// Control txtHsSemanales.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CursoTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtHsSemanales;
 
         /// <summary>
         /// Control Label4.
@@ -141,13 +141,49 @@ namespace UI.Web
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// Control CargoTextBox.
+        /// Control txtHsTotales.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CargoTextBox;
+        protected global::System.Web.UI.WebControls.TextBox txtHsTotales;
+
+        /// <summary>
+        /// Control Label5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
+        /// Control txtIDPlan.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtIDPlan;
+
+        /// <summary>
+        /// Control Label6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
+        /// Control txtDescPlan.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescPlan;
 
         /// <summary>
         /// Control Panel3.
