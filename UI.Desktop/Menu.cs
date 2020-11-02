@@ -93,9 +93,11 @@ namespace UI.Desktop
                     break;
                 case Persona.TipoPersonas.Administrador:
                     tipo.Text = "Usted ha ingresado como administrador";
+                    
                     break;
                 case Persona.TipoPersonas.Alumno:
                     tipo.Text = "Usted ha ingresado como alumno";
+                    cmbMenu.Items.Remove("Docentes Cursos");
                     break;
                 default:
                     break;

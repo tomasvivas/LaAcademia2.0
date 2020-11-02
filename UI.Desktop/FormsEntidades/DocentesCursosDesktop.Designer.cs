@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tlpDocentesCursos = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -39,7 +40,12 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.cmbCursos = new System.Windows.Forms.ComboBox();
             this.cmbDocentes = new System.Windows.Forms.ComboBox();
+            this.academiaDataSet = new UI.Desktop.AcademiaDataSet();
+            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cursosTableAdapter = new UI.Desktop.AcademiaDataSetTableAdapters.cursosTableAdapter();
             this.tlpDocentesCursos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tlpDocentesCursos
@@ -68,7 +74,6 @@
             this.tlpDocentesCursos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tlpDocentesCursos.Size = new System.Drawing.Size(286, 191);
             this.tlpDocentesCursos.TabIndex = 0;
-            this.tlpDocentesCursos.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // label6
             // 
@@ -85,8 +90,8 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAceptar.Location = new System.Drawing.Point(32, 140);
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAceptar.Location = new System.Drawing.Point(32, 152);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 1;
@@ -96,8 +101,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.Location = new System.Drawing.Point(208, 140);
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCancelar.Location = new System.Drawing.Point(208, 152);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -125,9 +130,9 @@
             this.cmbCargos.Items.AddRange(new object[] {
             "Auxiliar",
             "Profesor"});
-            this.cmbCargos.Location = new System.Drawing.Point(123, 109);
+            this.cmbCargos.Location = new System.Drawing.Point(138, 109);
             this.cmbCargos.Name = "cmbCargos";
-            this.cmbCargos.Size = new System.Drawing.Size(150, 21);
+            this.cmbCargos.Size = new System.Drawing.Size(120, 21);
             this.cmbCargos.TabIndex = 9;
             this.cmbCargos.Text = "Seleccione un cargo";
             // 
@@ -141,7 +146,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 29);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Id Docente";
+            this.label3.Text = "Docente";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -156,22 +161,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Curso";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(113, 3);
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtID.Location = new System.Drawing.Point(141, 9);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(150, 20);
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(114, 20);
             this.txtID.TabIndex = 11;
             // 
             // cmbCursos
             // 
             this.cmbCursos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbCursos.FormattingEnabled = true;
-            this.cmbCursos.Location = new System.Drawing.Point(130, 45);
+            this.cmbCursos.Location = new System.Drawing.Point(140, 45);
             this.cmbCursos.Name = "cmbCursos";
-            this.cmbCursos.Size = new System.Drawing.Size(135, 21);
+            this.cmbCursos.Size = new System.Drawing.Size(116, 21);
             this.cmbCursos.TabIndex = 12;
             this.cmbCursos.Text = "Seleccione un curso";
             // 
@@ -183,6 +189,21 @@
             this.cmbDocentes.Name = "cmbDocentes";
             this.cmbDocentes.Size = new System.Drawing.Size(121, 21);
             this.cmbDocentes.TabIndex = 13;
+            this.cmbDocentes.Text = "Seleccione un docente";
+            // 
+            // academiaDataSet
+            // 
+            this.academiaDataSet.DataSetName = "AcademiaDataSet";
+            this.academiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cursosBindingSource
+            // 
+            this.cursosBindingSource.DataMember = "cursos";
+            this.cursosBindingSource.DataSource = this.academiaDataSet;
+            // 
+            // cursosTableAdapter
+            // 
+            this.cursosTableAdapter.ClearBeforeFill = true;
             // 
             // DocentesCursosDesktop
             // 
@@ -194,6 +215,8 @@
             this.Text = "DocentesCursosDesktop";
             this.tlpDocentesCursos.ResumeLayout(false);
             this.tlpDocentesCursos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,5 +234,8 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.ComboBox cmbCursos;
         private System.Windows.Forms.ComboBox cmbDocentes;
+        private AcademiaDataSet academiaDataSet;
+        private System.Windows.Forms.BindingSource cursosBindingSource;
+        private AcademiaDataSetTableAdapters.cursosTableAdapter cursosTableAdapter;
     }
 }

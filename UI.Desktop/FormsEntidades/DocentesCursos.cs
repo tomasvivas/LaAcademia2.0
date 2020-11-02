@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Business.Logic;
 using System.Windows.Forms;
+using Business.Entities;
 
 namespace UI.Desktop.FormsEntidades
 {
@@ -21,29 +22,19 @@ namespace UI.Desktop.FormsEntidades
 
         private void DocentesCursos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'academiaDataSet.docentes_cursos' Puede moverla o quitarla según sea necesario.
-            this.docentes_cursosTableAdapter.Fill(this.academiaDataSet.docentes_cursos);
             this.Listar();
 
         }
 
         public void Listar() 
         {
-            DocenteCursoLogic dcl = new DocenteCursoLogic();
-            this.dgvDocentesCursos.DataSource = dcl.GetAll();
+            CursoLogic cl = new CursoLogic();
+            this.dgvDocentesCursos.DataSource = cl.GetAll();
         }
 
 
 
-        private void toolStripContainer1_ContentPanel_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripContainer1_TopToolStripPanel_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
@@ -54,6 +45,14 @@ namespace UI.Desktop.FormsEntidades
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
+            DocenteCurso DocenteCursoNuevo = new DocenteCurso();
+            DocenteCursoNuevo.IDDocente = Convert.ToInt32(dgvDocentesCursos.SelectedValue.ToString());
+            DocenteCursoNuevo.IDCurso = ((Business.Entities.Curso)this.dgvDocentesCursos.SelectedRows[0].DataBoundItem).ID;
+            DocenteCursoNuevo.Cargo = (DocenteCurso.TiposCargos)Enum.Parse(typeof(DocenteCurso.TiposCargos), cmbCargos.SelectedValue.ToString());
+            DocenteCursoActual = DocenteCursoNuevo;
+            DocenteCursoLogic doccurLogic = new DocenteCursoLogic();
+            DocenteCursoNuevo.State = BusinessEntity.States.New;
+            doccurLogic.Save(DocenteCursoNuevo);
             this.Listar();
         }
 

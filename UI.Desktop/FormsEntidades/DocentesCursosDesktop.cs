@@ -91,7 +91,7 @@ namespace UI.Desktop.FormsEntidades
             DocenteCursoLogic dcl = new DocenteCursoLogic();
             cmbCursos.DataSource = dcl.GetCursos();
             cmbCursos.ValueMember = "ID";
-            cmbCursos.DisplayMember = "DescMateria";
+            cmbCursos.DisplayMember = "DescMateria" ;
             if (Modo != ModoForm.Alta)
             {
                 cmbCursos.SelectedValue = DocenteCursoActual.IDCurso;
@@ -119,20 +119,7 @@ namespace UI.Desktop.FormsEntidades
         }
 
        #endregion
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -143,5 +130,7 @@ namespace UI.Desktop.FormsEntidades
         {
             this.Close();
         }
+
+        
     }
 }
