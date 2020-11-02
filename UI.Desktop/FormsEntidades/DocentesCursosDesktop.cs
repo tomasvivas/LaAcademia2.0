@@ -32,6 +32,7 @@ namespace UI.Desktop.FormsEntidades
         {
             Modo = modo;
             this.MapearCursos();
+            this.MapearDocentes();
         }
 
         public DocentesCursosDesktop(int ID, ModoForm modo) : this()
@@ -41,6 +42,7 @@ namespace UI.Desktop.FormsEntidades
             DocenteCursoActual = curso.GetOne(ID);
             this.MapearDeDatos();
             this.MapearCursos();
+            this.MapearDocentes();
 
         }
         #endregion
@@ -53,7 +55,7 @@ namespace UI.Desktop.FormsEntidades
                 DocenteCurso DocenteCursoNuevo = new DocenteCurso();
 
 
-                DocenteCursoNuevo.IDDocente = int.Parse(this.txtIdDocente.Text);
+                DocenteCursoNuevo.IDDocente = Convert.ToInt32(cmbDocentes.SelectedValue.ToString());
                 DocenteCursoNuevo.IDCurso = Convert.ToInt32(cmbCursos.SelectedValue.ToString());
                 DocenteCursoNuevo.Cargo = (DocenteCurso.TiposCargos)Enum.Parse(typeof(DocenteCurso.TiposCargos), cmbCargos.SelectedValue.ToString());
                 DocenteCursoActual = DocenteCursoNuevo;
@@ -66,7 +68,7 @@ namespace UI.Desktop.FormsEntidades
             else if (Modo == ModoForm.Modificacion)
             {
 
-                DocenteCursoActual.IDDocente = int.Parse(this.txtIdDocente.Text);
+                DocenteCursoActual.IDDocente = Convert.ToInt32(cmbDocentes.SelectedValue.ToString());
                 DocenteCursoActual.IDCurso = Convert.ToInt32(cmbCursos.SelectedValue.ToString());
                 DocenteCursoActual.Cargo = (DocenteCurso.TiposCargos)Enum.Parse(typeof(DocenteCurso.TiposCargos), cmbCargos.SelectedValue.ToString());
                 DocenteCursoLogic dcl = new DocenteCursoLogic();
@@ -89,7 +91,7 @@ namespace UI.Desktop.FormsEntidades
             DocenteCursoLogic dcl = new DocenteCursoLogic();
             cmbCursos.DataSource = dcl.GetCursos();
             cmbCursos.ValueMember = "ID";
-            cmbCursos.DisplayMember = "Descripcion";
+            cmbCursos.DisplayMember = "DescMateria";
             if (Modo != ModoForm.Alta)
             {
                 cmbCursos.SelectedValue = DocenteCursoActual.IDCurso;
@@ -97,6 +99,19 @@ namespace UI.Desktop.FormsEntidades
             };
         }
 
+
+        public void MapearDocentes()
+        {
+            DocenteCursoLogic dcl = new DocenteCursoLogic();
+            cmbDocentes.DataSource = dcl.GetDocente();
+            cmbDocentes.ValueMember = "ID";
+            cmbDocentes.DisplayMember = "Apellido";
+            if (Modo != ModoForm.Alta)
+            {
+                cmbDocentes.SelectedValue = DocenteCursoActual.IDDocente;
+
+            };
+        }
         
         public override void GuardarCambios()
         {
