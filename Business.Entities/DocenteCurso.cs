@@ -15,6 +15,7 @@ namespace Business.Entities
         private int _IDCurso;
         private int _IDDocente;
         private TiposCargos _Cargo;
+        private string _nombre, _apellido;
 
         public TiposCargos Cargo
         {
@@ -32,6 +33,18 @@ namespace Business.Entities
         {
             get { return _IDDocente; }
             set { _IDDocente = value; }
+        }
+
+        public string Nombre
+        {
+            get { return _nombre; }
+            set { _nombre = value; }
+        }
+
+        public string Apellido
+        {
+            get { return _apellido; }
+            set { _apellido = value; }
         }
     }
 }

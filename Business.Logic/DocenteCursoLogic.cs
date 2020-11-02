@@ -38,6 +38,11 @@ namespace Business.Logic
             return DocenteCursoData.GetCursos();
         }
 
+        public List<Persona> GetDocente()
+        {
+            return DocenteCursoData.GetDocente();
+        }
+
         public void Save(Business.Entities.DocenteCurso dc)
         {
             DocenteCursoData.Save(dc);
