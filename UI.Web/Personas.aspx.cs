@@ -95,7 +95,10 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            tipoper.Items.Add("Profesor");
+            tipoper.Items.Add("Administrador");
+            tipoper.Items.Add("Alumno");
+            formPanel.Visible = false;
         }
 
 

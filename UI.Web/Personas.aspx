@@ -6,8 +6,9 @@
         <asp:Panel ID="gridPanel" runat="server">
                 <asp:GridView ID="gridView" runat="server" AutoGenerateColumns="False"
                     SelectedRowStyle-BackColor="BLue"
-                    SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" DataSourceID="ObjectDataSource1" >
+                    SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" DataSourceID="ObjectDataSource1" DataKeyNames="ID" >
                     <Columns>
+                        <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
                         <asp:BoundField HeaderText="Apellido" DataField="Apellido" SortExpression="Apellido" />
                         <asp:BoundField HeaderText="Nombre" DataField="Nombre" SortExpression="Nombre" />
@@ -89,8 +90,8 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:Label ID="tipoPersonaLable" runat="server" Text="Tipo Persona: "></asp:Label>
             &nbsp;&nbsp;
-            <asp:DropDownList ID="tipoper" runat="server" DataSourceID="objecttipo"></asp:DropDownList>
-            <asp:ObjectDataSource ID="objecttipo" SelectMethod="" runat="server"></asp:ObjectDataSource>
+            <asp:DropDownList ID="tipoper" runat="server"></asp:DropDownList>
+            <asp:ObjectDataSource ID="objecttipo" runat="server"></asp:ObjectDataSource>
             <br />
             <br />
             &nbsp;&nbsp;<asp:Label ID="direccionLabel" runat="server" Text="Direccion: "></asp:Label>
@@ -98,16 +99,14 @@
             <asp:TextBox ID="direccionTextBox"  runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:Panel ID="formActionsPanel" runat="server">
+        </asp:Panel>  
+        <asp:Panel ID="formActionsPanel" runat="server">
                 <br>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnAceptar" runat="server" BackColor="#CCFFFF" OnClick="btnAceptar_Click" Text="Aceptar" Width="84px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" Width="84px" />
             </asp:Panel>
-
-
-        </asp:Panel>  
     </div>
 
 </asp:Content>
