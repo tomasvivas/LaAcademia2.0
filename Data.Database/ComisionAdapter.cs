@@ -60,7 +60,7 @@ namespace Data.Database
                 this.OpenConnection();
                 SqlCommand cmdComisiones = new SqlCommand("select c.id_comision, c.anio_especialidad, c.desc_comision, c.id_plan, " +
                     " planes.desc_plan from comisiones c inner join planes on planes.id_plan = c.id_plan" +
-                    " where id_comisiones = @id", sqlConn);
+                    " where id_comision = @id", sqlConn);
                 cmdComisiones.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drComision = cmdComisiones.ExecuteReader();
                 if (drComision.Read())

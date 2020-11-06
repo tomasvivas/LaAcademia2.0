@@ -33,7 +33,7 @@ namespace UI.Desktop
             else
             {
                 this.Opacity = 100;
-                Validar(login.tipoPersona);
+                Validar(login.tipoPersona, login.idAlum);
             }
         }
 
@@ -72,16 +72,19 @@ namespace UI.Desktop
                     com.Show();
                     break;
                 case "Docentes Cursos":
-                    DocentesCursos doc = new DocentesCursos();
-                    doc.Show();
+                    //DocentesCursos doc = new DocentesCursos();
+                   // doc.Show();
                     break;
-
+                case "Inscripcion Alumno":
+                    Inscripciones ins = new Inscripciones(int.Parse(txtidalum.Text));
+                    ins.Show();
+                    break;
 
             }
 
         }
 
-        public void Validar(Persona.TipoPersonas tipoper)
+        public void Validar(Persona.TipoPersonas tipoper, int idalum)
         {
             switch (tipoper)
             {
@@ -92,11 +95,13 @@ namespace UI.Desktop
                     cmbMenu.Items.Remove("Especialidades");
                     break;
                 case Persona.TipoPersonas.Administrador:
+                    txtidalum.Text = idalum.ToString();
                     tipo.Text = "Usted ha ingresado como administrador";
                     
                     break;
                 case Persona.TipoPersonas.Alumno:
                     tipo.Text = "Usted ha ingresado como alumno";
+                    txtidalum.Text = idalum.ToString();
                     cmbMenu.Items.Remove("Docentes Cursos");
                     break;
                 default:

@@ -5,21 +5,23 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Business.Logic;
-using Business.Entities;
+using Business.Entities; 
 
 namespace UI.Web
 {
-    public partial class Personas : System.Web.UI.Page
+    public partial class Comisiones : System.Web.UI.Page
     {
+        
+
         #region Enum
         public enum FormModes
         {
             Alta,
             Baja,
             Modificacion
-
         }
-         #endregion
+
+        #endregion
 
         #region Propiedades
         public FormModes FormMode
@@ -28,21 +30,20 @@ namespace UI.Web
             set { this.ViewState["FormMode"] = value; }
         }
 
-       
-        PersonaLogic _logic;
-        private PersonaLogic Logic
+        ComisionLogic _logic;
+        private ComisionLogic Logic
         {
             get
             {
                 if (_logic == null)
                 {
-                    _logic = new PersonaLogic();
+                    _logic = new ComisionLogic();
                 }
                 return _logic;
             }
         }
 
-        private Persona Entity
+        private Comision Entity
         {
             get;
             set;
@@ -80,81 +81,69 @@ namespace UI.Web
         private void LoadForm(int id)
         {
             this.Entity = this.Logic.GetOne(id);
-            this.IDTextBox.Text = this.Entity.ID.ToString();
-            this.nombreTextBox.Text = this.Entity.Nombre;
-            this.apellidoTextBox.Text = this.Entity.Apellido;
-            this.emailTextBox.Text = this.Entity.Email;
-            this.telefonoTextBox.Text = this.Entity.Telefono;
-            this.fechNacTextBox.Text = this.Entity.FechaNacimiento.ToString();
-            this.idplan.SelectedValue = this.Entity.IDPlan.ToString();
-            this.tipoper.SelectedValue = this.Entity.TipoPersona.ToString();
-            this.direccionTextBox.Text = this.Entity.Direccion;
-            this.txtLegajo.Text = this.Entity.Legajo.ToString();
-          
+            this.txtID.Text = this.Entity.ID.ToString();
+            this.txtDesc.Text = this.Entity.Descripcion.ToString();
+            this.txtAnio.Text = this.Entity.AnioEspecialidad.ToString();
+            this.idplan.SelectedValue = Entity.IDPlan.ToString();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+            formPanel.Visible = false;
+            
         }
-
 
         private void ClearForm()
         {
-            this.nombreTextBox.Text = string.Empty;
-            this.apellidoTextBox.Text = string.Empty;
-            this.emailTextBox.Text = string.Empty;
-            this.direccionTextBox.Text = string.Empty;
-            this.txtLegajo.Text = string.Empty;
-            this.telefonoTextBox.Text = string.Empty;
-            this.fechNacTextBox.Text = string.Empty;
-          
+            this.txtID.Text = string.Empty;
+            this.txtDesc.Text = string.Empty;
+            this.txtAnio.Text = string.Empty;
+
         }
 
         private void EnableForm(bool enable)
         {
-            this.nombreTextBox.Enabled = enable;
-            this.apellidoTextBox.Enabled = enable;
-            this.emailTextBox.Enabled = enable;
-            this.direccionTextBox.Enabled = enable;
-            this.fechNacTextBox.Enabled = enable;
-            this.telefonoTextBox.Enabled = enable;
-            this.txtLegajo.Enabled = enable;
-
-
+            this.txtID.Enabled = enable;
+            this.txtDesc.Enabled = enable;
+            this.txtAnio.Enabled = enable;
+            
 
         }
 
         protected void gridView_selectedIndexChanged(object sender, EventArgs e)
         {
             this.SelectedID = (int)this.gridView.SelectedValue;
+
         }
 
-        private void LoadEntity(Persona persona)
+        private void LoadEntity(Comision com)
         {
-            persona.Nombre = this.nombreTextBox.Text;
-            persona.Apellido = this.apellidoTextBox.Text;
-            persona.Email = this.emailTextBox.Text;
-            persona.FechaNacimiento = Convert.ToDateTime(this.fechNacTextBox);
-            persona.IDPlan = int.Parse(this.idplan.SelectedValue);
-            persona.TipoPersona = (Persona.TipoPersonas)Enum.Parse(typeof(Persona.TipoPersonas), tipoper.SelectedValue.ToString());
-            persona.Direccion = this.direccionTextBox.Text;
-            persona.Legajo = int.Parse(this.txtLegajo.Text);
-            persona.Telefono = this.telefonoTextBox.Text;
+            com.ID = int.Parse(this.txtID.Text);
+            com.Descripcion = this.txtDesc.Text;
+            com.AnioEspecialidad = int.Parse(this.txtAnio.Text);
+            com.IDPlan = int.Parse(idplan.SelectedValue);
+
         }
 
-        private void SaveEntity(Persona persona)
+        private void SaveEntity(Comision com)
         {
-            this.Logic.Save(persona);
+            this.Logic.Save(com);
         }
 
         private void DeleteEntity(int id)
         {
             this.Logic.Delete(id);
         }
-
-
         #endregion
+
+        protected void btnNuevo_Click(object sender, EventArgs e)
+        {
+            this.formPanel.Visible = true;
+            this.FormMode = FormModes.Alta;
+            this.ClearForm();
+            this.EnableForm(true);
+
+        }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -165,14 +154,7 @@ namespace UI.Web
                 this.EnableForm(false);
                 this.LoadForm(this.SelectedID);
             }
-        }
 
-        protected void btnNuevo_Click(object sender, EventArgs e)
-        {
-            this.formPanel.Visible = true;
-            this.FormMode = FormModes.Alta;
-            this.ClearForm();
-            this.EnableForm(true);
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
@@ -197,36 +179,32 @@ namespace UI.Web
             switch (this.FormMode)
             {
                 case FormModes.Baja:
-                   
-                        this.DeleteEntity(this.SelectedID);
-                        this.formPanel.Visible = false;
-                        this.gridView.DataBind();
-      
+
+                    this.DeleteEntity(this.SelectedID);
+                    this.formPanel.Visible = false;
+                    this.gridView.DataBind();
 
                     break;
                 case FormModes.Modificacion:
-                    this.Entity = new Persona();
+                    this.Entity = new Comision();
                     this.Entity.ID = this.SelectedID;
                     this.Entity.State = BusinessEntity.States.Modified;
                     this.LoadEntity(this.Entity);
                     this.SaveEntity(this.Entity);
                     this.gridView.DataBind();
                     this.formPanel.Visible = false;
-                    
                     break;
                 case FormModes.Alta:
-                        this.Entity = new Persona();
-                        this.LoadEntity(this.Entity);
-                        this.SaveEntity(this.Entity);
-                        this.gridView.DataBind();
-                        this.formPanel.Visible = false;
-                    
+
+                    this.Entity = new Comision();
+                    this.LoadEntity(this.Entity);
+                    this.SaveEntity(this.Entity);
+                    this.gridView.DataBind();
+                    this.formPanel.Visible = false;
                     break;
             }
             this.formPanel.Visible = false;
+
         }
     }
-
-
 }
-

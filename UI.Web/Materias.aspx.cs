@@ -84,13 +84,13 @@ namespace UI.Web
             this.txtDesc.Text = this.Entity.Descripcion.ToString();
             this.txtHsSemanales.Text = this.Entity.HSSemanales.ToString();
             this.txtHsTotales.Text = this.Entity.HSTotales.ToString();
-            this.txtIDPlan.Text = this.Entity.IDPlan.ToString();
-            this.txtDescPlan.Text = this.Entity.descPlan.ToString();
+            this.idplan.SelectedValue = this.Entity.IDPlan.ToString();
+           
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            formPanel.Visible = false; 
         }
 
         private void ClearForm()
@@ -99,8 +99,8 @@ namespace UI.Web
             this.txtDesc.Text = string.Empty;
             this.txtHsSemanales.Text = string.Empty;
             this.txtHsTotales.Text = string.Empty;
-            this.txtIDPlan.Text = string.Empty;
-            this.txtDescPlan.Text = string.Empty;
+            
+            
 
         }
 
@@ -110,8 +110,7 @@ namespace UI.Web
             this.txtDesc.Enabled = enable;
             this.txtHsSemanales.Enabled = enable;
             this.txtHsTotales.Enabled = enable;
-            this.txtIDPlan.Enabled = enable;
-            this.txtDescPlan.Enabled = enable;
+            
 
         }
 
@@ -127,8 +126,8 @@ namespace UI.Web
             materia.Descripcion = this.txtDesc.Text;
             materia.HSSemanales = int.Parse(this.txtHsSemanales.Text);
             materia.HSTotales = int.Parse(this.txtHsTotales.Text);
-            materia.IDPlan = int.Parse(this.txtIDPlan.Text);
-            materia.descPlan = this.txtDescPlan.Text;
+            materia.IDPlan = int.Parse(this.idplan.SelectedValue);
+            
 
         }
 

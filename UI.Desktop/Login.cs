@@ -29,6 +29,14 @@ namespace UI.Desktop
             set { tipoper = value; }
         }
 
+        private int _idAlum;
+
+        public int idAlum
+        {
+            get { return _idAlum; }
+            set { _idAlum = value; }
+        }
+
         public Login()
         {
             InitializeComponent();
@@ -57,7 +65,9 @@ namespace UI.Desktop
                 PersonaLogic pl = new PersonaLogic();
                 Persona PersonaActual = new Persona();
                 PersonaActual = pl.GetOne(usuarioActual.ID_Persona);
+                PersonaActual = pl.GetOne(usuarioActual.ID);
                 tipoper = PersonaActual.TipoPersona;
+                idAlum = PersonaActual.ID;
                 this.DialogResult = DialogResult.OK;
                 this.Dispose();
                 

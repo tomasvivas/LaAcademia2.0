@@ -6,23 +6,25 @@
         <asp:Panel ID="gridPanel" runat="server">
                 <asp:GridView ID="gridView" runat="server" AutoGenerateColumns="False"
                     SelectedRowStyle-BackColor="BLue"
-                    SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" DataSourceID="ObjectDataSource1" DataKeyNames="ID" >
+                    SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" DataSourceID="ObjectDataSource1" >
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
-                        <asp:BoundField HeaderText="Direccion" DataField="Direccion" SortExpression="Direccion" />
+                        <asp:BoundField HeaderText="Apellido" DataField="Apellido" SortExpression="Apellido" />
                         <asp:BoundField HeaderText="Nombre" DataField="Nombre" SortExpression="Nombre" />
-                        <asp:BoundField DataField="FechNac" HeaderText="Fecha de Nacimiento" SortExpression="FechNac" />
-                        <asp:BoundField HeaderText="Direccion" DataField="Direccion" SortExpression="Direccion" />
-                        <asp:BoundField HeaderText="Plan" DataField="Plan" SortExpression="Plan" />
-                        <asp:BoundField DataField="DescPlan" HeaderText="Descipcion Plan" SortExpression="DescPlan" />
                         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                        <asp:BoundField DataField="TipoPersona" HeaderText="Tipo de persona" SortExpression="TipoPersona" />
+                        <asp:BoundField HeaderText="Direccion" DataField="Direccion" SortExpression="Direccion" />
+                        <asp:BoundField HeaderText="FechaNacimiento" DataField="FechaNacimiento" SortExpression="FechaNacimiento" />
+                        <asp:BoundField DataField="Legajo" HeaderText="Legajo" SortExpression="Legajo" />
+                        <asp:BoundField DataField="Telefono" HeaderText="Telefono" SortExpression="Telefono" />
+                        <asp:BoundField DataField="IDPlan" HeaderText="IDPlan" SortExpression="IDPlan" />
+                      
+                        <asp:BoundField DataField="DescPlan" HeaderText="DescPlan" SortExpression="DescPlan" />
+                        <asp:BoundField DataField="TipoPersona" HeaderText="TipoPersona" SortExpression="TipoPersona" />
                       
                     </Columns>
                     <SelectedRowStyle BackColor="Blue" ForeColor="White" />
                 </asp:GridView>
-                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DataObjectTypeName="Business.Entities.Usuario" DeleteMethod="Delete" SelectMethod="GetAll" TypeName="Business.Logic.UsuarioLogic" UpdateMethod="Save">
+                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" DeleteMethod="Delete" SelectMethod="GetAll" TypeName="Business.Logic.PersonaLogic">
                     <DeleteParameters>
                         <asp:Parameter Name="id" Type="Int32" />
                     </DeleteParameters>
@@ -67,6 +69,11 @@
             <asp:TextBox ID="telefonoTextBox" runat="server"></asp:TextBox>
             <br />
             <br />
+            <asp:Label ID="Legajo" runat="server" Text="Legajo: "></asp:Label>
+            &nbsp;&nbsp;
+            <asp:TextBox ID="txtLegajo" runat="server"></asp:TextBox>
+            <br />
+            <br />
              &nbsp;&nbsp;<asp:Label ID="fechNacLabel" runat="server" Text="Fecha de nacimiento: "></asp:Label>
             &nbsp;&nbsp;
             <asp:TextBox ID="fechNacTextBox"  runat="server"></asp:TextBox>
@@ -75,19 +82,15 @@
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:Label ID="PlanLabel" runat="server" Text="Plan: "></asp:Label>
             &nbsp;&nbsp;
-            <asp:TextBox ID="planTextBox" runat="server"></asp:TextBox>
-            <br />
-            <br />
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-             <asp:Label ID="descPlanLabel" runat="server" Text="Descripcion del plan: "></asp:Label>
-            &nbsp;&nbsp;
-            <asp:TextBox ID="descPlanTextBox" runat="server"></asp:TextBox>
+            <asp:DropDownList ID="idplan" runat="server" DataSourceID="objectplan" DataTextField="Descripcion" DataValueField="ID"></asp:DropDownList>
+        <asp:ObjectDataSource ID="objectplan" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.PlanLogic"></asp:ObjectDataSource>
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
             <asp:Label ID="tipoPersonaLable" runat="server" Text="Tipo Persona: "></asp:Label>
             &nbsp;&nbsp;
-            <asp:TextBox ID="tipoPersonaTextBox" runat="server"></asp:TextBox>
+            <asp:DropDownList ID="tipoper" runat="server" DataSourceID="objecttipo"></asp:DropDownList>
+            <asp:ObjectDataSource ID="objecttipo" SelectMethod="" runat="server"></asp:ObjectDataSource>
             <br />
             <br />
             &nbsp;&nbsp;<asp:Label ID="direccionLabel" runat="server" Text="Direccion: "></asp:Label>

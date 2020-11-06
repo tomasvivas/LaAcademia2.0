@@ -18,7 +18,9 @@
                 <li><a href="Especialidades.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Especialidades</a></li>
                 <li><a href="Planes.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Planes</a></li>
                 <li><a href="Personas.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Personas</a></li>
-                
+                <li><a href="Materias.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Materias</a></li>
+                <li><a href="Comisiones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Comisiones</a></li>
+             
             </ul>
         </div>
 

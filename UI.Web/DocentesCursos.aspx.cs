@@ -128,7 +128,7 @@ namespace UI.Web
         {
             docentecurso.ID = int.Parse(this.IDTextBox.Text);
             docentecurso.IDDocente = int.Parse(this.IDDocenteTextBox.Text);
-            docentecurso.Cargo = Business.Entities.DocenteCurso.TiposCargos.set(this.CargoTextBox.Text);
+            //docentecurso.Cargo = (this.CargoTextBox.Text);
             docentecurso.IDCurso = int.Parse(this.CursoTextBox.Text);
 
         }

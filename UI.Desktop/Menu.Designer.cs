@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtidalum = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
+            this.tableLayoutPanel1.Controls.Add(this.txtidalum, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tipo, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.fecha, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.cmbMenu, 1, 3);
@@ -106,7 +108,8 @@
             "Planes",
             "Comisiones",
             "Cursos",
-            "Docentes Cursos"});
+            "Docentes Cursos",
+            "Inscripcion Alumno"});
             this.cmbMenu.Location = new System.Drawing.Point(168, 202);
             this.cmbMenu.Name = "cmbMenu";
             this.cmbMenu.Size = new System.Drawing.Size(324, 21);
@@ -169,6 +172,16 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // txtidalum
+            // 
+            this.txtidalum.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtidalum.AutoSize = true;
+            this.txtidalum.ForeColor = System.Drawing.Color.Black;
+            this.txtidalum.Location = new System.Drawing.Point(162, 289);
+            this.txtidalum.Name = "txtidalum";
+            this.txtidalum.Size = new System.Drawing.Size(0, 13);
+            this.txtidalum.TabIndex = 19;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,5 +211,6 @@
         private System.Windows.Forms.Button btnReporteUsuarios;
         private System.Windows.Forms.Label tipo;
         private System.Windows.Forms.Label fecha;
+        private System.Windows.Forms.Label txtidalum;
     }
 }
