@@ -14,19 +14,17 @@ namespace UI.Desktop.FormsEntidades
 {
     public partial class Inscripciones : Form
     {
-        public Inscripciones(int id)
+        public Inscripciones(Persona PerAct)
         {
             InitializeComponent();
             this.dgvInscripcion.AutoGenerateColumns = false;
-            foreach (DataGridViewRow row in dgvInscripcion.Rows)
-            {
-                row.Cells["alumno"].Value = id.ToString();
-            }
-            this.Listar(id);
+            
+            this.Listar(PerAct);
+            
             
         }
 
-        public void Listar(int id)
+        public void Listar(Persona PerAct)
         {
             CursoLogic cur = new CursoLogic();
             dgvInscripcion.DataSource = cur.GetAll();

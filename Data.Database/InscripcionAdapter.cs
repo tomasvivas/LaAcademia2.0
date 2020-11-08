@@ -53,6 +53,29 @@ namespace Data.Database
             return inscripciones;
         }
 
+        public List<AlumnoInscripcion> GetInscripciones(int ID)
+        {
+            List<AlumnoInscripcion> inscripciones = new List<AlumnoInscripcion>();
+            this.OpenConnection();
+            SqlCommand cmd = new SqlCommand("SELECT id_inscripcion, id_alumno, alumnos_inscripciones.id_curso, condicion " +
+                "FROM alumnos_inscripciones INNER JOIN cursos ON cursos.id_curso = alumnos_inscripciones.id_curso WHERE id_alumno = @id", sqlConn);
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = ID;
+            SqlDataReader drIns = cmd.ExecuteReader();
+            while (drIns.Read())
+            {
+                AlumnoInscripcion aluIns = new AlumnoInscripcion();
+                aluIns.ID = (int)drIns["id_inscripcion"];
+                aluIns.IDCurso = (int)drIns["id_curso"];
+                aluIns.IDAlumno = (int)drIns["id_alumno"];
+
+                inscripciones.Add(aluIns);
+            }
+            drIns.Close();
+            CloseConnection();
+            return inscripciones;
+        }
+        
+
         public AlumnoInscripcion GetOne(int ID)
         {
             AlumnoInscripcion ins = new AlumnoInscripcion();
@@ -135,29 +158,16 @@ namespace Data.Database
             return cursos;
         }
 
-        protected void Insert(AlumnoInscripcion ai)
+        public void Insert(AlumnoInscripcion ins)
         {
-            try
-            {
-                this.OpenConnection();
-                SqlCommand cmdSave = new SqlCommand("INSERT INTO alumnos_inscripcion(id_alumno, id_curso, condicion, nota) " +
-                    "values (@id_alumno,@id_curso,@condicion,@nota) " +
-                    "select @@identity", sqlConn);
-                cmdSave.Parameters.Add("@id_alumno", SqlDbType.Int).Value = ai.IDAlumno;
-                cmdSave.Parameters.Add("@id_curso", SqlDbType.Int).Value = ai.IDCurso;
-                cmdSave.Parameters.Add("@condicon", SqlDbType.VarChar,20).Value = ai.Condicion;
-                cmdSave.Parameters.Add("@nota", SqlDbType.Int).Value = ai.Nota;
-                ai.ID = Decimal.ToInt32((decimal)cmdSave.ExecuteScalar());
-            }
-            catch (Exception Ex)
-            {
-                Exception ExcepcionManejada = new Exception("Error al crear curso", Ex);
-                throw ExcepcionManejada;
-            }
-            finally
-            {
-                this.CloseConnection();
-            }
+            this.OpenConnection();
+            SqlCommand cmd = new SqlCommand("INSERT INTO alumnos_inscripciones(id_alumno, id_curso, condicion) values (@id_alumno," +
+                "@id_curso, @condicion); UPDATE cursos SET cupo = cupo-1 WHERE id_curso = @id_curso", sqlConn);
+            cmd.Parameters.Add("@id_alumno", SqlDbType.Int).Value = ins.IDAlumno;
+            cmd.Parameters.Add("@id_curso", SqlDbType.Int).Value = ins.IDCurso;
+            cmd.Parameters.Add("@condicion", SqlDbType.VarChar).Value = ins.Condicion;
+            cmd.ExecuteNonQuery();
+            this.CloseConnection();
         }
 
         public void Save(AlumnoInscripcion ai)

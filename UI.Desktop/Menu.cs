@@ -20,6 +20,14 @@ namespace UI.Desktop
             InitializeComponent();
         }
 
+        static private Persona _personaActual;
+
+        static public Persona PerAct
+        {
+            get { return _personaActual; }
+            set { _personaActual = value; }
+        }
+
         private void Menu_Load(object sender, EventArgs e)
         {
             fecha.Text = DateTime.Today.ToString("D"); 
@@ -76,7 +84,7 @@ namespace UI.Desktop
                    // doc.Show();
                     break;
                 case "Inscripcion Alumno":
-                    Inscripciones ins = new Inscripciones(int.Parse(txtidalum.Text));
+                    Inscripciones ins = new Inscripciones(PerAct);
                     ins.Show();
                     break;
 
