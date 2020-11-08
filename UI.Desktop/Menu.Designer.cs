@@ -36,10 +36,10 @@
             this.fecha = new System.Windows.Forms.Label();
             this.cmbMenu = new System.Windows.Forms.ComboBox();
             this.btnReporteUsuarios = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -120,7 +120,8 @@
             "Cursos",
             "Docentes Cursos",
             "Inscripcion Alumno",
-            "Reporte Especialidades"});
+            "Reporte Especialidades",
+            "Reporte Cursos"});
             this.cmbMenu.Location = new System.Drawing.Point(168, 202);
             this.cmbMenu.Name = "cmbMenu";
             this.cmbMenu.Size = new System.Drawing.Size(324, 21);
@@ -141,17 +142,6 @@
             this.btnReporteUsuarios.Text = "Reporte Usuarios";
             this.btnReporteUsuarios.UseVisualStyleBackColor = true;
             this.btnReporteUsuarios.Click += new System.EventHandler(this.btnReporteUsuarios_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(125, 150);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -182,6 +172,17 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 150);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // Menu
             // 

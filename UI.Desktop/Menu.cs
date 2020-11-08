@@ -91,6 +91,10 @@ namespace UI.Desktop
                     EspecialidadesReporte esrep = new EspecialidadesReporte();
                     esrep.Show();
                     break;
+                case "Reporte Cursos":
+                    CursosReporte currep = new CursosReporte();
+                    currep.Show();
+                    break;
 
                      
 
