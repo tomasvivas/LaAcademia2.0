@@ -84,9 +84,15 @@ namespace UI.Desktop
                    // doc.Show();
                     break;
                 case "Inscripcion Alumno":
-                    Inscripciones ins = new Inscripciones(PerAct);
-                    ins.Show();
+                   // Inscripciones ins = new Inscripciones(PerAct);
+                   // ins.Show();
                     break;
+                case "Reporte Especialidades":
+                    EspecialidadesReporte esrep = new EspecialidadesReporte();
+                    esrep.Show();
+                    break;
+
+                     
 
             }
 

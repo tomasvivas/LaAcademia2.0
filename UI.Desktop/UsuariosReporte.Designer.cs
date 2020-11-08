@@ -29,13 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.UsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.academiaDataSet1 = new UI.Desktop.AcademiaDataSet();
             this.usuariosTableAdapter1 = new UI.Desktop.AcademiaDataSetTableAdapters.usuariosTableAdapter();
+            this.AcademiaDataSet = new UI.Desktop.AcademiaDataSet();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new UI.Desktop.AcademiaDataSetTableAdapters.usuariosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcademiaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // UsuarioBindingSource
@@ -45,9 +50,9 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource2.Name = "Usuarios";
-            reportDataSource2.Value = this.UsuarioBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "Usuarios";
+            reportDataSource1.Value = this.usuariosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "UI.Desktop.Reportes.Usuarios.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
@@ -65,6 +70,20 @@
             // 
             this.usuariosTableAdapter1.ClearBeforeFill = true;
             // 
+            // AcademiaDataSet
+            // 
+            this.AcademiaDataSet.DataSetName = "AcademiaDataSet";
+            this.AcademiaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.AcademiaDataSet;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // UsuariosReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -76,6 +95,8 @@
             this.Load += new System.EventHandler(this.UsuariosReporte_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UsuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AcademiaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -86,5 +107,8 @@
         private System.Windows.Forms.BindingSource UsuarioBindingSource;
         private AcademiaDataSet academiaDataSet1;
         private AcademiaDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter1;
+        private System.Windows.Forms.BindingSource usuariosBindingSource;
+        private AcademiaDataSet AcademiaDataSet;
+        private AcademiaDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter;
     }
 }

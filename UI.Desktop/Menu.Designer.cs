@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.txtidalum = new System.Windows.Forms.Label();
             this.tipo = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Label();
             this.cmbMenu = new System.Windows.Forms.ComboBox();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtidalum = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -71,6 +71,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(495, 306);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // txtidalum
+            // 
+            this.txtidalum.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtidalum.AutoSize = true;
+            this.txtidalum.ForeColor = System.Drawing.Color.Black;
+            this.txtidalum.Location = new System.Drawing.Point(162, 289);
+            this.txtidalum.Name = "txtidalum";
+            this.txtidalum.Size = new System.Drawing.Size(0, 13);
+            this.txtidalum.TabIndex = 19;
             // 
             // tipo
             // 
@@ -109,7 +119,8 @@
             "Comisiones",
             "Cursos",
             "Docentes Cursos",
-            "Inscripcion Alumno"});
+            "Inscripcion Alumno",
+            "Reporte Especialidades"});
             this.cmbMenu.Location = new System.Drawing.Point(168, 202);
             this.cmbMenu.Name = "cmbMenu";
             this.cmbMenu.Size = new System.Drawing.Size(324, 21);
@@ -171,16 +182,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // txtidalum
-            // 
-            this.txtidalum.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtidalum.AutoSize = true;
-            this.txtidalum.ForeColor = System.Drawing.Color.Black;
-            this.txtidalum.Location = new System.Drawing.Point(162, 289);
-            this.txtidalum.Name = "txtidalum";
-            this.txtidalum.Size = new System.Drawing.Size(0, 13);
-            this.txtidalum.TabIndex = 19;
             // 
             // Menu
             // 

@@ -19,6 +19,8 @@ namespace UI.Desktop
 
         private void UsuariosReporte_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'AcademiaDataSet.usuarios' Puede moverla o quitarla según sea necesario.
+            this.usuariosTableAdapter.Fill(this.AcademiaDataSet.usuarios);
             this.usuariosTableAdapter1.Fill(this.academiaDataSet1.usuarios);
             this.reportViewer1.RefreshReport();
         }
