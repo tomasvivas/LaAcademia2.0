@@ -33,6 +33,8 @@ namespace UI.Desktop
             fecha.Text = DateTime.Today.ToString("D"); 
             Login login = new Login();
             login.ShowDialog();
+            PersonaLogic per = new PersonaLogic();
+            PerAct = per.GetOne(login.idAlum);
             if (login.DialogResult != DialogResult.OK)
             {
                 this.Dispose();
@@ -45,62 +47,6 @@ namespace UI.Desktop
             }
         }
 
-        private void cmbMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string opc = cmbMenu.SelectedItem.ToString();
-
-            switch (opc)
-            {
-                case "Usuarios":
-                    Usuarios usr = new Usuarios();
-                    usr.Show();
-                    break;
-                case "Personas":
-                    Personas per = new Personas();
-                    per.Show();
-                    break;
-                case "Especialidades":
-                    Especialidades esp = new Especialidades();
-                    esp.Show();
-                    break;
-                case "Planes":
-                    Planes plan = new Planes();
-                    plan.Show();
-                    break;
-                case "Materias":
-                    Materias mts = new Materias();
-                    mts.Show();
-                    break;
-                case "Cursos":
-                    Cursos cur = new Cursos();
-                    cur.Show();
-                    break;
-                case "Comisiones":
-                    Comisiones com = new Comisiones();
-                    com.Show();
-                    break;
-                case "Docentes Cursos":
-                    //DocentesCursos doc = new DocentesCursos();
-                   // doc.Show();
-                    break;
-                case "Inscripcion Alumno":
-                   // Inscripciones ins = new Inscripciones(PerAct);
-                   // ins.Show();
-                    break;
-                case "Reporte Especialidades":
-                    EspecialidadesReporte esrep = new EspecialidadesReporte();
-                    esrep.Show();
-                    break;
-                case "Reporte Cursos":
-                    CursosReporte currep = new CursosReporte();
-                    currep.Show();
-                    break;
-
-                     
-
-            }
-
-        }
 
         public void Validar(Persona.TipoPersonas tipoper, int idalum)
         {
@@ -109,8 +55,8 @@ namespace UI.Desktop
 
                 case Persona.TipoPersonas.Profesor:
                     
-                    tipo.Text = "Usted ha ingresado como profesor"; 
-                    cmbMenu.Items.Remove("Especialidades");
+                    tipo.Text = "Usted ha ingresado como profesor";
+                    especialidadesToolStripMenuItem.Visible = false;
                     break;
                 case Persona.TipoPersonas.Administrador:
                     txtidalum.Text = idalum.ToString();
@@ -120,7 +66,7 @@ namespace UI.Desktop
                 case Persona.TipoPersonas.Alumno:
                     tipo.Text = "Usted ha ingresado como alumno";
                     txtidalum.Text = idalum.ToString();
-                    cmbMenu.Items.Remove("Docentes Cursos");
+                   
                     break;
                 default:
                     break;
@@ -129,15 +75,73 @@ namespace UI.Desktop
             }
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Usuarios usr = new Usuarios();
+            usr.Show();
         }
 
-        private void btnReporteUsuarios_Click(object sender, EventArgs e)
+        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Personas per = new Personas();
+            per.Show();
+        }
+
+        private void planesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Planes plan = new Planes();
+            plan.Show();
+        }
+
+        private void especialidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Especialidades esp = new Especialidades();
+            esp.Show();
+        }
+
+        private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Materias mts = new Materias();
+            mts.Show();
+        }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             UsuariosReporte ur = new UsuariosReporte();
             ur.Show();
+        }
+
+        private void especialidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EspecialidadesReporte esrep = new EspecialidadesReporte();
+            esrep.Show();
+        }
+
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CursosReporte currep = new CursosReporte();
+            currep.Show();
+        }
+
+        private void cursostsmi_Click(object sender, EventArgs e)
+        {
+            Cursos cur = new Cursos();
+            cur.Show();
+        }
+
+        private void ComisionestoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Comisiones com = new Comisiones();
+            com.Show();
+        }
+
+        private void inscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inscripciones ins = new Inscripciones(PerAct);
+            ins.Show();
         }
     } 
 }

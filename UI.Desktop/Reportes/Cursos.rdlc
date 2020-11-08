@@ -6,19 +6,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.58983cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.65875cm</Width>
+              <Width>1.56338cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.55292cm</Width>
+              <Width>1.484cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.135cm</Width>
+              <Width>3.52129cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.88629cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -365,8 +365,9 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetCursos</DataSetName>
         <Top>0.17639cm</Top>
+        <Left>2.6562cm</Left>
         <Height>1.2cm</Height>
-        <Width>13.34667cm</Width>
+        <Width>11.0448cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

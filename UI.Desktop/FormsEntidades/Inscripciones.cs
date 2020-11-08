@@ -18,18 +18,31 @@ namespace UI.Desktop.FormsEntidades
         {
             InitializeComponent();
             this.dgvInscripcion.AutoGenerateColumns = false;
-            
+            InsLog = new InscripcionLogic();
+            personaActual = PerAct;
             this.Listar(PerAct);
             
             
         }
 
+        private Persona _personaActual;
+        public Persona personaActual
+        {
+            get { return _personaActual; }
+            set { _personaActual = value; }
+        }
+
+        private InscripcionLogic _il;
+
+        public InscripcionLogic InsLog
+        {
+            get { return _il; }
+            set { _il = value; }
+        }
+
         public void Listar(Persona PerAct)
         {
-            CursoLogic cur = new CursoLogic();
-            dgvInscripcion.DataSource = cur.GetAll();
-            //InscripcionLogic ins = new InscripcionLogic();
-            //dgvInscripcion.DataSource = ins.GetCursosAlumno(id);
+            dgvInscripcion.DataSource = InsLog.GetCursosAlumno(personaActual);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -39,16 +52,12 @@ namespace UI.Desktop.FormsEntidades
 
         private void tsbInscribir_Click(object sender, EventArgs e)
         {
-           
-            AlumnoInscripcion ins = new AlumnoInscripcion();
-            ins.IDCurso = ((Business.Entities.AlumnoInscripcion)this.dgvInscripcion.SelectedRows[0].DataBoundItem).IDCurso;
-            ins.IDAlumno = ((Business.Entities.AlumnoInscripcion)this.dgvInscripcion.SelectedRows[0].DataBoundItem).IDAlumno;
-            ins.Condicion = "Inscripto";
-            ins.Nota = 0;
-            ins.State = BusinessEntity.States.New;
-            InscripcionLogic inslog = new InscripcionLogic();
-            inslog.Save(ins);
-            MessageBox.Show("La inscripcion ha sido creada concretamente"); 
+
+            Curso cur = (Curso)dgvInscripcion.SelectedRows[0].DataBoundItem;
+            AlumnoInscripcion ai = new AlumnoInscripcion();
+            ai.Condicion = "Inscripto";
+            ai.IDAlumno = personaActual.ID;
+            ai.IDCurso = cur.ID;
         }
     }
 }

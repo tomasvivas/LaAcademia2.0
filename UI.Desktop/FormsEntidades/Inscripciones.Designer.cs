@@ -34,7 +34,6 @@
             this.dgvInscripcion = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbInscribir = new System.Windows.Forms.ToolStripButton();
-            this.alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc_comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,7 +99,6 @@
             this.dgvInscripcion.AllowUserToDeleteRows = false;
             this.dgvInscripcion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInscripcion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.alumno,
             this.id_curso,
             this.desc_comision,
             this.desc_materia,
@@ -131,12 +129,6 @@
             this.tsbInscribir.Size = new System.Drawing.Size(69, 22);
             this.tsbInscribir.Text = "Inscribir";
             this.tsbInscribir.Click += new System.EventHandler(this.tsbInscribir_Click);
-            // 
-            // alumno
-            // 
-            this.alumno.HeaderText = "ID Alumno";
-            this.alumno.Name = "alumno";
-            this.alumno.ReadOnly = true;
             // 
             // id_curso
             // 
@@ -202,7 +194,6 @@
         private System.Windows.Forms.DataGridView dgvInscripcion;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbInscribir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_curso;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc_comision;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc_materia;
