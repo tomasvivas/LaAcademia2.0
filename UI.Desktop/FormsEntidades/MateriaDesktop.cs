@@ -27,6 +27,9 @@ namespace UI.Desktop
         {
             InitializeComponent();
         }
+
+       
+
         public MateriaDesktop(ModoForm modo) : this()
         {
             Modo = modo;

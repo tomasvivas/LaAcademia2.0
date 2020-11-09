@@ -92,6 +92,7 @@ namespace UI.Desktop
                 PlanActual = PlanNuevo;
                 PlanNuevo.State = BusinessEntity.States.New;
                 nuevoplan.Save(PlanActual);
+                
             }
 
             else if (Modo == ModoForm.Modificacion)
