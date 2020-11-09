@@ -25,6 +25,16 @@ namespace UI.Desktop.FormsEntidades
             
         }
 
+        public Inscripciones(int ID)
+        {
+            InitializeComponent();
+            this.dgvInscripcion.AutoGenerateColumns = false;
+            InsLog = new InscripcionLogic();
+            dgvInscripcion.DataSource = InsLog.GetAll(ID);
+
+
+        }
+
         private Persona _personaActual;
         public Persona personaActual
         {

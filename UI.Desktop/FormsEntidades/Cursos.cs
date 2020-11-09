@@ -90,5 +90,12 @@ namespace UI.Desktop
         {
 
         }
+
+        private void tsbNotas_Click(object sender, EventArgs e)
+        {
+            int ID = ((Business.Entities.Curso)this.dgvCursos.SelectedRows[0].DataBoundItem).ID;
+            Inscripciones insc = new Inscripciones(ID);
+            insc.ShowDialog();
+        }
     }
 }

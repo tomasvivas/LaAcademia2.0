@@ -38,12 +38,13 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsCursos = new System.Windows.Forms.ToolStrip();
+            this.cursosTableAdapter = new UI.Desktop.AcademiaDataSetTableAdapters.cursosTableAdapter();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
-            this.cursosTableAdapter = new UI.Desktop.AcademiaDataSetTableAdapters.cursosTableAdapter();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tsbNotas = new System.Windows.Forms.ToolStripButton();
             this.Cupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDcomision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc_comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,8 +103,8 @@
             this.dgvCursos.AutoGenerateColumns = false;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
             this.Cupo,
+            this.id,
             this.Año,
             this.IDcomision,
             this.desc_comision,
@@ -156,12 +157,17 @@
             this.tsCursos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbEditar,
-            this.tsbEliminar});
+            this.tsbEliminar,
+            this.tsbNotas});
             this.tsCursos.Location = new System.Drawing.Point(3, 0);
             this.tsCursos.Name = "tsCursos";
-            this.tsCursos.Size = new System.Drawing.Size(201, 25);
+            this.tsCursos.Size = new System.Drawing.Size(259, 25);
             this.tsCursos.TabIndex = 0;
             this.tsCursos.Text = "toolStrip1";
+            // 
+            // cursosTableAdapter
+            // 
+            this.cursosTableAdapter.ClearBeforeFill = true;
             // 
             // tsbNuevo
             // 
@@ -190,16 +196,14 @@
             this.tsbEliminar.Text = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tbsEliminar_Click);
             // 
-            // cursosTableAdapter
+            // tsbNotas
             // 
-            this.cursosTableAdapter.ClearBeforeFill = true;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
+            this.tsbNotas.Image = global::UI.Desktop.Properties.Resources.businessapplication_edit_male_user_thepencil_theclient_negocio_2321;
+            this.tsbNotas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNotas.Name = "tsbNotas";
+            this.tsbNotas.Size = new System.Drawing.Size(58, 22);
+            this.tsbNotas.Text = "Notas";
+            this.tsbNotas.Click += new System.EventHandler(this.tsbNotas_Click);
             // 
             // Cupo
             // 
@@ -207,6 +211,13 @@
             this.Cupo.HeaderText = "Cupo";
             this.Cupo.Name = "Cupo";
             this.Cupo.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "ID";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
             // 
             // Año
             // 
@@ -282,8 +293,9 @@
         private AcademiaDataSet academiaDataSet;
         private System.Windows.Forms.BindingSource cursosBindingSource;
         private AcademiaDataSetTableAdapters.cursosTableAdapter cursosTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.ToolStripButton tsbNotas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cupo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Año;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDcomision;
         private System.Windows.Forms.DataGridViewTextBoxColumn desc_comision;

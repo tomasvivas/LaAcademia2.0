@@ -11,7 +11,7 @@ namespace Data.Database
 {
     public class InscripcionAdapter : Adapter 
     {
-        public List<AlumnoInscripcion> GetAll(int IDalum)
+        public List<AlumnoInscripcion> GetAll(int IDcur)
         {
             List<AlumnoInscripcion> inscripciones = new List<AlumnoInscripcion>();
             try
@@ -24,8 +24,8 @@ namespace Data.Database
                     "INNER JOIN cursos on cursos.id_curso = ai.id_curso" +
                     "INNER JOIN comisiones on comisiones.id_comision = curso.id_comision" +
                     "INNER JOIN materias on materias.id_materia = curso.id_materia" +
-                    "WHERE ai.id_alumno = @id" , sqlConn);
-                cmdInscripciones.Parameters.Add("@id", SqlDbType.Int).Value = IDalum;
+                    "WHERE ai.id_curso = @id" , sqlConn);
+                cmdInscripciones.Parameters.Add("@id", SqlDbType.Int).Value = IDcur;
                 SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
                 while (drInscripciones.Read())
                 {

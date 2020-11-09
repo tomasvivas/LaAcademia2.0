@@ -32,13 +32,13 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.dgvInscripcion = new System.Windows.Forms.DataGridView();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsbInscribir = new System.Windows.Forms.ToolStripButton();
             this.id_curso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc_comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.desc_materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anio_calendario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbInscribir = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -111,25 +111,6 @@
             this.dgvInscripcion.Size = new System.Drawing.Size(642, 226);
             this.dgvInscripcion.TabIndex = 0;
             // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbInscribir});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(81, 25);
-            this.toolStrip1.TabIndex = 0;
-            // 
-            // tsbInscribir
-            // 
-            this.tsbInscribir.Image = global::UI.Desktop.Properties.Resources.add_insert_plus_1588;
-            this.tsbInscribir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbInscribir.Name = "tsbInscribir";
-            this.tsbInscribir.Size = new System.Drawing.Size(69, 22);
-            this.tsbInscribir.Text = "Inscribir";
-            this.tsbInscribir.Click += new System.EventHandler(this.tsbInscribir_Click);
-            // 
             // id_curso
             // 
             this.id_curso.DataPropertyName = "id";
@@ -164,6 +145,25 @@
             this.anio_calendario.HeaderText = "Año";
             this.anio_calendario.Name = "anio_calendario";
             this.anio_calendario.ReadOnly = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbInscribir});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(112, 25);
+            this.toolStrip1.TabIndex = 0;
+            // 
+            // tsbInscribir
+            // 
+            this.tsbInscribir.Image = global::UI.Desktop.Properties.Resources.add_insert_plus_1588;
+            this.tsbInscribir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbInscribir.Name = "tsbInscribir";
+            this.tsbInscribir.Size = new System.Drawing.Size(69, 22);
+            this.tsbInscribir.Text = "Inscribir";
+            this.tsbInscribir.Click += new System.EventHandler(this.tsbInscribir_Click);
             // 
             // Inscripciones
             // 
