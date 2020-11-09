@@ -14,10 +14,16 @@ namespace UI.Desktop
 {
     public partial class Materias : Form
     {
-        public Materias()
+        public Materias(Persona per)
         {
             InitializeComponent();
             this.dgvMaterias.AutoGenerateColumns = false;
+            if (per.TipoPersona != Persona.TipoPersonas.Administrador)
+            {
+                tsbEditar.Enabled = false;
+                tsbEliminar.Enabled = false;
+                tsbNuevo.Enabled = false;
+            }
         }
 
         private void Materias_Load(object sender, EventArgs e)

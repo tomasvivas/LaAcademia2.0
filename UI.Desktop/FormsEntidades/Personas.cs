@@ -14,10 +14,16 @@ namespace UI.Desktop
 {
     public partial class Personas : Form
     {
-        public Personas()
+        public Personas(Persona per)
         {
             InitializeComponent();
             this.dgvPersonas.AutoGenerateColumns = false;
+            if (per.TipoPersona != Persona.TipoPersonas.Administrador)
+            {
+                tsbEditar.Enabled = false;
+                tsbEliminar.Enabled = false;
+                tsbNuevo.Enabled = false;
+            }   
         }
 
         private void Personas_Load(object sender, EventArgs e)

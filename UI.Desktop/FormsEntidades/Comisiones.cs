@@ -14,10 +14,16 @@ namespace UI.Desktop.FormsEntidades
 {
     public partial class Comisiones : Form
     {
-        public Comisiones()
+        public Comisiones(Persona per)
         {
             InitializeComponent();
-            this.dgvComisiones.AutoGenerateColumns = false; 
+            this.dgvComisiones.AutoGenerateColumns = false;
+            if (per.TipoPersona != Persona.TipoPersonas.Administrador)
+            {
+                tsbEditar.Enabled = false;
+                tsbEliminar.Enabled = false;
+                tsbNuevo.Enabled = false;  
+            }
         }
 
         private void Comisiones_Load(object sender, EventArgs e)

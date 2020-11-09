@@ -14,10 +14,16 @@ namespace UI.Desktop
 {
     public partial class Planes : Form
     {
-        public Planes()
+        public Planes(Persona  per)
         {
             InitializeComponent();
-            this.dgvPlanes.AutoGenerateColumns = false; 
+            this.dgvPlanes.AutoGenerateColumns = false;
+            if (per.TipoPersona != Persona.TipoPersonas.Administrador)
+            {
+                tsbEditar.Enabled = false;
+                tsbEliminar.Enabled = false;
+                tsbNuevo.Enabled = false;
+            }
         }
 
         private void Planes_Load(object sender, EventArgs e)

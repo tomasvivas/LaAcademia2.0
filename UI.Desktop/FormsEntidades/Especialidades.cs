@@ -15,10 +15,16 @@ namespace UI.Desktop
 {
     public partial class Especialidades : Form
     {
-        public Especialidades()
+        public Especialidades(Persona per)
         {
             InitializeComponent();
             this.dgvEspecialidades.AutoGenerateColumns = false;
+            if (per.TipoPersona != Persona.TipoPersonas.Administrador)
+            {
+                tsbEditar.Enabled = false;
+                tsbEliminar.Enabled = false;
+                tsbNuevo.Enabled = false;
+            }    
         }
 
         public void Listar()

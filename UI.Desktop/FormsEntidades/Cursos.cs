@@ -15,10 +15,16 @@ namespace UI.Desktop
 {
     public partial class Cursos : Form
     {
-        public Cursos()
+        public Cursos(Persona per)
         {
             InitializeComponent();
-            this.dgvCursos.AutoGenerateColumns = false; 
+            this.dgvCursos.AutoGenerateColumns = false;
+            if (per.TipoPersona != Persona.TipoPersonas.Administrador)
+            {
+                tsbEditar.Enabled = false;
+                tsbEliminar.Enabled = false;   
+                tsbNuevo.Enabled = false;
+            }
         }
 
         private void Cursos_Load(object sender, EventArgs e)

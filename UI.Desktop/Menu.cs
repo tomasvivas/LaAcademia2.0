@@ -58,6 +58,8 @@ namespace UI.Desktop
                     tipo.Text = "Usted ha ingresado como profesor";
                     especialidadesToolStripMenuItem.Visible = false;
                     inscripcionToolStripMenuItem.Visible = false;
+                    usuariosToolStripMenuItem.Visible = false;
+                    personasToolStripMenuItem.Visible = false;
                     break;
                 case Persona.TipoPersonas.Administrador:
                     txtidalum.Text = idalum.ToString();
@@ -67,6 +69,8 @@ namespace UI.Desktop
                     break;
                 case Persona.TipoPersonas.Alumno:
                     tipo.Text = "Usted ha ingresado como alumno";
+                    usuariosToolStripMenuItem.Visible = false;
+                    personasToolStripMenuItem.Visible = false;
                     
                    
                     break;
@@ -82,31 +86,31 @@ namespace UI.Desktop
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Usuarios usr = new Usuarios();
+            Usuarios usr = new Usuarios(PerAct);
             usr.Show();
         }
 
         private void personasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Personas per = new Personas();
+            Personas per = new Personas(PerAct);
             per.Show();
         }
 
         private void planesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Planes plan = new Planes();
+            Planes plan = new Planes(PerAct);
             plan.Show();
         }
 
         private void especialidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Especialidades esp = new Especialidades();
+            Especialidades esp = new Especialidades(PerAct);
             esp.Show();
         }
 
         private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Materias mts = new Materias();
+            Materias mts = new Materias(PerAct);
             mts.Show();
         }
 
@@ -130,13 +134,13 @@ namespace UI.Desktop
 
         private void cursostsmi_Click(object sender, EventArgs e)
         {
-            Cursos cur = new Cursos();
+            Cursos cur = new Cursos(PerAct);
             cur.Show();
         }
 
         private void ComisionestoolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Comisiones com = new Comisiones();
+            Comisiones com = new Comisiones(PerAct);
             com.Show();
         }
 
