@@ -30,6 +30,7 @@ namespace UI.Desktop
         private void Cursos_Load(object sender, EventArgs e)
         {
             this.Listar();
+            this.tsbNotas.Visible = false;
 
         }
 

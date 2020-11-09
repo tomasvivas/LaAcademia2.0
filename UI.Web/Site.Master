@@ -20,6 +20,7 @@
                 <li><a href="Personas.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Personas</a></li>
                 <li><a href="Materias.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Materias</a></li>
                 <li><a href="Comisiones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Comisiones</a></li>
+                <li><a href="Cursos.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Cursos</a></li>
              
             </ul>
         </div>
