@@ -20,7 +20,7 @@ namespace UI.Desktop.FormsEntidades
             this.dgvInscripcion.AutoGenerateColumns = false;
             InsLog = new InscripcionLogic();
             personaActual = PerAct;
-            this.Listar(PerAct);
+            this.Listar();
             
             
         }
@@ -40,7 +40,7 @@ namespace UI.Desktop.FormsEntidades
             set { _il = value; }
         }
 
-        public void Listar(Persona PerAct)
+        public void Listar()
         {
             dgvInscripcion.DataSource = InsLog.GetCursosAlumno(personaActual);
         }
@@ -52,12 +52,22 @@ namespace UI.Desktop.FormsEntidades
 
         private void tsbInscribir_Click(object sender, EventArgs e)
         {
-
             Curso cur = (Curso)dgvInscripcion.SelectedRows[0].DataBoundItem;
-            AlumnoInscripcion ai = new AlumnoInscripcion();
-            ai.Condicion = "Inscripto";
-            ai.IDAlumno = personaActual.ID;
-            ai.IDCurso = cur.ID;
+            DialogResult = MessageBox.Show("Confirma inscripcion?","Inscripcion", MessageBoxButtons.OKCancel);
+            if (DialogResult == DialogResult.OK)
+            {
+                
+                AlumnoInscripcion ai = new AlumnoInscripcion();
+                ai.Condicion = "Regular";
+                ai.IDAlumno = personaActual.ID;
+                ai.IDCurso = cur.ID;
+                ai.State = BusinessEntity.States.New;
+                InsLog.Save(ai);
+                MessageBox.Show("La inscripcion se realizo correctamente");
+                this.Listar();
+                
+            }
+            
         }
     }
 }

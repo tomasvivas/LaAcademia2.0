@@ -44,7 +44,7 @@
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.habilitado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.id_persona = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcUsuarios.ContentPanel.SuspendLayout();
             this.tcUsuarios.TopToolStripPanel.SuspendLayout();
             this.tcUsuarios.SuspendLayout();
@@ -103,7 +103,7 @@
             this.usuario,
             this.email,
             this.habilitado,
-            this.id_persona});
+            this.legajo});
             this.tlUsuarios.SetColumnSpan(this.dgvUsuarios, 2);
             this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsuarios.Location = new System.Drawing.Point(3, 3);
@@ -221,12 +221,12 @@
             this.habilitado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.habilitado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // id_persona
+            // legajo
             // 
-            this.id_persona.DataPropertyName = "id_persona";
-            this.id_persona.HeaderText = "ID Persona";
-            this.id_persona.Name = "id_persona";
-            this.id_persona.ReadOnly = true;
+            this.legajo.DataPropertyName = "legajo";
+            this.legajo.HeaderText = "Legajo";
+            this.legajo.Name = "legajo";
+            this.legajo.ReadOnly = true;
             // 
             // Usuarios
             // 
@@ -268,6 +268,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewCheckBoxColumn habilitado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_persona;
+        private System.Windows.Forms.DataGridViewTextBoxColumn legajo;
     }
 }

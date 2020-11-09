@@ -51,8 +51,8 @@
             this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.especialidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.inscripcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -81,7 +81,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33112F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(495, 306);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 250);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtidalum
@@ -89,7 +89,7 @@
             this.txtidalum.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtidalum.AutoSize = true;
             this.txtidalum.ForeColor = System.Drawing.Color.Black;
-            this.txtidalum.Location = new System.Drawing.Point(162, 289);
+            this.txtidalum.Location = new System.Drawing.Point(140, 233);
             this.txtidalum.Name = "txtidalum";
             this.txtidalum.Size = new System.Drawing.Size(0, 13);
             this.txtidalum.TabIndex = 19;
@@ -99,7 +99,7 @@
             this.tipo.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.tipo.AutoSize = true;
             this.tipo.ForeColor = System.Drawing.Color.Black;
-            this.tipo.Location = new System.Drawing.Point(468, 289);
+            this.tipo.Location = new System.Drawing.Point(402, 233);
             this.tipo.Name = "tipo";
             this.tipo.Size = new System.Drawing.Size(24, 13);
             this.tipo.TabIndex = 17;
@@ -110,7 +110,7 @@
             this.fecha.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.fecha.AutoSize = true;
             this.fecha.ForeColor = System.Drawing.Color.Black;
-            this.fecha.Location = new System.Drawing.Point(458, 6);
+            this.fecha.Location = new System.Drawing.Point(392, 6);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(34, 13);
             this.fecha.TabIndex = 18;
@@ -120,10 +120,10 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(20, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(125, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 130);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
@@ -133,9 +133,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(266, 112);
+            this.label1.Location = new System.Drawing.Point(222, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 87);
+            this.label1.Size = new System.Drawing.Size(127, 68);
             this.label1.TabIndex = 12;
             this.label1.Text = "Menu ";
             // 
@@ -146,9 +146,9 @@
             this.label2.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(192, 25);
+            this.label2.Location = new System.Drawing.Point(148, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 87);
+            this.label2.Size = new System.Drawing.Size(275, 68);
             this.label2.TabIndex = 14;
             this.label2.Text = "\"La Academia\"";
             // 
@@ -156,9 +156,9 @@
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(165, 199);
+            this.toolStrip1.Location = new System.Drawing.Point(143, 161);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(330, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(286, 25);
             this.toolStrip1.TabIndex = 20;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -269,11 +269,6 @@
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // inscripcionToolStripMenuItem
             // 
             this.inscripcionToolStripMenuItem.Name = "inscripcionToolStripMenuItem";
@@ -281,11 +276,16 @@
             this.inscripcionToolStripMenuItem.Text = "Inscripcion";
             this.inscripcionToolStripMenuItem.Click += new System.EventHandler(this.inscripcionToolStripMenuItem_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 306);
+            this.ClientSize = new System.Drawing.Size(429, 250);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

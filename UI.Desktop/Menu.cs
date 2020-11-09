@@ -57,15 +57,17 @@ namespace UI.Desktop
                     
                     tipo.Text = "Usted ha ingresado como profesor";
                     especialidadesToolStripMenuItem.Visible = false;
+                    inscripcionToolStripMenuItem.Visible = false;
                     break;
                 case Persona.TipoPersonas.Administrador:
                     txtidalum.Text = idalum.ToString();
                     tipo.Text = "Usted ha ingresado como administrador";
+                    inscripcionToolStripMenuItem.Visible = false;
                     
                     break;
                 case Persona.TipoPersonas.Alumno:
                     tipo.Text = "Usted ha ingresado como alumno";
-                    txtidalum.Text = idalum.ToString();
+                    
                    
                     break;
                 default:
