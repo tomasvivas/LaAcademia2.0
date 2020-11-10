@@ -25,6 +25,13 @@ namespace UI.Web
             set { tipoper = value; }
         }
 
+        private int _idalum;
+        public int idalum
+        {
+            get { return _idalum; }
+            set { _idalum = value; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -44,7 +51,10 @@ namespace UI.Web
             else
             {
                 Page.Response.Write("Ingreso ok");
+                idalum = usuarioActual.ID_Persona;
                 Page.Response.Redirect("Menu");
+                
+                
                 this.Dispose();
             }
 

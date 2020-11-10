@@ -132,6 +132,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Inscripcion.aspx" />
+    <Content Include="Inscripciones.aspx" />
     <Content Include="Materias.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Personas.aspx" />
@@ -234,6 +235,13 @@
     </Compile>
     <Compile Include="Inscripcion.aspx.designer.cs">
       <DependentUpon>Inscripcion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripciones.aspx.cs">
+      <DependentUpon>Inscripciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inscripciones.aspx.designer.cs">
+      <DependentUpon>Inscripciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

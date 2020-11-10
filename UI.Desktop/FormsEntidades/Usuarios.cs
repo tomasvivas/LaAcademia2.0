@@ -57,33 +57,23 @@ namespace UI.Desktop.FormsEntidades
 
         private void tsbEditar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Modificacion);
                 ud.ShowDialog();
                 this.Listar();
-            }
-            catch
-            {
-                MessageBox.Show("Debe seleccionar una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            
+            
         }
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
                 int ID = ((Business.Entities.Usuario)this.dgvUsuarios.SelectedRows[0].DataBoundItem).ID;
                 UsuarioDesktop ud = new UsuarioDesktop(ID, ApplicationForm.ModoForm.Baja);
                 ud.ShowDialog();
                 this.Listar();
-            }
-            catch
-            {
-                MessageBox.Show("Debe seleccionar una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
 
         }
     }
