@@ -56,21 +56,20 @@ namespace UI.Desktop
                 case Persona.TipoPersonas.Profesor:
                     
                     tipo.Text = "Usted ha ingresado como profesor";
-                    especialidadesToolStripMenuItem.Visible = false;
-                    inscripcionToolStripMenuItem.Visible = false;
-                    usuariosToolStripMenuItem.Visible = false;
-                    personasToolStripMenuItem.Visible = false;
+                    tsbREspecialidades.Visible = false;
+                    tsbInscripcion.Visible = false;
+                    tsbRUsuarios.Visible = false;
+                    tsbPersonas.Visible = false;
                     break;
                 case Persona.TipoPersonas.Administrador:
-                    txtidalum.Text = idalum.ToString();
                     tipo.Text = "Usted ha ingresado como administrador";
-                    //inscripcionToolStripMenuItem.Visible = false;
+                    tsbInscripcion.Visible = false;
                     
                     break;
                 case Persona.TipoPersonas.Alumno:
                     tipo.Text = "Usted ha ingresado como alumno";
-                    usuariosToolStripMenuItem.Visible = false;
-                    personasToolStripMenuItem.Visible = false;
+                    tsbRUsuarios.Visible = false;
+                    tsbPersonas.Visible = false;
                     
                    
                     break;
@@ -84,71 +83,73 @@ namespace UI.Desktop
 
         
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbUsuarios_Click(object sender, EventArgs e)
         {
             Usuarios usr = new Usuarios(PerAct);
             usr.Show();
         }
 
-        private void personasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbPersonas_Click(object sender, EventArgs e)
         {
             Personas per = new Personas(PerAct);
             per.Show();
         }
 
-        private void planesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbPlanes_Click(object sender, EventArgs e)
         {
             Planes plan = new Planes(PerAct);
             plan.Show();
         }
 
-        private void especialidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbEspecialidades_Click(object sender, EventArgs e)
         {
             Especialidades esp = new Especialidades(PerAct);
             esp.Show();
         }
 
-        private void materiasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbMaterias_Click(object sender, EventArgs e)
         {
             Materias mts = new Materias(PerAct);
             mts.Show();
         }
 
-        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void tsbRUsuarios_Click(object sender, EventArgs e)
         {
             UsuariosReporte ur = new UsuariosReporte();
             ur.Show();
         }
 
-        private void especialidadesToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void tsbREspecialidades_Click(object sender, EventArgs e)
         {
             EspecialidadesReporte esrep = new EspecialidadesReporte();
             esrep.Show();
         }
 
-        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbRCursos_Click(object sender, EventArgs e)
         {
             CursosReporte currep = new CursosReporte();
             currep.Show();
         }
 
-        private void cursostsmi_Click(object sender, EventArgs e)
+        private void tsbCursos_Click(object sender, EventArgs e)
         {
             Cursos cur = new Cursos(PerAct);
             cur.Show();
         }
 
-        private void ComisionestoolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbComisiones_Click(object sender, EventArgs e)
         {
             Comisiones com = new Comisiones(PerAct);
             com.Show();
         }
 
-        private void inscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsbInscripciones_Click(object sender, EventArgs e)
         {
             Inscripciones ins = new Inscripciones(PerAct);
             ins.Show();
         }
+
+        
     } 
 }
 

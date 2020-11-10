@@ -31,27 +31,25 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtidalum = new System.Windows.Forms.Label();
             this.tipo = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.especialidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursostsmi = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComisionestoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.especialidadesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inscripcionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbConsultas = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsbUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbPersonas = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbPlanes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbMaterias = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbComisiones = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbCursos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbReportes = new System.Windows.Forms.ToolStripDropDownButton();
+            this.tsbRUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbRCursos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbREspecialidades = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbInscripcion = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -64,7 +62,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
-            this.tableLayoutPanel1.Controls.Add(this.txtidalum, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tipo, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.fecha, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 1);
@@ -81,25 +78,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33112F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 250);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(429, 246);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // txtidalum
-            // 
-            this.txtidalum.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtidalum.AutoSize = true;
-            this.txtidalum.ForeColor = System.Drawing.Color.Black;
-            this.txtidalum.Location = new System.Drawing.Point(140, 233);
-            this.txtidalum.Name = "txtidalum";
-            this.txtidalum.Size = new System.Drawing.Size(0, 13);
-            this.txtidalum.TabIndex = 19;
             // 
             // tipo
             // 
             this.tipo.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.tipo.AutoSize = true;
             this.tipo.ForeColor = System.Drawing.Color.Black;
-            this.tipo.Location = new System.Drawing.Point(402, 233);
+            this.tipo.Location = new System.Drawing.Point(402, 229);
             this.tipo.Name = "tipo";
             this.tipo.Size = new System.Drawing.Size(24, 13);
             this.tipo.TabIndex = 17;
@@ -123,7 +110,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(9, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.tableLayoutPanel1.SetRowSpan(this.pictureBox1, 2);
-            this.pictureBox1.Size = new System.Drawing.Size(125, 130);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 128);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
@@ -133,9 +120,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(222, 93);
+            this.label1.Location = new System.Drawing.Point(222, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 68);
+            this.label1.Size = new System.Drawing.Size(127, 67);
             this.label1.TabIndex = 12;
             this.label1.Text = "Menu ";
             // 
@@ -148,133 +135,132 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Location = new System.Drawing.Point(148, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 68);
+            this.label2.Size = new System.Drawing.Size(275, 67);
             this.label2.TabIndex = 14;
             this.label2.Text = "\"La Academia\"";
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(143, 161);
+            this.tsbConsultas,
+            this.tsbReportes,
+            this.tsbInscripcion});
+            this.toolStrip1.Location = new System.Drawing.Point(143, 159);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(286, 25);
             this.toolStrip1.TabIndex = 20;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripDropDownButton1
+            // tsbConsultas
             // 
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultasToolStripMenuItem,
-            this.reportesToolStripMenuItem,
-            this.inscripcionToolStripMenuItem});
-            this.toolStripDropDownButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.toolStripDropDownButton1.Image = global::UI.Desktop.Properties.Resources.admin_person_user_man_2839;
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(67, 22);
-            this.toolStripDropDownButton1.Text = "Menu";
+            this.tsbConsultas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbUsuarios,
+            this.tsbPersonas,
+            this.tsbPlanes,
+            this.tsbMaterias,
+            this.tsbComisiones,
+            this.tsbEspecialidades,
+            this.tsbCursos});
+            this.tsbConsultas.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tsbConsultas.Image = global::UI.Desktop.Properties.Resources.business_application_addmale_useradd_insert_add_user_client_2312;
+            this.tsbConsultas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbConsultas.Name = "tsbConsultas";
+            this.tsbConsultas.Size = new System.Drawing.Size(88, 22);
+            this.tsbConsultas.Text = "Consultas";
             // 
-            // consultasToolStripMenuItem
+            // tsbUsuarios
             // 
-            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem,
-            this.personasToolStripMenuItem,
-            this.planesToolStripMenuItem,
-            this.especialidadesToolStripMenuItem,
-            this.materiasToolStripMenuItem,
-            this.cursostsmi,
-            this.ComisionestoolStripMenuItem});
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultasToolStripMenuItem.Text = "Consultas";
+            this.tsbUsuarios.Name = "tsbUsuarios";
+            this.tsbUsuarios.Size = new System.Drawing.Size(180, 22);
+            this.tsbUsuarios.Text = "Usuarios";
+            this.tsbUsuarios.Click += new System.EventHandler(this.tsbUsuarios_Click);
             // 
-            // usuariosToolStripMenuItem
+            // tsbPersonas
             // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.tsbPersonas.Name = "tsbPersonas";
+            this.tsbPersonas.Size = new System.Drawing.Size(180, 22);
+            this.tsbPersonas.Text = "Personas";
+            this.tsbPersonas.Click += new System.EventHandler(this.tsbPersonas_Click);
             // 
-            // personasToolStripMenuItem
+            // tsbPlanes
             // 
-            this.personasToolStripMenuItem.Name = "personasToolStripMenuItem";
-            this.personasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.personasToolStripMenuItem.Text = "Personas";
-            this.personasToolStripMenuItem.Click += new System.EventHandler(this.personasToolStripMenuItem_Click);
+            this.tsbPlanes.Name = "tsbPlanes";
+            this.tsbPlanes.Size = new System.Drawing.Size(180, 22);
+            this.tsbPlanes.Text = "Planes";
+            this.tsbPlanes.Click += new System.EventHandler(this.tsbPlanes_Click);
             // 
-            // planesToolStripMenuItem
+            // tsbMaterias
             // 
-            this.planesToolStripMenuItem.Name = "planesToolStripMenuItem";
-            this.planesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.planesToolStripMenuItem.Text = "Planes";
-            this.planesToolStripMenuItem.Click += new System.EventHandler(this.planesToolStripMenuItem_Click);
+            this.tsbMaterias.Name = "tsbMaterias";
+            this.tsbMaterias.Size = new System.Drawing.Size(180, 22);
+            this.tsbMaterias.Text = "Materias";
+            this.tsbMaterias.Click += new System.EventHandler(this.tsbMaterias_Click);
             // 
-            // especialidadesToolStripMenuItem
+            // tsbComisiones
             // 
-            this.especialidadesToolStripMenuItem.Name = "especialidadesToolStripMenuItem";
-            this.especialidadesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.especialidadesToolStripMenuItem.Text = "Especialidades";
-            this.especialidadesToolStripMenuItem.Click += new System.EventHandler(this.especialidadesToolStripMenuItem_Click);
+            this.tsbComisiones.Name = "tsbComisiones";
+            this.tsbComisiones.Size = new System.Drawing.Size(180, 22);
+            this.tsbComisiones.Text = "Comisiones";
+            this.tsbComisiones.Click += new System.EventHandler(this.tsbComisiones_Click);
             // 
-            // materiasToolStripMenuItem
+            // tsbEspecialidades
             // 
-            this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
-            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.materiasToolStripMenuItem.Text = "Materias";
-            this.materiasToolStripMenuItem.Click += new System.EventHandler(this.materiasToolStripMenuItem_Click);
+            this.tsbEspecialidades.Name = "tsbEspecialidades";
+            this.tsbEspecialidades.Size = new System.Drawing.Size(180, 22);
+            this.tsbEspecialidades.Text = "Especialidades";
+            this.tsbEspecialidades.Click += new System.EventHandler(this.tsbEspecialidades_Click);
             // 
-            // cursostsmi
+            // tsbCursos
             // 
-            this.cursostsmi.Name = "cursostsmi";
-            this.cursostsmi.Size = new System.Drawing.Size(150, 22);
-            this.cursostsmi.Text = "Cursos";
-            this.cursostsmi.Click += new System.EventHandler(this.cursostsmi_Click);
+            this.tsbCursos.Name = "tsbCursos";
+            this.tsbCursos.Size = new System.Drawing.Size(180, 22);
+            this.tsbCursos.Text = "Cursos";
+            this.tsbCursos.Click += new System.EventHandler(this.tsbCursos_Click);
             // 
-            // ComisionestoolStripMenuItem
+            // tsbReportes
             // 
-            this.ComisionestoolStripMenuItem.Name = "ComisionestoolStripMenuItem";
-            this.ComisionestoolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.ComisionestoolStripMenuItem.Text = "Comisiones";
-            this.ComisionestoolStripMenuItem.Click += new System.EventHandler(this.ComisionestoolStripMenuItem_Click);
+            this.tsbReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbRUsuarios,
+            this.tsbRCursos,
+            this.tsbREspecialidades});
+            this.tsbReportes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tsbReportes.Image = global::UI.Desktop.Properties.Resources.admin_person_user_man_2839;
+            this.tsbReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbReportes.Name = "tsbReportes";
+            this.tsbReportes.Size = new System.Drawing.Size(82, 22);
+            this.tsbReportes.Text = "Reportes";
             // 
-            // reportesToolStripMenuItem
+            // tsbRUsuarios
             // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem1,
-            this.especialidadesToolStripMenuItem1,
-            this.cursosToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reportesToolStripMenuItem.Text = "Reportes";
+            this.tsbRUsuarios.Name = "tsbRUsuarios";
+            this.tsbRUsuarios.Size = new System.Drawing.Size(150, 22);
+            this.tsbRUsuarios.Text = "Usuarios";
+            this.tsbRUsuarios.Click += new System.EventHandler(this.tsbRUsuarios_Click);
             // 
-            // usuariosToolStripMenuItem1
+            // tsbRCursos
             // 
-            this.usuariosToolStripMenuItem1.Name = "usuariosToolStripMenuItem1";
-            this.usuariosToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
-            this.usuariosToolStripMenuItem1.Text = "Usuarios";
-            this.usuariosToolStripMenuItem1.Click += new System.EventHandler(this.usuariosToolStripMenuItem1_Click);
+            this.tsbRCursos.Name = "tsbRCursos";
+            this.tsbRCursos.Size = new System.Drawing.Size(150, 22);
+            this.tsbRCursos.Text = "Cursos";
+            this.tsbRCursos.Click += new System.EventHandler(this.tsbRCursos_Click);
             // 
-            // especialidadesToolStripMenuItem1
+            // tsbREspecialidades
             // 
-            this.especialidadesToolStripMenuItem1.Name = "especialidadesToolStripMenuItem1";
-            this.especialidadesToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
-            this.especialidadesToolStripMenuItem1.Text = "Especialidades";
-            this.especialidadesToolStripMenuItem1.Click += new System.EventHandler(this.especialidadesToolStripMenuItem1_Click);
+            this.tsbREspecialidades.Name = "tsbREspecialidades";
+            this.tsbREspecialidades.Size = new System.Drawing.Size(150, 22);
+            this.tsbREspecialidades.Text = "Especialidades";
+            this.tsbREspecialidades.Click += new System.EventHandler(this.tsbREspecialidades_Click);
             // 
-            // cursosToolStripMenuItem
+            // tsbInscripcion
             // 
-            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
-            this.cursosToolStripMenuItem.Text = "Cursos";
-            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
-            // 
-            // inscripcionToolStripMenuItem
-            // 
-            this.inscripcionToolStripMenuItem.Name = "inscripcionToolStripMenuItem";
-            this.inscripcionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.inscripcionToolStripMenuItem.Text = "Inscripcion";
-            this.inscripcionToolStripMenuItem.Click += new System.EventHandler(this.inscripcionToolStripMenuItem_Click);
+            this.tsbInscripcion.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.tsbInscripcion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tsbInscripcion.Image = global::UI.Desktop.Properties.Resources.businessapplication_edit_male_user_thepencil_theclient_negocio_2321;
+            this.tsbInscripcion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbInscripcion.Name = "tsbInscripcion";
+            this.tsbInscripcion.Size = new System.Drawing.Size(85, 22);
+            this.tsbInscripcion.Text = "Inscripcion";
+            this.tsbInscripcion.Click += new System.EventHandler(this.tsbInscripciones_Click);
             // 
             // contextMenuStrip1
             // 
@@ -285,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 250);
+            this.ClientSize = new System.Drawing.Size(429, 246);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -312,19 +298,18 @@
         private System.Windows.Forms.Label fecha;
         private System.Windows.Forms.Label txtidalum;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem planesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem especialidadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem materiasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem especialidadesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cursostsmi;
-        private System.Windows.Forms.ToolStripMenuItem ComisionestoolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inscripcionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton tsbConsultas;
+        private System.Windows.Forms.ToolStripDropDownButton tsbReportes;
+        private System.Windows.Forms.ToolStripButton tsbInscripcion;
+        private System.Windows.Forms.ToolStripMenuItem tsbRUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem tsbRCursos;
+        private System.Windows.Forms.ToolStripMenuItem tsbREspecialidades;
+        private System.Windows.Forms.ToolStripMenuItem tsbUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem tsbPersonas;
+        private System.Windows.Forms.ToolStripMenuItem tsbPlanes;
+        private System.Windows.Forms.ToolStripMenuItem tsbMaterias;
+        private System.Windows.Forms.ToolStripMenuItem tsbComisiones;
+        private System.Windows.Forms.ToolStripMenuItem tsbEspecialidades;
+        private System.Windows.Forms.ToolStripMenuItem tsbCursos;
     }
 }
