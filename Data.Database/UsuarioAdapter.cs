@@ -10,16 +10,21 @@ namespace Data.Database
     public class UsuarioAdapter : Adapter
     {
 
+        
+
         public List<Usuario> GetAll()
         {
             List<Usuario> usuarios = new List<Usuario>();
             try
             {
                 this.OpenConnection();
-                SqlCommand cmdUsuarios = new SqlCommand("SELECT u.id_usuario, u.nombre_usuario, u.clave, u.habilitado, " +
-                "u.nombre, u.apellido, u.email, personas.id_persona, personas.legajo " +
-                "FROM usuarios u INNER JOIN personas on personas.id_persona = u.id_persona", sqlConn);
+
+                SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario, u.nombre_usuario, u.clave, u.habilitado, " +
+                    "u.nombre, u.apellido, u.email, personas.legajo, u.id_persona from usuarios u " +
+                    "inner join personas on personas.id_persona = u.id_persona", sqlConn);
+
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
+
                 while (drUsuarios.Read())
                 {
                     Usuario usr = new Usuario();
@@ -32,16 +37,15 @@ namespace Data.Database
                     usr.Email = (string)drUsuarios["email"];
                     usr.ID_Persona = (int)drUsuarios["id_persona"];
                     usr.Legajo = (int)drUsuarios["legajo"];
-                    
+
                     usuarios.Add(usr);
                 }
                 drUsuarios.Close();
             }
-            catch (Exception Ex)
+            catch (Exception ex)
             {
-                Exception ExcepcionManejada = new Exception("Error al recuperar lista de usuarios", Ex);
+                Exception ExcepcionManejada = new Exception("Error al recuperar la lista de usuarios", ex);
                 throw ExcepcionManejada;
-
             }
             finally
             {

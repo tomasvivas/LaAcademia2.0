@@ -64,7 +64,7 @@ namespace UI.Desktop.FormsEntidades
             else if (Modo == ModoForm.Modificacion)
             {
                 btnAceptar.Text = "Guardar";
-            }
+                txtID.Enabled = false;            }
             else if (Modo == ModoForm.Baja)
             {
                 btnAceptar.Text = "Eliminar";

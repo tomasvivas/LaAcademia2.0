@@ -7,12 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business.Logic;
 using Business.Entities;
-using System.Security.Cryptography.X509Certificates;
+using Business.Logic;
 
-
-namespace UI.Desktop
+namespace UI.Desktop.FormsEntidades
 {
     public partial class Usuarios : Form
     {
@@ -30,18 +28,18 @@ namespace UI.Desktop
 
         private void Usuarios_Load(object sender, EventArgs e)
         {
-            this.Listar(); 
+            this.Listar();
         }
 
         public void Listar()
         {
             UsuarioLogic ul = new UsuarioLogic();
-            this.dgvUsuarios.DataSource = ul.GetAll(); 
+            this.dgvUsuarios.DataSource = ul.GetAll();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            this.Listar(); 
+            this.Listar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -88,6 +86,5 @@ namespace UI.Desktop
             }
 
         }
-
     }
 }

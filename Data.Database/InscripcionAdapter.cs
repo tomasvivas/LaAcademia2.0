@@ -18,12 +18,10 @@ namespace Data.Database
             {
                 this.OpenConnection();
                 SqlCommand cmdInscripciones = new SqlCommand("SELECT ai.id_inscripcion, ai.id_alumno, ai.id_curso, ai.condicion, ai.nota, " +
-                    "comisiones.desc_comision, materias.desc_materia " +
+                    "personas.nombre, personas.apellido " +
                     "FROM alumnos_inscripciones ai " +
                     "INNER JOIN personas on personas.id_persona = ai.id_alumno " +
-                    "INNER JOIN cursos on cursos.id_curso = ai.id_curso" +
-                    "INNER JOIN comisiones on comisiones.id_comision = curso.id_comision" +
-                    "INNER JOIN materias on materias.id_materia = curso.id_materia" +
+                    "INNER JOIN cursos on cursos.id_curso = ai.id_curso " +
                     "WHERE ai.id_curso = @id" , sqlConn);
                 cmdInscripciones.Parameters.Add("@id", SqlDbType.Int).Value = IDcur;
                 SqlDataReader drInscripciones = cmdInscripciones.ExecuteReader();
@@ -35,8 +33,8 @@ namespace Data.Database
                     ins.IDCurso = (int)drInscripciones["id_curso"];
                     ins.Condicion = (string)drInscripciones["condicion"];
                     ins.Nota = (int)drInscripciones["nota"];
-                    ins.DescComision = (string)drInscripciones["desc_comision"];
-                    ins.DescMateria = (string)drInscripciones["desc_materia"];
+                    ins.Nombre = (string)drInscripciones["nombre"];
+                    ins.Apellido = (string)drInscripciones["apellido"];
                     inscripciones.Add(ins);
                 }
                 drInscripciones.Close();
@@ -170,6 +168,29 @@ namespace Data.Database
             this.CloseConnection();
         }
 
+        public void Update(AlumnoInscripcion ins)
+        {
+            try
+            {
+                this.OpenConnection();
+                SqlCommand cmdSave = new SqlCommand("UPDATE alumnos_inscripciones SET nota = @nota, condicion = @condicion " +
+                    "WHERE id_inscripcion = @id", sqlConn);
+                cmdSave.Parameters.Add("@id", SqlDbType.Int).Value = ins.ID;
+                cmdSave.Parameters.Add("@condicion", SqlDbType.VarChar).Value = ins.Condicion;
+                cmdSave.Parameters.Add("@AnioCalendario", SqlDbType.Int).Value = ins.Nota;
+                cmdSave.ExecuteNonQuery();
+            }
+            catch (Exception Ex)
+            {
+                Exception ExcepcionManejada = new Exception("Error al modificar datos de la inscripcion", Ex);
+                throw ExcepcionManejada;
+            }
+            finally
+            {
+                this.CloseConnection();
+            }
+        }
+
         public void Save(AlumnoInscripcion ai)
         {
             if (ai.State == BusinessEntity.States.New)
@@ -182,7 +203,7 @@ namespace Data.Database
             }
             else if (ai.State == BusinessEntity.States.Modified)
             {
-               // this.Update(cur);
+                 this.Update(ai);
             }
             ai.State = BusinessEntity.States.Unmodified;
         }

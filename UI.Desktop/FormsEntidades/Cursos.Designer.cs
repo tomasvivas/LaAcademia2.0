@@ -28,21 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cursos));
             this.tcCursos = new System.Windows.Forms.ToolStripContainer();
             this.tlCursos = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.cursosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.academiaDataSet = new UI.Desktop.AcademiaDataSet();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.tsCursos = new System.Windows.Forms.ToolStrip();
-            this.cursosTableAdapter = new UI.Desktop.AcademiaDataSetTableAdapters.cursosTableAdapter();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbNotas = new System.Windows.Forms.ToolStripButton();
+            this.cursosTableAdapter = new UI.Desktop.AcademiaDataSetTableAdapters.cursosTableAdapter();
             this.Cupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +53,6 @@
             this.tcCursos.SuspendLayout();
             this.tlCursos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet)).BeginInit();
             this.tsCursos.SuspendLayout();
             this.SuspendLayout();
@@ -66,11 +63,11 @@
             // tcCursos.ContentPanel
             // 
             this.tcCursos.ContentPanel.Controls.Add(this.tlCursos);
-            this.tcCursos.ContentPanel.Size = new System.Drawing.Size(751, 298);
+            this.tcCursos.ContentPanel.Size = new System.Drawing.Size(748, 298);
             this.tcCursos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcCursos.Location = new System.Drawing.Point(0, 0);
             this.tcCursos.Name = "tcCursos";
-            this.tcCursos.Size = new System.Drawing.Size(751, 323);
+            this.tcCursos.Size = new System.Drawing.Size(748, 323);
             this.tcCursos.TabIndex = 0;
             this.tcCursos.Text = "toolStripContainer1";
             // 
@@ -93,14 +90,13 @@
             this.tlCursos.RowCount = 2;
             this.tlCursos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlCursos.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlCursos.Size = new System.Drawing.Size(751, 298);
+            this.tlCursos.Size = new System.Drawing.Size(748, 298);
             this.tlCursos.TabIndex = 0;
             // 
             // dgvCursos
             // 
             this.dgvCursos.AllowUserToAddRows = false;
             this.dgvCursos.AllowUserToDeleteRows = false;
-            this.dgvCursos.AutoGenerateColumns = false;
             this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cupo,
@@ -111,19 +107,13 @@
             this.idMateria,
             this.desc_materia});
             this.tlCursos.SetColumnSpan(this.dgvCursos, 2);
-            this.dgvCursos.DataSource = this.cursosBindingSource;
             this.dgvCursos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCursos.Location = new System.Drawing.Point(3, 3);
             this.dgvCursos.Name = "dgvCursos";
             this.dgvCursos.ReadOnly = true;
             this.dgvCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCursos.Size = new System.Drawing.Size(745, 263);
+            this.dgvCursos.Size = new System.Drawing.Size(742, 263);
             this.dgvCursos.TabIndex = 0;
-            // 
-            // cursosBindingSource
-            // 
-            this.cursosBindingSource.DataMember = "cursos";
-            this.cursosBindingSource.DataSource = this.academiaDataSet;
             // 
             // academiaDataSet
             // 
@@ -133,7 +123,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(592, 272);
+            this.btnActualizar.Location = new System.Drawing.Point(589, 272);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
@@ -143,7 +133,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(673, 272);
+            this.btnSalir.Location = new System.Drawing.Point(670, 272);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -164,10 +154,6 @@
             this.tsCursos.Size = new System.Drawing.Size(259, 25);
             this.tsCursos.TabIndex = 0;
             this.tsCursos.Text = "toolStrip1";
-            // 
-            // cursosTableAdapter
-            // 
-            this.cursosTableAdapter.ClearBeforeFill = true;
             // 
             // tsbNuevo
             // 
@@ -204,6 +190,10 @@
             this.tsbNotas.Size = new System.Drawing.Size(58, 22);
             this.tsbNotas.Text = "Notas";
             this.tsbNotas.Click += new System.EventHandler(this.tsbNotas_Click);
+            // 
+            // cursosTableAdapter
+            // 
+            this.cursosTableAdapter.ClearBeforeFill = true;
             // 
             // Cupo
             // 
@@ -258,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 323);
+            this.ClientSize = new System.Drawing.Size(748, 323);
             this.Controls.Add(this.tcCursos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cursos";
@@ -271,7 +261,6 @@
             this.tcCursos.PerformLayout();
             this.tlCursos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cursosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.academiaDataSet)).EndInit();
             this.tsCursos.ResumeLayout(false);
             this.tsCursos.PerformLayout();
@@ -291,7 +280,6 @@
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private AcademiaDataSet academiaDataSet;
-        private System.Windows.Forms.BindingSource cursosBindingSource;
         private AcademiaDataSetTableAdapters.cursosTableAdapter cursosTableAdapter;
         private System.Windows.Forms.ToolStripButton tsbNotas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cupo;

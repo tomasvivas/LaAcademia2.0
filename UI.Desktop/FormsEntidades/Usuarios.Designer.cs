@@ -1,4 +1,4 @@
-﻿namespace UI.Desktop
+﻿namespace UI.Desktop.FormsEntidades
 {
     partial class Usuarios
     {
@@ -28,139 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
-            this.tcUsuarios = new System.Windows.Forms.ToolStripContainer();
-            this.tlUsuarios = new System.Windows.Forms.TableLayoutPanel();
+            this.components = new System.ComponentModel.Container();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.usUsuarios = new System.Windows.Forms.ToolStrip();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbEditar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.habilitado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tcUsuarios.ContentPanel.SuspendLayout();
-            this.tcUsuarios.TopToolStripPanel.SuspendLayout();
-            this.tcUsuarios.SuspendLayout();
-            this.tlUsuarios.SuspendLayout();
+            this.usuarioLogicBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel1.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
-            this.usUsuarios.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioLogicBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // tcUsuarios
+            // tableLayoutPanel1
             // 
-            this.tcUsuarios.AccessibleName = "";
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 82.30769F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.69231F));
+            this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.toolStripContainer1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.94326F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.05674F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(751, 329);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tcUsuarios.ContentPanel
+            // btnCancelar
             // 
-            this.tcUsuarios.ContentPanel.Controls.Add(this.tlUsuarios);
-            this.tcUsuarios.ContentPanel.Size = new System.Drawing.Size(800, 425);
-            this.tcUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.tcUsuarios.Name = "tcUsuarios";
-            this.tcUsuarios.Size = new System.Drawing.Size(800, 450);
-            this.tcUsuarios.TabIndex = 0;
-            this.tcUsuarios.Text = "toolStripContainer1";
+            this.btnCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelar.Location = new System.Drawing.Point(647, 297);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // tcUsuarios.TopToolStripPanel
+            // toolStripContainer1
             // 
-            this.tcUsuarios.TopToolStripPanel.Controls.Add(this.usUsuarios);
+            this.tableLayoutPanel1.SetColumnSpan(this.toolStripContainer1, 2);
             // 
-            // tlUsuarios
+            // toolStripContainer1.ContentPanel
             // 
-            this.tlUsuarios.ColumnCount = 2;
-            this.tlUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlUsuarios.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlUsuarios.Controls.Add(this.dgvUsuarios, 0, 0);
-            this.tlUsuarios.Controls.Add(this.btnActualizar, 0, 1);
-            this.tlUsuarios.Controls.Add(this.btnSalir, 1, 1);
-            this.tlUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.tlUsuarios.Name = "tlUsuarios";
-            this.tlUsuarios.RowCount = 2;
-            this.tlUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlUsuarios.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tlUsuarios.Size = new System.Drawing.Size(800, 425);
-            this.tlUsuarios.TabIndex = 0;
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.dgvUsuarios);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(745, 258);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(3, 3);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(745, 283);
+            this.toolStripContainer1.TabIndex = 0;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
             // dgvUsuarios
             // 
             this.dgvUsuarios.AllowUserToAddRows = false;
             this.dgvUsuarios.AllowUserToDeleteRows = false;
-            this.dgvUsuarios.AllowUserToResizeColumns = false;
-            this.dgvUsuarios.AllowUserToResizeRows = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
+            this.usuario,
             this.nombre,
             this.apellido,
-            this.usuario,
             this.email,
             this.habilitado,
             this.legajo});
-            this.tlUsuarios.SetColumnSpan(this.dgvUsuarios, 2);
             this.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvUsuarios.Location = new System.Drawing.Point(3, 3);
-            this.dgvUsuarios.MultiSelect = false;
+            this.dgvUsuarios.Location = new System.Drawing.Point(0, 0);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(794, 390);
+            this.dgvUsuarios.Size = new System.Drawing.Size(745, 258);
             this.dgvUsuarios.TabIndex = 0;
             // 
-            // btnActualizar
+            // toolStrip1
             // 
-            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizar.Location = new System.Drawing.Point(641, 399);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 1;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(722, 399);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 2;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // usUsuarios
-            // 
-            this.usUsuarios.Dock = System.Windows.Forms.DockStyle.None;
-            this.usUsuarios.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNuevo,
             this.tsbEditar,
             this.tsbEliminar});
-            this.usUsuarios.Location = new System.Drawing.Point(3, 0);
-            this.usUsuarios.Name = "usUsuarios";
-            this.usUsuarios.Size = new System.Drawing.Size(201, 25);
-            this.usUsuarios.TabIndex = 0;
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(201, 25);
+            this.toolStrip1.TabIndex = 0;
             // 
             // tsbNuevo
             // 
-            this.tsbNuevo.Image = ((System.Drawing.Image)(resources.GetObject("tsbNuevo.Image")));
+            this.tsbNuevo.Image = global::UI.Desktop.Properties.Resources.add_insert_plus_1588;
             this.tsbNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbNuevo.Name = "tsbNuevo";
             this.tsbNuevo.Size = new System.Drawing.Size(62, 22);
             this.tsbNuevo.Text = "Nuevo";
-            this.tsbNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tsbNuevo.ToolTipText = "Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbEditar
             // 
-            this.tsbEditar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEditar.Image")));
+            this.tsbEditar.Image = global::UI.Desktop.Properties.Resources.edit_modify_icon_icons_com_49882;
             this.tsbEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEditar.Name = "tsbEditar";
             this.tsbEditar.Size = new System.Drawing.Size(57, 22);
@@ -169,57 +155,65 @@
             // 
             // tsbEliminar
             // 
-            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.Image = global::UI.Desktop.Properties.Resources.delete_delete_exit_1577;
             this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(70, 22);
             this.tsbEliminar.Text = "Eliminar";
-            this.tsbEliminar.ToolTipText = "Eliminar";
             this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAceptar.Location = new System.Drawing.Point(540, 297);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 1;
+            this.btnAceptar.Text = "Actualizar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // id
             // 
-            this.id.DataPropertyName = "ID";
+            this.id.DataPropertyName = "id";
             this.id.HeaderText = "ID";
             this.id.Name = "id";
             this.id.ReadOnly = true;
             // 
+            // usuario
+            // 
+            this.usuario.DataPropertyName = "nombreusuario";
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            // 
             // nombre
             // 
-            this.nombre.DataPropertyName = "Nombre";
+            this.nombre.DataPropertyName = "nombre";
             this.nombre.HeaderText = "Nombre";
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             // 
             // apellido
             // 
-            this.apellido.DataPropertyName = "Apellido";
+            this.apellido.DataPropertyName = "apellido";
             this.apellido.HeaderText = "Apellido";
             this.apellido.Name = "apellido";
             this.apellido.ReadOnly = true;
             // 
-            // usuario
-            // 
-            this.usuario.DataPropertyName = "NombreUsuario";
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            // 
             // email
             // 
-            this.email.DataPropertyName = "Email";
+            this.email.DataPropertyName = "email";
             this.email.HeaderText = "Email";
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
             // habilitado
             // 
-            this.habilitado.DataPropertyName = "Habilitado";
+            this.habilitado.DataPropertyName = "habilitado";
             this.habilitado.HeaderText = "Habilitado";
             this.habilitado.Name = "habilitado";
             this.habilitado.ReadOnly = true;
-            this.habilitado.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.habilitado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // legajo
             // 
@@ -228,44 +222,49 @@
             this.legajo.Name = "legajo";
             this.legajo.ReadOnly = true;
             // 
+            // usuarioLogicBindingSource
+            // 
+            this.usuarioLogicBindingSource.DataSource = typeof(Business.Logic.UsuarioLogic);
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tcUsuarios);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ClientSize = new System.Drawing.Size(751, 329);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Usuarios";
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.Usuarios_Load);
-            this.tcUsuarios.ContentPanel.ResumeLayout(false);
-            this.tcUsuarios.TopToolStripPanel.ResumeLayout(false);
-            this.tcUsuarios.TopToolStripPanel.PerformLayout();
-            this.tcUsuarios.ResumeLayout(false);
-            this.tcUsuarios.PerformLayout();
-            this.tlUsuarios.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer1.TopToolStripPanel.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
-            this.usUsuarios.ResumeLayout(false);
-            this.usUsuarios.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioLogicBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ToolStripContainer tcUsuarios;
-        private System.Windows.Forms.ToolStrip usUsuarios;
-        private System.Windows.Forms.TableLayoutPanel tlUsuarios;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.DataGridView dgvUsuarios;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
         private System.Windows.Forms.ToolStripButton tsbEditar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.BindingSource usuarioLogicBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewCheckBoxColumn habilitado;
         private System.Windows.Forms.DataGridViewTextBoxColumn legajo;

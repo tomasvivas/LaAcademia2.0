@@ -7,18 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Business.Logic;
 using Business.Entities;
-using System.Globalization;
-using System.Text.RegularExpressions;
-using System.Net.Mail;
+using Business.Logic;
 
-
-namespace UI.Desktop
+namespace UI.Desktop.FormsEntidades
 {
     public partial class UsuarioDesktop : ApplicationForm
     {
-
         #region Propiedades
         private Usuario _UsAct;
         public Usuario UsuarioActual
@@ -44,7 +39,7 @@ namespace UI.Desktop
             UsuarioActual = usuario.GetOne(ID);
             this.MapearDeDatos();
             this.MapearPersonas();
-            
+
         }
         #endregion
 
@@ -151,7 +146,7 @@ namespace UI.Desktop
                 & clave.Length >= 8)
             {
                 return true;
-            } 
+            }
             else
             {
                 this.Notificar("Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -182,13 +177,13 @@ namespace UI.Desktop
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
         private void btnCrearPersona_Click(object sender, EventArgs e)
         {
             PersonaDesktop pd = new PersonaDesktop(ApplicationForm.ModoForm.Alta);
-            pd.ShowDialog(); 
+            pd.ShowDialog();
         }
     }
 }

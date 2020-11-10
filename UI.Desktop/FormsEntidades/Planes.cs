@@ -59,8 +59,9 @@ namespace UI.Desktop
         {
             try
             {
+                
                 int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
-                PlanDesktop pd = new PlanDesktop(ID, ApplicationForm.ModoForm.Modificacion);
+                PlanDesktop pd = new PlanDesktop(ID, ApplicationForm.ModoForm.Baja);
                 pd.ShowDialog();
                 this.Listar();
             }
@@ -75,7 +76,7 @@ namespace UI.Desktop
             try
             {
                 int ID = ((Business.Entities.Plan)this.dgvPlanes.SelectedRows[0].DataBoundItem).ID;
-                PlanDesktop pd = new PlanDesktop(ID, ApplicationForm.ModoForm.Baja);
+                PlanDesktop pd = new PlanDesktop(ID, ApplicationForm.ModoForm.Modificacion);
                 pd.ShowDialog();
                 this.Listar();
             }

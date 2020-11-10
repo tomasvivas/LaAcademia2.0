@@ -132,11 +132,29 @@
     <Compile Include="FormsEntidades\Inscripciones.Designer.cs">
       <DependentUpon>Inscripciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Notas.cs">
+    <Compile Include="FormsEntidades\Notas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Notas.Designer.cs">
+    <Compile Include="FormsEntidades\Notas.Designer.cs">
       <DependentUpon>Notas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEntidades\NotasDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEntidades\NotasDesktop.Designer.cs">
+      <DependentUpon>NotasDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEntidades\UsuarioDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEntidades\UsuarioDesktop.Designer.cs">
+      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsEntidades\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsEntidades\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="UsuariosReporte.cs">
       <SubType>Form</SubType>
@@ -198,18 +216,6 @@
       <DependentUpon>Settings1.settings</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="FormsEntidades\UsuarioDesktop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsEntidades\UsuarioDesktop.Designer.cs">
-      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormsEntidades\Usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormsEntidades\Usuarios.Designer.cs">
-      <DependentUpon>Usuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ApplicationForm.resx">
@@ -242,6 +248,18 @@
     <EmbeddedResource Include="FormsEntidades\Inscripciones.resx">
       <DependentUpon>Inscripciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\NotasDesktop.resx">
+      <DependentUpon>NotasDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\UsuarioDesktop.resx">
+      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEntidades\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,18 +284,9 @@
     <EmbeddedResource Include="FormsEntidades\Planes.resx">
       <DependentUpon>Planes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notas.resx">
-      <DependentUpon>Notas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Cursos.rdlc" />
     <EmbeddedResource Include="Reportes\Especialidades.rdlc" />
     <EmbeddedResource Include="Reportes\Usuarios.rdlc" />
-    <EmbeddedResource Include="FormsEntidades\UsuarioDesktop.resx">
-      <DependentUpon>UsuarioDesktop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormsEntidades\Usuarios.resx">
-      <DependentUpon>Usuarios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -318,6 +327,7 @@
     <None Include="Properties\DataSources\Business.Entities.Persona.datasource" />
     <None Include="Properties\DataSources\Business.Entities.Plan.datasource" />
     <None Include="Properties\DataSources\Business.Entities.Usuario.datasource" />
+    <None Include="Properties\DataSources\Business.Logic.UsuarioLogic.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

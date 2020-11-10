@@ -7,7 +7,7 @@ namespace Business.Entities
 {
     public class AlumnoInscripcion : BusinessEntity
     {
-        private string _Condicion, _DescMateria, _DescComision;
+        private string _Condicion, _DescMateria, _DescComision, _nombre, _apellido;
         private int _IDAlumno;
         private int _IDCurso;
         private int _Nota;
@@ -28,6 +28,18 @@ namespace Business.Entities
         {
             get { return _DescComision; }
             set { _DescComision = value; }
+        }
+
+        public string Nombre
+        {
+            get { return _nombre; }
+            set { _nombre = value; }
+        }
+
+        public string Apellido
+        {
+            get { return _apellido; }
+            set { _apellido = value; }
         }
 
         public int IDAlumno

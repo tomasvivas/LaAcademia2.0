@@ -64,7 +64,7 @@ namespace UI.Desktop
                 case Persona.TipoPersonas.Administrador:
                     txtidalum.Text = idalum.ToString();
                     tipo.Text = "Usted ha ingresado como administrador";
-                    inscripcionToolStripMenuItem.Visible = false;
+                    //inscripcionToolStripMenuItem.Visible = false;
                     
                     break;
                 case Persona.TipoPersonas.Alumno:

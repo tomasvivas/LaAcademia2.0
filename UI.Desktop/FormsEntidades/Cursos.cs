@@ -25,12 +25,16 @@ namespace UI.Desktop
                 tsbEliminar.Enabled = false;   
                 tsbNuevo.Enabled = false;
             }
+            if (per.TipoPersona == Persona.TipoPersonas.Alumno)
+            {
+                tsbNotas.Visible = false;
+            }
         }
 
         private void Cursos_Load(object sender, EventArgs e)
         {
             this.Listar();
-            this.tsbNotas.Visible = false;
+            
 
         }
 
@@ -61,7 +65,7 @@ namespace UI.Desktop
         {
             try
             {
-                int ID = ((Business.Entities.Materia)this.dgvCursos.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.Curso)this.dgvCursos.SelectedRows[0].DataBoundItem).ID;
                 CursoDesktop cd = new CursoDesktop(ID, ApplicationForm.ModoForm.Modificacion);
                 cd.ShowDialog();
                 this.Listar();
@@ -76,7 +80,7 @@ namespace UI.Desktop
         {
             try
             {
-                int ID = ((Business.Entities.Materia)this.dgvCursos.SelectedRows[0].DataBoundItem).ID;
+                int ID = ((Business.Entities.Curso)this.dgvCursos.SelectedRows[0].DataBoundItem).ID;
                 CursoDesktop cd = new CursoDesktop(ID, ApplicationForm.ModoForm.Baja);
                 cd.ShowDialog();
                 this.Listar();
@@ -94,9 +98,16 @@ namespace UI.Desktop
 
         private void tsbNotas_Click(object sender, EventArgs e)
         {
-            int ID = ((Business.Entities.Curso)this.dgvCursos.SelectedRows[0].DataBoundItem).ID;
-            Inscripciones insc = new Inscripciones(ID);
-            insc.ShowDialog();
+           // try
+            //{
+                int ID = ((Business.Entities.Curso)this.dgvCursos.SelectedRows[0].DataBoundItem).ID;
+                Notas not = new Notas(ID);
+                not.ShowDialog();
+           // }
+            //catch
+            //{
+            //    MessageBox.Show("Debe seleccionar una fila", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+//}
         }
     }
 }
