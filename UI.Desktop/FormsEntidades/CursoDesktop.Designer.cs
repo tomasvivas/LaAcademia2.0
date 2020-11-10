@@ -36,11 +36,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtCupo = new System.Windows.Forms.TextBox();
-            this.cmbAnio = new System.Windows.Forms.ComboBox();
             this.cmbMateria = new System.Windows.Forms.ComboBox();
             this.cmbComision = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.txtAnio = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,11 +58,11 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtCupo, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cmbAnio, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.cmbMateria, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cmbComision, 3, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnAceptar, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.btnCancelar, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.txtAnio, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -140,22 +140,6 @@
             this.txtCupo.Size = new System.Drawing.Size(100, 20);
             this.txtCupo.TabIndex = 6;
             // 
-            // cmbAnio
-            // 
-            this.cmbAnio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbAnio.FormattingEnabled = true;
-            this.cmbAnio.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
-            this.cmbAnio.Location = new System.Drawing.Point(272, 94);
-            this.cmbAnio.Name = "cmbAnio";
-            this.cmbAnio.Size = new System.Drawing.Size(121, 21);
-            this.cmbAnio.TabIndex = 7;
-            this.cmbAnio.Text = "Selecciona un año";
-            // 
             // cmbMateria
             // 
             this.cmbMateria.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -198,6 +182,14 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // txtAnio
+            // 
+            this.txtAnio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAnio.Location = new System.Drawing.Point(283, 95);
+            this.txtAnio.Name = "txtAnio";
+            this.txtAnio.Size = new System.Drawing.Size(100, 20);
+            this.txtAnio.TabIndex = 12;
+            // 
             // CursoDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,10 +214,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtCupo;
-        private System.Windows.Forms.ComboBox cmbAnio;
         private System.Windows.Forms.ComboBox cmbMateria;
         private System.Windows.Forms.ComboBox cmbComision;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox txtAnio;
     }
 }

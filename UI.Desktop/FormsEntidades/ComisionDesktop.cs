@@ -48,7 +48,8 @@ namespace UI.Desktop.FormsEntidades
         public override void MapearDeDatos()
         {
             this.txtID.Text = this.ComisionActual.ID.ToString();
-            this.txtDescripcion.Text = this.ComisionActual.Descripcion;        
+            this.txtDescripcion.Text = this.ComisionActual.Descripcion;
+            this.cmbAnioEspe.SelectedItem = this.ComisionActual.AnioEspecialidad.ToString();
 
 
             if (Modo == ModoForm.Alta)

@@ -56,6 +56,7 @@ namespace UI.Desktop.FormsEntidades
         {
             this.txtID.Text = this.CursoActual.ID.ToString();
             this.txtCupo.Text = this.CursoActual.Cupo.ToString();
+            this.txtAnio.Text = this.CursoActual.AnioCalendario.ToString();
 
             if (Modo == ModoForm.Alta)
             {
@@ -70,7 +71,7 @@ namespace UI.Desktop.FormsEntidades
                 btnAceptar.Text = "Eliminar";
                 txtID.Enabled = false;
                 txtCupo.Enabled = false;
-                cmbAnio.Enabled = false;
+                txtAnio.Enabled = false;
                 cmbComision.Enabled = false;
                 cmbMateria.Enabled = false;
             }
@@ -89,7 +90,7 @@ namespace UI.Desktop.FormsEntidades
 
 
                 CursoNuevo.Cupo = int.Parse(this.txtCupo.Text);
-                CursoNuevo.AnioCalendario = Convert.ToInt32(cmbAnio.SelectedValue);
+                CursoNuevo.AnioCalendario = int.Parse(txtAnio.Text);
                 CursoNuevo.IDComision = Convert.ToInt32(cmbComision.SelectedValue.ToString());
                 CursoNuevo.IDMateria = Convert.ToInt32(cmbMateria.SelectedValue.ToString());
                 CursoActual = CursoNuevo;
@@ -103,7 +104,7 @@ namespace UI.Desktop.FormsEntidades
             {
 
                 CursoActual.Cupo = int.Parse(this.txtCupo.Text);
-                CursoActual.AnioCalendario = Convert.ToInt32(cmbAnio.SelectedValue);
+                CursoActual.AnioCalendario = int.Parse(txtAnio.Text);
                 CursoActual.IDComision = Convert.ToInt32(cmbComision.SelectedValue.ToString());
                 CursoActual.IDMateria = Convert.ToInt32(cmbMateria.SelectedValue.ToString());
                 CursoLogic cl = new CursoLogic();
@@ -152,9 +153,9 @@ namespace UI.Desktop.FormsEntidades
             this.MapearADatos();
         }
 
-        public bool Validar(int cupo)
+        public bool Validar(int cupo, int anio)
         {
-            if (cupo >= 0)
+            if (cupo >= 0 && anio != 0)
             {
                 return true;
             }
@@ -170,9 +171,10 @@ namespace UI.Desktop.FormsEntidades
         {
 
             int cupo = int.Parse(this.txtCupo.Text);
+            int anio = int.Parse(this.txtAnio.Text);
 
 
-            if (Validar(cupo) == true)
+            if (Validar(cupo,anio) == true)
             {
                 this.GuardarCambios();
             }
