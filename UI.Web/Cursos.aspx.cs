@@ -163,6 +163,14 @@ namespace UI.Web
 
         }
 
+        protected void btnNotas_Click(object sender, EventArgs e)
+        {
+            if (this.isEntitySelected)
+            {
+                Response.Redirect("Notas.aspx?ID=" + SelectedID);
+            }
+        }
+
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             if (this.isEntitySelected)

@@ -135,6 +135,7 @@
     <Content Include="Inscripciones.aspx" />
     <Content Include="Materias.aspx" />
     <Content Include="Menu.aspx" />
+    <Content Include="Notas.aspx" />
     <Content Include="Personas.aspx" />
     <Content Include="Cursos.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -256,6 +257,13 @@
     </Compile>
     <Compile Include="Materias.aspx.designer.cs">
       <DependentUpon>Materias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notas.aspx.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notas.aspx.designer.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Planes.aspx.cs">
       <DependentUpon>Planes.aspx</DependentUpon>

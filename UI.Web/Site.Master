@@ -21,6 +21,7 @@
                 <li><a href="Materias.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Materias</a></li>
                 <li><a href="Comisiones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Comisiones</a></li>
                 <li><a href="Cursos.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Cursos</a></li>
+                <li><a href="Inscripciones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Inscripciones</a></li>
              
             </ul>
         </div>

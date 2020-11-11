@@ -63,7 +63,7 @@ namespace UI.Desktop
                     break;
                 case Persona.TipoPersonas.Administrador:
                     tipo.Text = "Usted ha ingresado como administrador";
-                    tsbInscripcion.Visible = false;
+                    //tsbInscripcion.Visible = false;
                     
                     break;
                 case Persona.TipoPersonas.Alumno:

@@ -51,7 +51,8 @@ namespace UI.Web
             else
             {
                 Page.Response.Write("Ingreso ok");
-                idalum = usuarioActual.ID_Persona;
+                Session["Usuario"] = new Usuario();
+                Session["Usuario"] = usuarioActual;
                 Page.Response.Redirect("Menu");
                 
                 

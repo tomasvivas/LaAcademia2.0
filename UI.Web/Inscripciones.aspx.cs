@@ -21,6 +21,8 @@ namespace UI.Web
             set { _per = value; }
         }
 
+        
+
         private InscripcionLogic _il;
         public InscripcionLogic il
         {
@@ -77,9 +79,7 @@ namespace UI.Web
 
         private void LoadForm(int id)
         {
-            this.Entity = this.Logic.GetOne(id);
-            PersonaLogic pl = new PersonaLogic();
-            Per = pl.GetOne();
+            
             
 
         }
@@ -100,6 +100,11 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Usuario user = new Usuario();
+            user = (Usuario)Session["Usuario"];
+            PersonaLogic pl = new PersonaLogic();
+            Per = pl.GetOne(user.ID_Persona);
+            il = new InscripcionLogic();
             this.Listar();
         }
 
@@ -107,6 +112,11 @@ namespace UI.Web
         {
             dgInscripciones.DataSource = il.GetCursosAlumno(Per);
             dgInscripciones.DataBind();
+        }
+
+        public void gridView_selectedIndexChanged(object sender, EventArgs e)
+        {
+            this.SelectedID = (int)this.dgInscripciones.SelectedValue;
         }
     }
 }
