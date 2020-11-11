@@ -116,6 +116,7 @@
     <Content Include="CSS\academia.png" />
     <Content Include="CSS\aula.jpg" />
     <Content Include="CSS\Estilo 1.css" />
+    <Content Include="CSS\usuarios.png" />
     <Content Include="Default.aspx" />
     <Content Include="DocentesCursos.aspx" />
     <Content Include="Especialidades.aspx" />

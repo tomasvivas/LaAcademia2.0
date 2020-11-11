@@ -7,27 +7,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Academia</title>
     <link href="CSS/Estilo%201.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style2 {
+            right: 50%;
+            width: 1028px;
+        }
+        .auto-style3 {
+            width: 987px;
+        }
+    </style>
     </head>
-<body style="Estilo 1; width: 710px;">
+<body style="Estilo 1; width: 1025px; height: 146px;">
     <form id="bodyForm" runat="server">
         <div id="navbar">
-            <h1 style="right: 50%">&nbsp;&nbsp;<asp:Image ID="Image1" runat="server" Height="40px" ImageUrl="~/CSS/academia.png" Width="41px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACADEMIA</h1>
-            <ul>
-                <li><a href="Usuarios.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000;">Usuarios</a></li>
-                <li><a href="Especialidades.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Especialidades</a></li>
-                <li><a href="Planes.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Planes</a></li>
-                <li><a href="Personas.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Personas</a></li>
-                <li><a href="Materias.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Materias</a></li>
-                <li><a href="Comisiones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Comisiones</a></li>
-                <li><a href="Cursos.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Cursos</a></li>
-                <li><a href="Inscripciones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Inscripciones</a></li>
-             
-            </ul>
+            <h1 class="auto-style2">&nbsp;&nbsp;<asp:Image ID="Image1" runat="server" Height="40px" ImageUrl="~/CSS/academia.png" Width="41px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACADEMIA</h1>
+            <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Usuarios.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000;">Usuarios</a>&nbsp;&nbsp; <a href="Especialidades.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Especialidades</a>&nbsp; <a href="Planes.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Planes</a>&nbsp; <a href="Personas.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Personas</a>&nbsp; <a href="Materias.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Materias</a>&nbsp;
+                <a href="Comisiones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Comisiones</a>&nbsp; <a href="Cursos.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Cursos</a>&nbsp; <a href="Inscripciones.aspx" style="font-style: normal; font-family: 'Microsoft sans Serif'; font-size: large; font-weight: bold; color: #000000">Inscripciones</a></p>
         </div>
 
         <section id="bodyContent">
             <asp:ContentPlaceHolder ID="bodyContentPlaceHolder" runat="server">
+                <ul>
+                    <li class="auto-style3"></li>
+                </ul>
             </asp:ContentPlaceHolder>
         </section>
     </form>

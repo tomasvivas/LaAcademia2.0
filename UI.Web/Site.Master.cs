@@ -25,5 +25,10 @@ namespace UI.Web
             get { return _pers; }
             set { _pers = value; }
         }
+
+        protected System.Void Page_Load(System.Object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
