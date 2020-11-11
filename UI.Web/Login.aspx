@@ -92,8 +92,7 @@
                 <td class="auto-style10">
                     </td>
                 <td class="auto-style11" style="font-family: 'microsoft sans Serif'; font-size: small;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:LinkButton ID="lnkRecordarClave" runat="server" Text="Olvidé mi Clave" OnClick="lnkRecordarClave_Click"></asp:LinkButton>
+        &nbsp;<asp:Label ID="lnkError" runat="server" Text="El usuario y/o la contraseña son incorrectos" ForeColor="Red" ></asp:Label>
 
                 </td>
             </tr>

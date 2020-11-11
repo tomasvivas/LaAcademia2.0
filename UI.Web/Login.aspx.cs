@@ -34,7 +34,8 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lnkError.Visible = false;
+            
         }
         // txtUsuario y txtClave
         protected void btnIngresar_click(object sender, EventArgs e) 
@@ -43,29 +44,32 @@ namespace UI.Web
             Usuario usuarioActual = new Usuario();
             usuarioActual = user.GetOne(txtUsuario.Text);
              
-
-            if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
+            if(txtClave.Text.Length > 0 && txtUsuario.Text.Length > 0)
             {
-                Page.Response.Write("Usuario y/o contrasña incorrectos");
+                if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
+                {
+                    Page.Response.Write("Usuario y/o contrasña incorrectos");
+                }
+                else
+                {
+                    Page.Response.Write("Ingreso ok");
+                    Session["Usuario"] = new Usuario();
+                    Session["Usuario"] = usuarioActual;
+                    Page.Response.Redirect("Menu");
+
+
+                    this.Dispose();
+                }
             }
             else
             {
-                Page.Response.Write("Ingreso ok");
-                Session["Usuario"] = new Usuario();
-                Session["Usuario"] = usuarioActual;
-                Page.Response.Redirect("Menu");
-                
-                
-                this.Dispose();
+                lnkError.Visible = true;
             }
 
 
         }
 
-        protected void lnkRecordarClave_Click(object sender, EventArgs e) 
-        {
-            Response.Redirect("~/Default.aspx?msg= Es ud. Un usuario muy descuidado, deje de olvidar.");
-        }
+        
 
     }
 }
