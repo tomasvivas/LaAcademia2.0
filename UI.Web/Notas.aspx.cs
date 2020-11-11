@@ -57,6 +57,14 @@ namespace UI.Web
                 return (this.SelectedID != 0);
             }
         }
+
+        private int id;
+        public int idCurso
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         #endregion
 
         private void LoadForm(int id)
@@ -68,12 +76,23 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            int idCurso = int.Parse(Request.QueryString["ID"]);
+            idCurso = int.Parse(Request.QueryString["ID"]);
+            //Logic = new InscripcionLogic();
+            gridPanel.Visible = true; 
+            Listar();
+            formPanel.Visible = false;
         }
 
+
+        public void Listar()
+        {
+            
+            this.gvNotas.DataSource = Logic.GetAll(idCurso);
+            this.gvNotas.DataBind();
+        }
         protected void btnNota_Click(object sender, EventArgs e)
         {
-
+            formPanel.Visible = true;
         }
 
         protected void gridView_selectedIndexChanged(object sender, EventArgs e)
@@ -83,7 +102,28 @@ namespace UI.Web
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-
+            if (int.Parse(txtNota.Text) > 0 && int.Parse(txtNota.Text) < 10)
+            {
+                this.Entity = new AlumnoInscripcion();
+                Entity.State = BusinessEntity.States.Modified;
+                Entity.Nota = int.Parse(txtNota.Text);
+                if(int.Parse(txtNota.Text) > 6)
+                {
+                    Entity.Condicion = "Aprobado";
+                }
+                else
+                {
+                    Entity.Condicion = "No aprobado";
+                }
+                this.Logic.Save(Entity);
+                gvNotas.DataBind();
+                this.formPanel.Visible = false;
+            }
+            else
+            {
+                this.adv.Text = "Debe ingresar un numero"; 
+            }
+            
         }
     }
 }

@@ -5,11 +5,21 @@
         <asp:GridView Descripcion="gridView" runat="server" AutoGenerateColumns="False"
                     SelectedRowStyle-BackColor="Blue"
                     SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" 
-                    ID="gvNotas" Height="91px" Width="698px" DataSourceID="ObjectDataSource1" DataKeyNames="ID">
+                    ID="gvNotas" Height="91px" Width="698px">
+
+            <SelectedRowStyle BackColor="Blue" ForeColor="White" />
+            <Columns>
+                <asp:CommandField ShowSelectButton="True" />
+                 <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
+                        <asp:BoundField DataField="IDAlumno" HeaderText="Alumno" SortExpression="IDAlumno" />
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="Nombre" />
+                        <asp:BoundField DataField="Apellido" HeaderText="Apellido" SortExpression="Apellido" />
+                        <asp:BoundField DataField="Condicion" HeaderText="Condicion" SortExpression="Condicion" />
+                        <asp:BoundField HeaderText="Nota" DataField="Nota" SortExpression="Nota" />
+                        
+            </Columns>
 
         </asp:GridView>
-
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
 
     </asp:Panel>
         <asp:Panel ID="gridActionsPanel" runat="server">
@@ -24,10 +34,10 @@
          <asp:Label ID="IdLbl" runat="server" Text="Ingrese la nota: "></asp:Label>
          &nbsp;&nbsp;&nbsp;&nbsp;
          <asp:TextBox ID="txtNota" runat="server" Height="22px" Width="128px"></asp:TextBox>
-        <br>
-
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnIngresar" runat="server" BackColor="#99FF33" OnClick="btnIngresar_Click" Text="Aceptar" Width="84px" />
-            </asp:Panel>
+            <asp:Label ID="adv" runat="server" Text=""></asp:Label>
+            &nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnIngresar" runat="server" BackColor="#99FF33" OnClick="btnIngresar_Click" Text="Aceptar" Width="84px" />
+            </br>
+        </asp:Panel>
         </div>
 </asp:Content>

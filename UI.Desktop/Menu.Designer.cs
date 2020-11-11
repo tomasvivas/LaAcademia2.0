@@ -296,7 +296,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label tipo;
         private System.Windows.Forms.Label fecha;
-        private System.Windows.Forms.Label txtidalum;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton tsbConsultas;
         private System.Windows.Forms.ToolStripDropDownButton tsbReportes;

@@ -32,15 +32,15 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.dgvNotas = new System.Windows.Forms.DataGridView();
-            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsbIngresarNota = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.id_inscripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsbIngresarNota = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
@@ -90,8 +90,8 @@
             this.dgvNotas.AllowUserToDeleteRows = false;
             this.dgvNotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_alumno,
             this.id_inscripcion,
+            this.id_alumno,
             this.nombre,
             this.apellido,
             this.condicion,
@@ -103,42 +103,6 @@
             this.dgvNotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNotas.Size = new System.Drawing.Size(637, 194);
             this.dgvNotas.TabIndex = 0;
-            // 
-            // id_alumno
-            // 
-            this.id_alumno.HeaderText = "ID Alumno";
-            this.id_alumno.Name = "id_alumno";
-            this.id_alumno.ReadOnly = true;
-            // 
-            // id_inscripcion
-            // 
-            this.id_inscripcion.HeaderText = "ID Inscripcion";
-            this.id_inscripcion.Name = "id_inscripcion";
-            this.id_inscripcion.ReadOnly = true;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.ReadOnly = true;
-            // 
-            // condicion
-            // 
-            this.condicion.HeaderText = "Condicion";
-            this.condicion.Name = "condicion";
-            this.condicion.ReadOnly = true;
-            // 
-            // nota
-            // 
-            this.nota.HeaderText = "Nota";
-            this.nota.Name = "nota";
-            this.nota.ReadOnly = true;
             // 
             // toolStrip1
             // 
@@ -170,6 +134,42 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // id_inscripcion
+            // 
+            this.id_inscripcion.HeaderText = "ID Inscripcion";
+            this.id_inscripcion.Name = "id_inscripcion";
+            this.id_inscripcion.ReadOnly = true;
+            // 
+            // id_alumno
+            // 
+            this.id_alumno.HeaderText = "ID Alumno";
+            this.id_alumno.Name = "id_alumno";
+            this.id_alumno.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
+            // condicion
+            // 
+            this.condicion.HeaderText = "Condicion";
+            this.condicion.Name = "condicion";
+            this.condicion.ReadOnly = true;
+            // 
+            // nota
+            // 
+            this.nota.HeaderText = "Nota";
+            this.nota.Name = "nota";
+            this.nota.ReadOnly = true;
+            // 
             // Notas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,8 +199,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsbIngresarNota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_inscripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn condicion;

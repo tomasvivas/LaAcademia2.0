@@ -7,14 +7,14 @@
                     SelectedRowStyle-BackColor="Blue"
                     SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" ID="cursoGV" Height="91px" Width="698px" DataSourceID="ObjectDataSource2" DataKeyNames="ID" >
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" />
-                        <asp:BoundField HeaderText="ID" DataField="ID" SortExpression="ID" />
-                        <asp:BoundField HeaderText="Año Calendario" DataField="AnioCalendario" SortExpression="AnioCalendario" />
-                        <asp:BoundField DataField="IDMateria" HeaderText="ID Materia" SortExpression="IDMateria" />
-                        <asp:BoundField DataField="DescMateria" HeaderText="Desc Materia" SortExpression="DescMateria" />
-                        <asp:BoundField DataField="IDComisión" HeaderText="ID Comisión" SortExpression="IDComision" />
-                        <asp:BoundField DataField="DescComision" HeaderText="Desc Comisión" SortExpression="DescComision" />
-                        <asp:BoundField DataField="Cupo" HeaderText="Cupo" SortExpression="Cupo" />
+                         <asp:CommandField ShowSelectButton="True" />
+                        <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
+                        <asp:BoundField DataField="IDComision" HeaderText="IDComision" SortExpression="IDComision" />
+                        <asp:BoundField DataField="DescComision" HeaderText="DescComision" SortExpression="DescComision" />
+                        <asp:BoundField DataField="IDMateria" HeaderText="IDMateria" SortExpression="IDMateria" />
+                        <asp:BoundField DataField="DescMateria" HeaderText="DescMateria" SortExpression="DescMateria" />
+                        <asp:BoundField HeaderText="AnioCalendario" DataField="AnioCalendario" SortExpression="AnioCalendario" />
+                        <asp:BoundField HeaderText="Cupo" DataField="Cupo" SortExpression="Cupo" />
 
                     </Columns>
                      <SelectedRowStyle BackColor="Blue" ForeColor="White" />
