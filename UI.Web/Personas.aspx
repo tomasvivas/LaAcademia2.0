@@ -78,6 +78,7 @@
             &nbsp;&nbsp;<asp:Label ID="fechNacLabel" runat="server" Text="Fecha de nacimiento: "></asp:Label>
             &nbsp;&nbsp;
             <asp:TextBox ID="fechNacTextBox" runat="server"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;

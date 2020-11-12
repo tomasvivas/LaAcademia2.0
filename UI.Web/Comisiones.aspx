@@ -47,7 +47,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label3" runat="server" Text="Año especialidad:"></asp:Label>
         &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtAnio" runat="server" Width="153px"></asp:TextBox>
+        <asp:TextBox ID="txtAnio" runat="server" type="number" CausesValidation="true" ValidationGroup="btnAceptar" Width="153px"></asp:TextBox>
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;

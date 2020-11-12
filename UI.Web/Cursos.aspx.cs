@@ -226,5 +226,10 @@ namespace UI.Web
             this.formPanel.Visible = false;
 
         }
+
+        protected System.Void CupoTxt_TextChanged(System.Object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
