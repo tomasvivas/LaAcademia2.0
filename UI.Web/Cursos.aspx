@@ -45,12 +45,13 @@
         <br>
          <asp:Label ID="añoCalLbl" runat="server" Text="Año calendario: "></asp:Label>
          &nbsp;&nbsp;&nbsp;&nbsp;
-         <asp:TextBox ID="añocalTxt" runat="server"></asp:TextBox>
+         <asp:TextBox ID="añocalTxt" runat="server" type="number" CausesValidation="true" ValidationGroup="btnAceptar"></asp:TextBox>
         <br>
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="CupoLbl" runat="server" Text="Cupo: "></asp:Label>
          &nbsp;
-         <asp:TextBox ID="CupoTxt" runat="server"></asp:TextBox>
+         <asp:TextBox ID="CupoTxt" runat="server" type="number" CausesValidation="true" ValidationGroup="btnAceptar"></asp:TextBox>
+         
          <br />
          <br />
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;

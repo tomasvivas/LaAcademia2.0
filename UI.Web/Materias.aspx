@@ -44,13 +44,13 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label3" runat="server" Text="Hs. Semanales:"></asp:Label>
         &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtHsSemanales" runat="server" Width="153px"></asp:TextBox>
+        <asp:TextBox ID="txtHsSemanales" runat="server" type="number" CausesValidation="true" ValidationGroup="btnAceptar" Width="153px"></asp:TextBox>
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label4" runat="server" Text="Hs. Totales:"></asp:Label>
         &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtHsTotales" runat="server" Width="153px"></asp:TextBox>
+        <asp:TextBox ID="txtHsTotales" runat="server" type="number" CausesValidation="true" ValidationGroup="btnAceptarButton" Width="153px"></asp:TextBox>
         <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
