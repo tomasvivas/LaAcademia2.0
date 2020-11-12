@@ -108,6 +108,8 @@ namespace UI.Web
             {
                 il = new InscripcionLogic();
                 this.Listar();
+                lbl.Visible = true;
+                lbl.Text = "La inscripcion fue correcta";
             }
             else
             {

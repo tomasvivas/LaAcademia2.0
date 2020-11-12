@@ -65,6 +65,13 @@ namespace UI.Web
             set { id = value; }
         }
 
+        private InscripcionLogic _il;
+        public InscripcionLogic il
+        {
+            get { return _il; }
+            set { _il = value; }
+        }
+
         #endregion
 
         private void LoadForm(int id)
@@ -77,7 +84,7 @@ namespace UI.Web
         protected void Page_Load(object sender, EventArgs e)
         {
             idCurso = int.Parse(Request.QueryString["ID"]);
-            //Logic = new InscripcionLogic();
+            il = new InscripcionLogic();
             gridPanel.Visible = true; 
             Listar();
             formPanel.Visible = false;
@@ -105,6 +112,7 @@ namespace UI.Web
             if (int.Parse(txtNota.Text) > 0 && int.Parse(txtNota.Text) < 10)
             {
                 this.Entity = new AlumnoInscripcion();
+                Entity = il.GetOne(SelectedID);
                 Entity.State = BusinessEntity.States.Modified;
                 Entity.Nota = int.Parse(txtNota.Text);
                 if(int.Parse(txtNota.Text) > 6)
@@ -115,8 +123,8 @@ namespace UI.Web
                 {
                     Entity.Condicion = "No aprobado";
                 }
-                this.Logic.Save(Entity);
-                gvNotas.DataBind();
+                this.il.Save(Entity);
+                this.Listar();
                 this.formPanel.Visible = false;
             }
             else

@@ -15,26 +15,32 @@ namespace UI.Desktop
 {
     public partial class Cursos : Form
     {
+        private Persona per;
+        public Persona Per
+        {
+            get { return per; }
+            set { per = value; }
+        }
+
         public Cursos(Persona per)
         {
             InitializeComponent();
             this.dgvCursos.AutoGenerateColumns = false;
-            if (per.TipoPersona != Persona.TipoPersonas.Administrador)
-            {
-                tsbEditar.Enabled = false;
-                tsbEliminar.Enabled = false;   
-                tsbNuevo.Enabled = false;
-            }
-            if (per.TipoPersona == Persona.TipoPersonas.Alumno)
-            {
-                tsbNotas.Visible = false;
-            }
+            Per = per; 
+            
         }
 
         private void Cursos_Load(object sender, EventArgs e)
         {
             this.Listar();
-            
+            if (Per.TipoPersona != Persona.TipoPersonas.Administrador)
+            {
+                tsbEditar.Enabled = false;
+                tsbEliminar.Enabled = false;
+                tsbNuevo.Enabled = false;
+                tsbNotas.Visible = false;
+            }
+
 
         }
 

@@ -5,7 +5,7 @@
         <asp:GridView Descripcion="gridView" runat="server" AutoGenerateColumns="False"
                     SelectedRowStyle-BackColor="Blue"
                     SelectedRowStyle-ForeColor="White" OnSelectedIndexChanged="gridView_selectedIndexChanged" 
-                    ID="gvNotas" Height="91px" Width="1016px">
+                    ID="gvNotas" Height="91px" Width="1016px" DataKeyNames="ID">
 
             <SelectedRowStyle BackColor="Blue" ForeColor="White" />
             <Columns>

@@ -55,22 +55,22 @@ namespace UI.Desktop
 
                 case Persona.TipoPersonas.Profesor:
                     
-                    tipo.Text = "Usted ha ingresado como profesor";
+                    tipo.Text = "Usted ha ingresado como " + tipoper.ToString();
                     tsbREspecialidades.Visible = false;
                     tsbInscripcion.Visible = false;
-                    tsbRUsuarios.Visible = false;
+                    tsbUsuarios.Visible = false;
                     tsbPersonas.Visible = false;
                     break;
                 case Persona.TipoPersonas.Administrador:
-                    tipo.Text = "Usted ha ingresado como administrador";
-                    //tsbInscripcion.Visible = false;
+                    tipo.Text = "Usted ha ingresado como " + tipoper.ToString(); 
+                    tsbInscripcion.Visible = false;
                     
                     break;
                 case Persona.TipoPersonas.Alumno:
-                    tipo.Text = "Usted ha ingresado como alumno";
-                    tsbRUsuarios.Visible = false;
+                    tipo.Text = "Usted ha ingresado como " + tipoper.ToString();
+                    tsbReportes.Visible = false;
                     tsbPersonas.Visible = false;
-                    
+                    tsbUsuarios.Visible = false;
                    
                     break;
                 default:
