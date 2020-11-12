@@ -168,6 +168,12 @@
     <Compile Include="PlanesReporte.Designer.cs">
       <DependentUpon>PlanesReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsuariosReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +323,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UsuariosReporte.resx">
       <DependentUpon>UsuariosReporte.cs</DependentUpon>
     </EmbeddedResource>
