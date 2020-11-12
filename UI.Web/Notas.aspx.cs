@@ -129,7 +129,7 @@ namespace UI.Web
             }
             else
             {
-                this.adv.Text = "Debe ingresar un numero"; 
+               // this.adv.Text = "Debe ingresar un numero";
             }
             
         }

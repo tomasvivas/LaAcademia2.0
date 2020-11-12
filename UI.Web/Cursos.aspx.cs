@@ -227,9 +227,5 @@ namespace UI.Web
 
         }
 
-        protected System.Void CupoTxt_TextChanged(System.Object sender, System.EventArgs e)
-        {
-
-        }
     }
 }
