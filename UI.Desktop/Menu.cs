@@ -149,7 +149,11 @@ namespace UI.Desktop
             ins.Show();
         }
 
-        
+        private void stbRInscripciones_Click(object sender, EventArgs e)
+        {
+            InscripcionesReporte insc = new InscripcionesReporte();
+            insc.Show();
+        }
     } 
 }
 

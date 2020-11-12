@@ -45,7 +45,8 @@
          <br />
          <asp:Label ID="idEspecialidadLabel" runat="server" Text="ID Especialidad: "></asp:Label>
          &nbsp;
-         <asp:TextBox ID="idEspecialidadTextBox" runat="server"></asp:TextBox>
+          <asp:DropDownList ID="idespec" runat="server" DataSourceID="objectespe" DataTextField="Descripcion" DataValueField="ID"></asp:DropDownList>
+        <asp:ObjectDataSource ID="objectespe" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.EspecialidadLogic"></asp:ObjectDataSource>
          <br />
          <br />
          <asp:Panel runat="server" Descripcion="formActionsPanel">

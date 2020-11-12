@@ -17,20 +17,7 @@ namespace UI.Web
 
         }
 
-        private Persona.TipoPersonas tipoper;
-
-        public Persona.TipoPersonas tipoPersona
-        {
-            get { return tipoper; }
-            set { tipoper = value; }
-        }
-
-        private int _idalum;
-        public int idalum
-        {
-            get { return _idalum; }
-            set { _idalum = value; }
-        }
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,12 +29,15 @@ namespace UI.Web
         {
             UsuarioLogic user = new UsuarioLogic();
             Usuario usuarioActual = new Usuario();
-            usuarioActual = user.GetOne(txtUsuario.Text);
+            
              
             if(txtClave.Text.Length > 0 && txtUsuario.Text.Length > 0)
             {
+                usuarioActual = user.GetOne(txtUsuario.Text);
+
                 if (usuarioActual is null || (usuarioActual.Clave != txtClave.Text))
                 {
+
                     Page.Response.Write("Usuario y/o contrasña incorrectos");
                 }
                 else

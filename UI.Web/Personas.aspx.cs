@@ -95,9 +95,7 @@ namespace UI.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            tipoper.Items.Add("Profesor");
-            tipoper.Items.Add("Administrador");
-            tipoper.Items.Add("Alumno");
+            
             formPanel.Visible = false;
         }
 
@@ -164,6 +162,7 @@ namespace UI.Web
             if (this.isEntitySelected)
             {
                 this.formPanel.Visible = true;
+                this.formActionsPanel.Visible = true;
                 this.FormMode = FormModes.Baja;
                 this.EnableForm(false);
                 this.LoadForm(this.SelectedID);
@@ -173,6 +172,7 @@ namespace UI.Web
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = true;
+            this.formActionsPanel.Visible = true;
             this.FormMode = FormModes.Alta;
             this.ClearForm();
             this.EnableForm(true);
@@ -183,6 +183,7 @@ namespace UI.Web
             if (this.isEntitySelected)
             {
                 this.EnableForm(true);
+                this.formActionsPanel.Visible = true;
                 this.formPanel.Visible = true;
                 this.FormMode = FormModes.Modificacion;
                 this.LoadForm(this.SelectedID);

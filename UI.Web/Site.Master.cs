@@ -14,21 +14,12 @@ namespace UI.Web
         protected void Page_Load(object sender, EventArgs e)
         {
             Login log = new Login();
-            PersonaLogic pl = new PersonaLogic();
-            Pers = pl.GetOne(log.idalum);
+            
             
         }
 
-        private Persona _pers;
-        public Persona Pers
-        {
-            get { return _pers; }
-            set { _pers = value; }
-        }
+        
 
-        protected System.Void Page_Load(System.Object sender, System.EventArgs e)
-        {
-
-        }
+        
     }
 }

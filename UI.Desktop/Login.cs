@@ -65,9 +65,9 @@ namespace UI.Desktop
                 PersonaLogic pl = new PersonaLogic();
                 Persona PersonaActual = new Persona();
                 PersonaActual = pl.GetOne(usuarioActual.ID_Persona);
-                PersonaActual = pl.GetOne(usuarioActual.ID);
+                
                 tipoper = PersonaActual.TipoPersona;
-                idAlum = PersonaActual.ID;
+                
                 this.DialogResult = DialogResult.OK;
                 this.Dispose();
                 

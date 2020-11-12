@@ -81,7 +81,7 @@ namespace UI.Web
             this.Entity = this.Logic.GetOne(id);
             this.idTextBox.Text = this.Entity.ID.ToString();
             this.descripcionTextBox.Text = this.Entity.Descripcion;
-            this.idEspecialidadTextBox.Text = this.Entity.IDEspecialidad.ToString();
+            this.idespec.SelectedValue = this.Entity.IDEspecialidad.ToString();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace UI.Web
         {
             this.idTextBox.Text = string.Empty;
             this.descripcionTextBox.Text = string.Empty;
-            this.idEspecialidadTextBox.Text = string.Empty;
+            this.idespec.SelectedValue = string.Empty;
 
         }
 
@@ -101,7 +101,7 @@ namespace UI.Web
         {
             this.idTextBox.Enabled = enable;
             this.descripcionTextBox.Enabled = enable;
-            this.idEspecialidadTextBox.Enabled = enable; 
+            this.idespec.Enabled = enable; 
 
         }
 
@@ -114,7 +114,7 @@ namespace UI.Web
         {
             plan.ID = int.Parse(this.idTextBox.Text);
             plan.Descripcion = this.descripcionTextBox.Text;
-            plan.IDEspecialidad = int.Parse(this.idEspecialidadTextBox.Text);
+            plan.IDEspecialidad = int.Parse(this.idespec.SelectedValue);
 
         }
 

@@ -145,6 +145,8 @@ namespace UI.Web
         protected void btnNuevo_Click(object sender, EventArgs e)
         {
             this.formPanel.Visible = true;
+            this.btnAceptar.Visible = true;
+            this.btnCancelar.Visible = true;
             this.FormMode = FormModes.Alta;
             this.ClearForm();
             this.EnableForm(true);
@@ -156,6 +158,8 @@ namespace UI.Web
             if (this.isEntitySelected)
             {
                 this.formPanel.Visible = true;
+                this.btnAceptar.Visible = true;
+                this.btnCancelar.Visible = true;
                 this.FormMode = FormModes.Baja;
                 this.EnableForm(false);
                 this.LoadForm(this.SelectedID);
@@ -177,6 +181,8 @@ namespace UI.Web
             {
                 this.EnableForm(true);
                 this.formPanel.Visible = true;
+                this.btnAceptar.Visible = true;
+                this.btnCancelar.Visible = true;
                 this.FormMode = FormModes.Modificacion;
                 this.LoadForm(this.SelectedID);
             }

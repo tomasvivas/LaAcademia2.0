@@ -63,6 +63,7 @@ namespace Data.Database
                 SqlCommand cmdUsuarios = new SqlCommand("select u.id_usuario, u.nombre_usuario, u.clave, u.habilitado," +
                     "u.nombre, u.apellido, u.email, personas.id_persona, personas.legajo from usuarios u inner join personas " +
                     "on personas.id_persona = u.id_persona where id_usuario = @id", sqlConn);
+                cmdUsuarios.Parameters.Add("@id", SqlDbType.Int).Value = ID;
                 SqlDataReader drUsuarios = cmdUsuarios.ExecuteReader();
                 if (drUsuarios.Read())
                 {

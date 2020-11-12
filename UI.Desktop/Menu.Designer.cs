@@ -51,6 +51,7 @@
             this.tsbREspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbInscripcion = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.stbRInscripciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -171,49 +172,49 @@
             // tsbUsuarios
             // 
             this.tsbUsuarios.Name = "tsbUsuarios";
-            this.tsbUsuarios.Size = new System.Drawing.Size(180, 22);
+            this.tsbUsuarios.Size = new System.Drawing.Size(150, 22);
             this.tsbUsuarios.Text = "Usuarios";
             this.tsbUsuarios.Click += new System.EventHandler(this.tsbUsuarios_Click);
             // 
             // tsbPersonas
             // 
             this.tsbPersonas.Name = "tsbPersonas";
-            this.tsbPersonas.Size = new System.Drawing.Size(180, 22);
+            this.tsbPersonas.Size = new System.Drawing.Size(150, 22);
             this.tsbPersonas.Text = "Personas";
             this.tsbPersonas.Click += new System.EventHandler(this.tsbPersonas_Click);
             // 
             // tsbPlanes
             // 
             this.tsbPlanes.Name = "tsbPlanes";
-            this.tsbPlanes.Size = new System.Drawing.Size(180, 22);
+            this.tsbPlanes.Size = new System.Drawing.Size(150, 22);
             this.tsbPlanes.Text = "Planes";
             this.tsbPlanes.Click += new System.EventHandler(this.tsbPlanes_Click);
             // 
             // tsbMaterias
             // 
             this.tsbMaterias.Name = "tsbMaterias";
-            this.tsbMaterias.Size = new System.Drawing.Size(180, 22);
+            this.tsbMaterias.Size = new System.Drawing.Size(150, 22);
             this.tsbMaterias.Text = "Materias";
             this.tsbMaterias.Click += new System.EventHandler(this.tsbMaterias_Click);
             // 
             // tsbComisiones
             // 
             this.tsbComisiones.Name = "tsbComisiones";
-            this.tsbComisiones.Size = new System.Drawing.Size(180, 22);
+            this.tsbComisiones.Size = new System.Drawing.Size(150, 22);
             this.tsbComisiones.Text = "Comisiones";
             this.tsbComisiones.Click += new System.EventHandler(this.tsbComisiones_Click);
             // 
             // tsbEspecialidades
             // 
             this.tsbEspecialidades.Name = "tsbEspecialidades";
-            this.tsbEspecialidades.Size = new System.Drawing.Size(180, 22);
+            this.tsbEspecialidades.Size = new System.Drawing.Size(150, 22);
             this.tsbEspecialidades.Text = "Especialidades";
             this.tsbEspecialidades.Click += new System.EventHandler(this.tsbEspecialidades_Click);
             // 
             // tsbCursos
             // 
             this.tsbCursos.Name = "tsbCursos";
-            this.tsbCursos.Size = new System.Drawing.Size(180, 22);
+            this.tsbCursos.Size = new System.Drawing.Size(150, 22);
             this.tsbCursos.Text = "Cursos";
             this.tsbCursos.Click += new System.EventHandler(this.tsbCursos_Click);
             // 
@@ -222,7 +223,8 @@
             this.tsbReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbRUsuarios,
             this.tsbRCursos,
-            this.tsbREspecialidades});
+            this.tsbREspecialidades,
+            this.stbRInscripciones});
             this.tsbReportes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsbReportes.Image = global::UI.Desktop.Properties.Resources.admin_person_user_man_2839;
             this.tsbReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -233,21 +235,21 @@
             // tsbRUsuarios
             // 
             this.tsbRUsuarios.Name = "tsbRUsuarios";
-            this.tsbRUsuarios.Size = new System.Drawing.Size(150, 22);
+            this.tsbRUsuarios.Size = new System.Drawing.Size(180, 22);
             this.tsbRUsuarios.Text = "Usuarios";
             this.tsbRUsuarios.Click += new System.EventHandler(this.tsbRUsuarios_Click);
             // 
             // tsbRCursos
             // 
             this.tsbRCursos.Name = "tsbRCursos";
-            this.tsbRCursos.Size = new System.Drawing.Size(150, 22);
+            this.tsbRCursos.Size = new System.Drawing.Size(180, 22);
             this.tsbRCursos.Text = "Cursos";
             this.tsbRCursos.Click += new System.EventHandler(this.tsbRCursos_Click);
             // 
             // tsbREspecialidades
             // 
             this.tsbREspecialidades.Name = "tsbREspecialidades";
-            this.tsbREspecialidades.Size = new System.Drawing.Size(150, 22);
+            this.tsbREspecialidades.Size = new System.Drawing.Size(180, 22);
             this.tsbREspecialidades.Text = "Especialidades";
             this.tsbREspecialidades.Click += new System.EventHandler(this.tsbREspecialidades_Click);
             // 
@@ -266,6 +268,13 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // stbRInscripciones
+            // 
+            this.stbRInscripciones.Name = "stbRInscripciones";
+            this.stbRInscripciones.Size = new System.Drawing.Size(180, 22);
+            this.stbRInscripciones.Text = "Inscripciones";
+            this.stbRInscripciones.Click += new System.EventHandler(this.stbRInscripciones_Click);
             // 
             // Menu
             // 
@@ -310,5 +319,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsbComisiones;
         private System.Windows.Forms.ToolStripMenuItem tsbEspecialidades;
         private System.Windows.Forms.ToolStripMenuItem tsbCursos;
+        private System.Windows.Forms.ToolStripMenuItem stbRInscripciones;
     }
 }

@@ -104,8 +104,18 @@ namespace UI.Web
             user = (Usuario)Session["Usuario"];
             PersonaLogic pl = new PersonaLogic();
             Per = pl.GetOne(user.ID_Persona);
-            il = new InscripcionLogic();
-            this.Listar();
+            if(Per.TipoPersona == Persona.TipoPersonas.Alumno)
+            {
+                il = new InscripcionLogic();
+                this.Listar();
+            }
+            else
+            {
+                dgInscripciones.Visible = false;
+                btnNuevo.Visible = false;
+                lbl.Visible = true;
+            }
+            
         }
 
         public void Listar()
