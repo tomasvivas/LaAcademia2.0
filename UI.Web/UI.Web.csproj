@@ -137,6 +137,8 @@
     <Content Include="CSS\academia.png" />
     <Content Include="CSS\aula.jpg" />
     <Content Include="CSS\Estilo 1.css" />
+    <Content Include="CSS\guardar.png" />
+    <Content Include="CSS\imprimir.png" />
     <Content Include="CSS\usuarios.png" />
     <Content Include="Default.aspx" />
     <Content Include="DocentesCursos.aspx" />
@@ -164,6 +166,7 @@
     <Content Include="Planes.aspx" />
     <Content Include="Reporte Cursos.aspx" />
     <Content Include="Reporte Usuarios.aspx" />
+    <Content Include="Reportes.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -315,6 +318,13 @@
     </Compile>
     <Compile Include="Reporte Usuarios.aspx.designer.cs">
       <DependentUpon>Reporte Usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.aspx.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes.aspx.designer.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
