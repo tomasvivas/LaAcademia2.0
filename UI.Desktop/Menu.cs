@@ -60,6 +60,7 @@ namespace UI.Desktop
                     tsbInscripcion.Visible = false;
                     tsbUsuarios.Visible = false;
                     tsbPersonas.Visible = false;
+                    tsbRUsuarios.Visible = false; 
                     break;
                 case Persona.TipoPersonas.Administrador:
                     tipo.Text = "Usted ha ingresado como " + tipoper.ToString(); 
@@ -153,6 +154,12 @@ namespace UI.Desktop
         {
             InscripcionesReporte insc = new InscripcionesReporte();
             insc.Show();
+        }
+
+        private void tsbRPlanes_Click(object sender, EventArgs e)
+        {
+            PlanesReporte prep = new PlanesReporte();
+            prep.Show();
         }
     } 
 }

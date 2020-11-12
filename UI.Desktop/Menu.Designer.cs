@@ -49,9 +49,10 @@
             this.tsbRUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbRCursos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbREspecialidades = new System.Windows.Forms.ToolStripMenuItem();
+            this.stbRInscripciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbInscripcion = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.stbRInscripciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbRPlanes = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -224,7 +225,8 @@
             this.tsbRUsuarios,
             this.tsbRCursos,
             this.tsbREspecialidades,
-            this.stbRInscripciones});
+            this.stbRInscripciones,
+            this.tsbRPlanes});
             this.tsbReportes.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tsbReportes.Image = global::UI.Desktop.Properties.Resources.admin_person_user_man_2839;
             this.tsbReportes.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -253,6 +255,13 @@
             this.tsbREspecialidades.Text = "Especialidades";
             this.tsbREspecialidades.Click += new System.EventHandler(this.tsbREspecialidades_Click);
             // 
+            // stbRInscripciones
+            // 
+            this.stbRInscripciones.Name = "stbRInscripciones";
+            this.stbRInscripciones.Size = new System.Drawing.Size(180, 22);
+            this.stbRInscripciones.Text = "Inscripciones";
+            this.stbRInscripciones.Click += new System.EventHandler(this.stbRInscripciones_Click);
+            // 
             // tsbInscripcion
             // 
             this.tsbInscripcion.BackColor = System.Drawing.SystemColors.InactiveBorder;
@@ -269,12 +278,12 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // stbRInscripciones
+            // tsbRPlanes
             // 
-            this.stbRInscripciones.Name = "stbRInscripciones";
-            this.stbRInscripciones.Size = new System.Drawing.Size(180, 22);
-            this.stbRInscripciones.Text = "Inscripciones";
-            this.stbRInscripciones.Click += new System.EventHandler(this.stbRInscripciones_Click);
+            this.tsbRPlanes.Name = "tsbRPlanes";
+            this.tsbRPlanes.Size = new System.Drawing.Size(180, 22);
+            this.tsbRPlanes.Text = "Planes";
+            this.tsbRPlanes.Click += new System.EventHandler(this.tsbRPlanes_Click);
             // 
             // Menu
             // 
@@ -320,5 +329,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsbEspecialidades;
         private System.Windows.Forms.ToolStripMenuItem tsbCursos;
         private System.Windows.Forms.ToolStripMenuItem stbRInscripciones;
+        private System.Windows.Forms.ToolStripMenuItem tsbRPlanes;
     }
 }
