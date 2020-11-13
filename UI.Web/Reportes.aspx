@@ -13,6 +13,10 @@
         </asp:DropDownList>
         &nbsp;&nbsp;
         <asp:Button ID="btnGenerarReporte" runat="server" BackColor="#66FF33" BorderColor="#009900" ForeColor="Black" OnClick="Button3_Click" Text="Generar" />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:ImageButton ID="ImageButton1" runat="server" Height="21px" ImageUrl="~/CSS/imprimir.png" Width="26px" />
+        &nbsp;&nbsp;&nbsp;
+        <asp:ImageButton ID="ImageButton2" runat="server" Height="24px" ImageUrl="~/CSS/guardar.png" Width="26px" />
     </asp:Panel>
     <asp:Panel ID="PanelGrid" runat="server" Height="192px">
         <asp:GridView ID="gvReportes" runat="server" Width="818px" AutoGenerateColumns="True" CellPadding="4" ForeColor="#333333" GridLines="None">
