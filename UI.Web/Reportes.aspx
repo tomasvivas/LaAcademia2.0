@@ -11,15 +11,12 @@
             <asp:ListItem>Planes</asp:ListItem>
             <asp:ListItem>Usuarios</asp:ListItem>
         </asp:DropDownList>
+        &nbsp;&nbsp;
+        <asp:Button ID="btnGenerarReporte" runat="server" BackColor="#66FF33" BorderColor="#009900" ForeColor="Black" OnClick="Button3_Click" Text="Generar" />
     </asp:Panel>
     <asp:Panel ID="PanelGrid" runat="server" Height="192px">
-        <asp:GridView ID="gvReportes" runat="server" Width="818px" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="gvReportes_SelectedIndexChanged" DataSourceID="DSEspecialidades">
+        <asp:GridView ID="gvReportes" runat="server" Width="818px" AutoGenerateColumns="True" CellPadding="4" ForeColor="#333333" GridLines="None">
             <AlternatingRowStyle BackColor="White" />
-            <Columns>
-                <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" SortExpression="Descripcion" />
-                <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
-                <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
-            </Columns>
             <EditRowStyle BackColor="#7C6F57" />
             <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -36,7 +33,6 @@
         <asp:ObjectDataSource ID="DSCursos" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.CursoLogic" DataObjectTypeName="Business.Entities.Curso" InsertMethod="Save" UpdateMethod="Save"></asp:ObjectDataSource>
         <asp:ObjectDataSource ID="DSPlanes" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.PlanLogic"></asp:ObjectDataSource>
         <asp:ObjectDataSource ID="DSEspecialidades" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.EspecialidadLogic"></asp:ObjectDataSource>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.DocenteCursoLogic"></asp:ObjectDataSource>
         <asp:ObjectDataSource ID="DSUsuarios" runat="server" SelectMethod="GetAll" TypeName="Business.Logic.UsuarioLogic"></asp:ObjectDataSource>
     </asp:Panel>
     <asp:Panel ID="Panel2" runat="server">

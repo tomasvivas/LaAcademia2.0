@@ -19,47 +19,7 @@ namespace UI.Web
 
         protected void dplReportes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (this.dplReportes.SelectedIndex)
-            {
-                case 0: 
-                    {
-                        this.PanelDS.Visible = false;
-                        this.PanelGrid.Visible = false;
-                       break;
-                    }
-                case 3: 
-                    {
-                        gvReportes.DataSource = DSPlanes;
-                        gvReportes.DataBind();
-                        break;
-                    }
-                case 4:
-                    {
-                        DSEspecialidades.DataObjectTypeName = "Business.Logic.UsuarioLogic";
-                        DSEspecialidades.Update();
-                        DSEspecialidades.DataBind();
-                        gvReportes.DataBind();
-                        break;
-                    }
-                case 2:
-                    {
-                        
-                        this.PanelDS.Visible = true;
-                        this.PanelGrid.Visible = true;
-                        gvReportes.DataSource = DSEspecialidades;
-                        gvReportes.DataBind();
-                        break;
-                    }
-                case 1:
-                    {
-                        this.gvReportes.DataSource = DSCursos;
-                        this.PanelDS.Visible = true;
-                        this.PanelGrid.Visible = true;
-                        gvReportes.DataBind();
-                        break;
-                    }
-
-            }
+            
         }
 
         protected void gvReportes_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,5 +28,42 @@ namespace UI.Web
         }
 
 
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            switch (dplReportes.SelectedValue)
+            {
+                case "(Ninguno)":
+                    {
+                        gvReportes.DataSource = null;
+                        gvReportes.DataBind();
+                        break;
+                    }
+                case "Planes":
+                    {
+                        gvReportes.DataSource = DSPlanes;
+                        gvReportes.DataBind();
+                        break;
+                    }
+                case "Usuarios":
+                    {
+                        gvReportes.DataSource = DSUsuarios;
+                        gvReportes.DataBind();
+                        break;
+                    }
+                case "Especialidades":
+                    {
+                        gvReportes.DataSource = DSEspecialidades;
+                        gvReportes.DataBind();
+                        break;
+                    }
+                case "Cursos":
+                    {
+                        gvReportes.DataSource = DSCursos;
+                        gvReportes.DataBind();
+                        break;
+                    }
+
+            }
+        }
     }
 }
