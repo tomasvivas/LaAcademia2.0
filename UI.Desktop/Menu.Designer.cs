@@ -50,9 +50,10 @@
             this.tsbRCursos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbREspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.stbRInscripciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbRPlanes = new System.Windows.Forms.ToolStripMenuItem();
             this.tsbInscripcion = new System.Windows.Forms.ToolStripButton();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsbRPlanes = new System.Windows.Forms.ToolStripMenuItem();
+            this.userControl11 = new UI.Desktop.UserControl1();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -70,6 +71,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.toolStrip1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.userControl11, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -237,30 +239,37 @@
             // tsbRUsuarios
             // 
             this.tsbRUsuarios.Name = "tsbRUsuarios";
-            this.tsbRUsuarios.Size = new System.Drawing.Size(180, 22);
+            this.tsbRUsuarios.Size = new System.Drawing.Size(150, 22);
             this.tsbRUsuarios.Text = "Usuarios";
             this.tsbRUsuarios.Click += new System.EventHandler(this.tsbRUsuarios_Click);
             // 
             // tsbRCursos
             // 
             this.tsbRCursos.Name = "tsbRCursos";
-            this.tsbRCursos.Size = new System.Drawing.Size(180, 22);
+            this.tsbRCursos.Size = new System.Drawing.Size(150, 22);
             this.tsbRCursos.Text = "Cursos";
             this.tsbRCursos.Click += new System.EventHandler(this.tsbRCursos_Click);
             // 
             // tsbREspecialidades
             // 
             this.tsbREspecialidades.Name = "tsbREspecialidades";
-            this.tsbREspecialidades.Size = new System.Drawing.Size(180, 22);
+            this.tsbREspecialidades.Size = new System.Drawing.Size(150, 22);
             this.tsbREspecialidades.Text = "Especialidades";
             this.tsbREspecialidades.Click += new System.EventHandler(this.tsbREspecialidades_Click);
             // 
             // stbRInscripciones
             // 
             this.stbRInscripciones.Name = "stbRInscripciones";
-            this.stbRInscripciones.Size = new System.Drawing.Size(180, 22);
+            this.stbRInscripciones.Size = new System.Drawing.Size(150, 22);
             this.stbRInscripciones.Text = "Inscripciones";
             this.stbRInscripciones.Click += new System.EventHandler(this.stbRInscripciones_Click);
+            // 
+            // tsbRPlanes
+            // 
+            this.tsbRPlanes.Name = "tsbRPlanes";
+            this.tsbRPlanes.Size = new System.Drawing.Size(150, 22);
+            this.tsbRPlanes.Text = "Planes";
+            this.tsbRPlanes.Click += new System.EventHandler(this.tsbRPlanes_Click);
             // 
             // tsbInscripcion
             // 
@@ -278,12 +287,17 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // tsbRPlanes
+            // userControl11
             // 
-            this.tsbRPlanes.Name = "tsbRPlanes";
-            this.tsbRPlanes.Size = new System.Drawing.Size(180, 22);
-            this.tsbRPlanes.Text = "Planes";
-            this.tsbRPlanes.Click += new System.EventHandler(this.tsbRPlanes_Click);
+            this.userControl11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userControl11.ForeColor = System.Drawing.Color.Black;
+            this.userControl11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.userControl11.Location = new System.Drawing.Point(22, 175);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(98, 33);
+            this.userControl11.TabIndex = 21;
+            this.userControl11.Load += new System.EventHandler(this.userControl11_Load);
+            this.userControl11.Click += new System.EventHandler(this.userControl11_Click);
             // 
             // Menu
             // 
@@ -330,5 +344,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsbCursos;
         private System.Windows.Forms.ToolStripMenuItem stbRInscripciones;
         private System.Windows.Forms.ToolStripMenuItem tsbRPlanes;
+        private UserControl1 userControl11;
     }
 }

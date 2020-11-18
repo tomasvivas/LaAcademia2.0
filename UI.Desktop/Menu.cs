@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business.Entities;
 using Business.Logic;
-using UI.Desktop.FormsEntidades; 
+using UI.Desktop.FormsEntidades;
 
 namespace UI.Desktop
 {
@@ -30,6 +30,7 @@ namespace UI.Desktop
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            userControl11.Form = this;
             fecha.Text = DateTime.Today.ToString("D"); 
             Login login = new Login();
             login.ShowDialog();
@@ -160,6 +161,26 @@ namespace UI.Desktop
         {
             PlanesReporte prep = new PlanesReporte();
             prep.Show();
+        }
+
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControl11_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void userControl11_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        public void cerrarventana() 
+        {
+          this.Dispose();
         }
     } 
 }

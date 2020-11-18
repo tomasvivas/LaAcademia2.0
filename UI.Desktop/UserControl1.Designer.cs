@@ -35,7 +35,7 @@
             // 
             this.btnSesion.Location = new System.Drawing.Point(3, 3);
             this.btnSesion.Name = "btnSesion";
-            this.btnSesion.Size = new System.Drawing.Size(75, 23);
+            this.btnSesion.Size = new System.Drawing.Size(91, 25);
             this.btnSesion.TabIndex = 0;
             this.btnSesion.Text = "Cerrar sesion";
             this.btnSesion.UseVisualStyleBackColor = true;
@@ -47,7 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnSesion);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(83, 31);
+            this.Size = new System.Drawing.Size(99, 33);
             this.ResumeLayout(false);
 
         }

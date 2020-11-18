@@ -19,7 +19,17 @@ namespace UI.Desktop
 
         private void btnSesion_Click(object sender, EventArgs e)
         {
-
+            Form.Dispose();
+            Menu menu = new Menu();
+            menu.Show();  
         }
+
+        private Form _form;
+
+        public Form Form  
+        {get { return _form; }
+         set { _form = value; }
+        }
+
     }
 }
